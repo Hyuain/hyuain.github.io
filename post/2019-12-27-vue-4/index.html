@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+            }
+            function changeModeMeta() {
+                document.documentElement.setAttribute('data-theme', arguments[0]);
+                if (arguments[0] === "dark") {
+                    changeThemeColor("#1c1c21");
+                } else {
+                    changeThemeColor("#fff");
+                }
+            }
+            function changeThemeColor() {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', arguments[0]);
+            }
+        </script>
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.63.2" />
+
+    <title>Vue 第四课：模板语法 | Hai&#39;s Teatime</title>
+
+    <link rel="stylesheet" href="/css/meme.min.cbc9653abca27a53a6c4f4cdd4d458af03748a097f11c12004350cdf883f5414.css" integrity="sha256-y8llOryielOmxPTN1NRYrwN0igl/EcEgBDUM34g/VBQ=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="Harvey Zhang" />
+    
+    
+    <meta name="description" content="看看 Vue 中的模板语法。" />
+    <meta name="keywords" content="从小白开始的前端学习之旅, vue, 前端, 入门" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hai&#39;s Teatime" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Hai&#39;s Teatime" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="http://hais-teatime.com/post/2019-12-27-vue-4/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2019-12-27T16:34:09+08:00",
+        "dateModified": "2020-01-28T11:35:42+08:00",
+        "url": "http://hais-teatime.com/post/2019-12-27-vue-4/",
+        "headline": "Vue 第四课：模板语法",
+        "description": "看看 Vue 中的模板语法。",
+        "keywords": "从小白开始的前端学习之旅, vue, 前端, 入门",
+        "inLanguage" : "zh-CN",
+        "articleSection": "post",
+        "wordCount":  1465 ,
+        "image": ["http://hais-teatime.com/images/vue-1.gif"],
+        "author": {
+            "@type": "Person",
+            "description": "我们所生活的日常，也许就是由一个个奇迹堆叠而成的",
+            "email": "Hyuain97@163.com",
+            "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
+            "url": "http://hais-teatime.com/",
+            "name": "Harvey Zhang"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Hai's Teatime",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://hais-teatime.com/icons/apple-touch-icon.png"
+            },
+            "url": "http://hais-teatime.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "http://hais-teatime.com/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="Vue 第四课：模板语法" />
+<meta property="og:description" content="看看 Vue 中的模板语法。" />
+<meta property="og:url" content="http://hais-teatime.com/post/2019-12-27-vue-4/" />
+<meta property="og:site_name" content="Hai&#39;s Teatime" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="http://hais-teatime.com/images/vue-1.gif" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-12-27T16:34:09+08:00" />
+    <meta property="article:modified_time" content="2020-01-28T11:35:42+08:00" />
+    
+    <meta property="article:section" content="post" />
+    <meta property="article:tag" content="从小白开始的前端学习之旅, vue, 前端, 入门" />
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">Hai&#39;s Teatime</a>
+            
+        </div>
+    </header>
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/post/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+    
+        
+            
+        
+        <div id="theme-toggle" onclick="modeSwitcher()">🌞</div>
+    
+
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="post">
+
+            <h1 class="post-title">Vue 第四课：模板语法</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2019-12-27T16:34:09+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.27</time>
+    
+    
+        
+        <time datetime="2020-01-28T11:35:42+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.1.28</time>
+    
+    
+    
+        
+        
+        
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" class="category-link">从小白开始的前端学习之旅</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1465</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;3&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            
+                <nav class="contents">
+<ul>
+<li>
+<ul>
+<li><a id="contents:key-points" href="#key-points">Key Points</a></li>
+<li><a id="contents:开始" href="#开始">开始</a></li>
+<li><a id="contents:语法" href="#语法">语法</a>
+<ul>
+<li><a id="contents:插值" href="#插值">插值</a></li>
+<li><a id="contents:指令" href="#指令">指令</a></li>
+<li><a id="contents:修饰符" href="#修饰符">修饰符</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav><div class="post-body"><p>看看 Vue 中的模板语法。</p>
+
+<!--more-->
+
+<hr />
+
+<h2 id="key-points"><a href="#key-points" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:key-points" class="headings">Key Points</a></h2>
+
+<ol>
+<li>三种方式书写 <code>template</code>： HTML 中、options 中、.vue 文件中</li>
+<li><code>.sync</code> 使得当一个子组件改变了一个 <code>prop</code> 的值时，这个父组件中绑定的值也会跟着改变。</li>
+</ol>
+
+<hr />
+
+<h2 id="开始"><a href="#开始" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:开始" class="headings">开始</a></h2>
+
+<p>通常，我们说 “模板”，说的就是 <code>template</code> 这样一个东西，我们可以在里面书写类似 HTML 的代码，从而得到自己想要的页面效果。在 Vue 中，这样的一个 <code>template</code> 可以写在以下三个地方：</p>
+
+<ol>
+<li><p>HTML 文件中，需要使用 Vue 完整版</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;xxx&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  {{n}}
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;+1&#34;</span><span class="p"></span><span class="p">&gt;</span>+1<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="nx">el</span><span class="o">:</span> <span class="s2">&#34;#xxx&#34;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 可以改成函数
+</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>options 中，需要使用 Vue 完整版</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">app</span><span class="p"></span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span><span class="sb">
+</span><span class="sb">    &lt;div id=xxx&gt;
+</span><span class="sb">      {{n}}
+</span><span class="sb">      &lt;button @click=&#34;add&#34;&gt;+1&lt;/button&gt;
+</span><span class="sb">    &lt;/div&gt;
+</span><span class="sb">   </span><span class="sb">`</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 可以改成函数
+</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span> <span class="c1">// 注意这个时候 div#app 会被替代
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>.vue 文件中，可以使用 Vue 运行时版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="na">xxx</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">{</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span><span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;add&#34;</span><span class="p">&gt;</span><span class="err">+</span><span class="na">1</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">return</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span><span class="mi">0</span> <span class="p">}</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 必须为函数
+</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
+<span class="cm">/*CSS-Code*/</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./app.vue&#39;</span> <span class="c1">// App 是一个 options 对象
+</span><span class="c1"></span><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<p>这里我们要注意的是，<code>template</code> 里面书写的其实不是 HTML 代码，<strong>而是 XML 代码</strong>，二者有所不同，比如HTML 与 XML 写法不同，比如在 XML 中，自闭合标签要加上 <code>/</code>，而且空标签需要写成自闭合的形式——尽管官方文档称 “Vue.js 使用了基于 HTML 的模板语法”。</p>
+
+<h2 id="语法"><a href="#语法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:语法" class="headings">语法</a></h2>
+
+<h3 id="插值"><a href="#插值" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:插值" class="headings">插值</a></h3>
+
+<ul>
+<li><p>插入 JavaScript 表达式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ number + 1 }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ ok ? &#39;YES&#39; : &#39;NO&#39; }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ message.split(&#39;&#39;).reverse().join(&#39;&#39;) }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>如果表达式的值为 <code>undefined</code> 或者 <code>null</code>，则页面上将不会显示。</p>
+
+<ul>
+<li><p>插入原始 HTML</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>Using v-html directive: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-html</span><span class="o">=</span><span class="s">&#34;rawHtml&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p><code>span</code> 将会被 <code>rawHtml</code> 的内容所替换，并且 <code>rawHtml</code> 里面的数据绑定将会失效，因此我们不能用 <code>v-html</code> 来在 <code>template</code> 里面使用 <code>template</code>，这个时候需要用 <code>component</code> 来进行组件的组合。</p>
+
+<ul>
+<li>插入特性</li>
+</ul>
+
+<p>像 <code>{{}}</code> 这样的语法并不能使用在 HTML 属性上，这时我们需要依靠 <code>v-bind</code> 来帮我们绑定特性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:src</span><span class="s">=&#34;x&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
+<span class="c">&lt;!--</span> <span class="nx">可以简写为</span> <span class="o">--</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="nt">:src</span><span class="s">=&#34;x&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span>
+      <span class="o">:</span><span class="na">style</span><span class="o">=</span><span class="s">&#34;{border: &#39;1px solid red&#39;}&#34;</span> <span class="p">/</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="指令"><a href="#指令" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:指令" class="headings">指令</a></h3>
+
+<p>在 Vue 中，指令（Directives）就是带有 v- 前缀的特殊特性，里面的值应该是 JavaScript 表达式。</p>
+
+<p>有的指令是可以接受 <strong>参数</strong> 的，一般的指令看起来就像 <code>v-指令名:参数=值</code>。</p>
+
+<p>而我们用方括号将参数括起来，则可以构成 <strong>动态参数</strong>，他会被先当做 JavaScript 表达式进行求值操作，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:[attributeName]</span><span class="s">=&#34;url&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="p">...</span> <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>如果我们的 data 中有一个叫 <code>attributeName</code> 的属性，他的值为 <code>href</code>，那么上面这句话将等价为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:href</span><span class="s">=&#34;url&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="p">...</span> <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>我们常用的指令可以在 <a href="https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4" target="_blank">Vue 文档 - 指令</a> 中找到。</p>
+
+<h3 id="修饰符"><a href="#修饰符" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:修饰符" class="headings">修饰符</a></h3>
+
+<p>有的指令有 <strong>修饰符</strong>，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@click.stop=&#34;add&#34; 阻止冒泡
+@click.prevent=&#34;add&#34; 阻止默认动作
+@click.stop.prevent=&#34;add&#34;
+@keypress.13 或 @keypress.enter 按下回车之后执行</code></pre></td></tr></table>
+</div>
+</div>
+<p>我们同样可以在刚才的文档中找到关于修饰符的说明，这里主要讲一下 <code>.sync</code> 修饰符。</p>
+
+<p>我们可以有这样一个例子：</p>
+
+<ul>
+<li>有一个组件 <code>total.vue</code>，用来显示 <strong>总共点击的次数</strong>，其 <code>data</code> 中的 <code>clickNum</code> 记录了这个值；</li>
+
+<li><p><code>total.vue</code> 引入了一个子组件 <code>me.vue</code>，他可以接受来自 <code>total.vue</code> 传来的 <strong>总共点击的次数</strong>；并且，我们点击他的按钮，就可以在 <strong>总共点击的次数</strong> 上加 1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 在 total.vue 中
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>
+<span class="nx">一共点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">clickNum</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span>
+<span class="p">&lt;</span><span class="nt">Me</span> <span class="nt">:totalClick</span><span class="s">=&#34;clickNum&#34;</span> <span class="err">@</span><span class="na">update</span><span class="o">:</span><span class="na">totalClick</span><span class="o">=</span><span class="s">&#34;clickNum = $event&#34;</span><span class="p">/</span><span class="p">&gt;</span>
+<span class="c">&lt;!--</span> <span class="nx">$event</span> <span class="nx">保存了</span> <span class="nx">$emit</span> <span class="nx">后面的传过来的那个值</span> <span class="o">--</span><span class="o">&gt;</span>
+<span class="c">&lt;!--</span> <span class="nx">这句话也可以用</span> <span class="p">.</span><span class="nx">sync</span> <span class="nx">来写</span> <span class="o">--</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">Me</span> <span class="nt">:totalClick.sync</span><span class="s">=&#34;clickNum&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
+<span class="kr">import</span> <span class="nx">Me</span> <span class="nx">from</span> <span class="s1">&#39;./me.vue&#39;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+<span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+<span class="k">return</span> <span class="p">{</span> <span class="nx">clickNum</span><span class="o">:</span> <span class="mi">100</span> <span class="p">}</span>  
+<span class="p">}</span><span class="p">,</span>
+<span class="nx">components</span><span class="o">:</span> <span class="p">{</span> <span class="nx">Me</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 在 me.vue 中
+</span><span class="c1"></span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>
+<span class="nx">我点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">myClick</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span><span class="err">，</span><span class="nx">我知道现在所有人一共点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">totalClick</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;clicked&#34;</span><span class="p">&gt;</span><span class="na">点击</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span><span class="p">{</span>
+<span class="nx">props</span><span class="o">:</span><span class="p">[</span><span class="nx">totalClick</span><span class="p">]</span><span class="p">,</span>
+<span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+<span class="k">return</span> <span class="p">{</span> <span class="nx">myClick</span><span class="o">:</span><span class="mi">0</span> <span class="p">}</span>  
+<span class="p">}</span><span class="p">,</span>
+<span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+<span class="nx">clicked</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">myClicked</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;update-totalClick&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">totalClick</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>下面是代码的预览效果：
+<img src="/images/vue-1.gif" alt="preview" /></p>
+
+<p>这段代码也可以在 <a href="https://codesandbox.io/s/kind-cookies-1o6rs" target="_blank">Codesandbox</a> 中进行预览。</p>
+
+<p>看一下过程：</p>
+
+<ol>
+<li>将父组件的值传给子组件，子组件需用 <code>props</code> 接收这个值；</li>
+<li>子组件触发 <code>clicked</code> 事件之后，调用 <code>$emit('update-totalClick', this.totalClick + 1)</code></li>
+<li>父组件原来要写成 <code>&lt;Me :totalClick=&quot;clickNum&quot; @update:totalClick=&quot;clickNum = $event&quot;/&gt;</code>，而现在只需要写 <code>Me :totalClick.sync=&quot;clickNum&quot; /</code>就可以了。</li>
+</ol>
+
+<p>总而言之，<code>.sync</code> 使得当一个子组件改变了一个 <code>prop</code> 的值时，这个父组件中绑定的值也会跟着改变——而此前我们需要比较麻烦的监听过程。</p>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-28 11:35:42 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-28</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-25-vue-3/" class="related-link">Vue 第三课：computed 和 watch</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-25-vue-2/" class="related-link">Vue 第二课：data 与 响应式</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-22-vue-1/" class="related-link">Vue 第一课：安装</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2020-01-16-navigation-vue/" class="related-link">小项目：前端导航页面 - 维生素导航·Vue</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-24-this/" class="related-link">再看 this</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/vue/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Vue</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>前端</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%85%A5%E9%97%A8/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>入门</a>
+                
+            
+        </div>
+    
+
+
+        
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/post/2020-01-16-navigation-vue/" rel="prev">< 小项目：前端导航页面 - 维生素导航·Vue</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/post/2019-12-25-vue-3/" rel="next">Vue 第三课：computed 和 watch ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner"><div class="site-info">©&nbsp;2019–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Harvey Zhang</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
+
+            
+        </div>
+    </footer>
+
+        </div>
+        <script src="/js/meme.min.29d7c0ac6f58249eb9e1d6e5085f6da35af90d1dd45b21ae2082bcd9afa4101e.js" integrity="sha256-KdfArG9YJJ654dblCF9to1r5DR3UWyGuIIK82a+kEB4=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            }
+        });
+    </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+            }
+            function changeModeMeta() {
+                document.documentElement.setAttribute('data-theme', arguments[0]);
+                if (arguments[0] === "dark") {
+                    changeThemeColor("#1c1c21");
+                } else {
+                    changeThemeColor("#fff");
+                }
+            }
+            function changeThemeColor() {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', arguments[0]);
+            }
+        </script>
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.63.2" />
+
+    <title>JavaScript 入门 V：函数 | Hai&#39;s Teatime</title>
+
+    <link rel="stylesheet" href="/css/meme.min.cbc9653abca27a53a6c4f4cdd4d458af03748a097f11c12004350cdf883f5414.css" integrity="sha256-y8llOryielOmxPTN1NRYrwN0igl/EcEgBDUM34g/VBQ=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="Harvey Zhang" />
+    
+    
+    <meta name="description" content="本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。" />
+    <meta name="keywords" content="从小白开始的前端学习之旅, javascript, 前端, 入门" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hai&#39;s Teatime" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Hai&#39;s Teatime" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="http://hais-teatime.com/post/2019-12-06-js-5/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2019-12-03T09:00:59+08:00",
+        "dateModified": "2020-01-28T11:35:42+08:00",
+        "url": "http://hais-teatime.com/post/2019-12-06-js-5/",
+        "headline": "JavaScript 入门 V：函数",
+        "description": "本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。",
+        "keywords": "从小白开始的前端学习之旅, javascript, 前端, 入门",
+        "inLanguage" : "zh-CN",
+        "articleSection": "post",
+        "wordCount":  2590 ,
+        "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "description": "我们所生活的日常，也许就是由一个个奇迹堆叠而成的",
+            "email": "Hyuain97@163.com",
+            "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
+            "url": "http://hais-teatime.com/",
+            "name": "Harvey Zhang"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Hai's Teatime",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://hais-teatime.com/icons/apple-touch-icon.png"
+            },
+            "url": "http://hais-teatime.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "http://hais-teatime.com/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="JavaScript 入门 V：函数" />
+<meta property="og:description" content="本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。" />
+<meta property="og:url" content="http://hais-teatime.com/post/2019-12-06-js-5/" />
+<meta property="og:site_name" content="Hai&#39;s Teatime" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="http://hais-teatime.com/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-12-03T09:00:59+08:00" />
+    <meta property="article:modified_time" content="2020-01-28T11:35:42+08:00" />
+    
+    <meta property="article:section" content="post" />
+    <meta property="article:tag" content="从小白开始的前端学习之旅, javascript, 前端, 入门" />
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">Hai&#39;s Teatime</a>
+            
+        </div>
+    </header>
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/post/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+    
+        
+            
+        
+        <div id="theme-toggle" onclick="modeSwitcher()">🌞</div>
+    
+
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="post">
+
+            <h1 class="post-title">JavaScript 入门 V：函数</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2019-12-03T09:00:59+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.3</time>
+    
+    
+        
+        <time datetime="2020-01-28T11:35:42+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.1.28</time>
+    
+    
+    
+        
+        
+        
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" class="category-link">从小白开始的前端学习之旅</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2590</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;6&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            
+                <nav class="contents">
+<ul>
+<li>
+<ul>
+<li><a id="contents:函数的定义" href="#函数的定义">函数的定义</a></li>
+<li><a id="contents:作用域" href="#作用域">作用域</a></li>
+<li><a id="contents:函数的执行时机" href="#函数的执行时机">函数的执行时机</a></li>
+<li><a id="contents:参数" href="#参数">参数</a></li>
+<li><a id="contents:this" href="#this">this</a>
+<ul>
+<li><a id="contents:this-解决了什么问题" href="#this-解决了什么问题">this 解决了什么问题？</a></li>
+<li><a id="contents:绑定-this" href="#绑定-this">绑定 this</a></li>
+<li><a id="contents:箭头函数" href="#箭头函数">箭头函数</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav><div class="post-body"><p>本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。</p>
+
+<!--more-->
+
+<blockquote>
+<p>本文大部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
+</blockquote>
+
+<h2 id="函数的定义"><a href="#函数的定义" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:函数的定义" class="headings">函数的定义</a></h2>
+
+<p>函数的定义大致有以下几种：</p>
+
+<p>具名函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">函数名</span><span class="p">(</span><span class="nx">形参</span><span class="p">)</span> <span class="p">{</span> <span class="nx">函数体</span> <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>匿名函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">形参</span><span class="p">)</span> <span class="p">{</span> <span class="nx">函数体</span> <span class="p">}</span> <span class="c1">// 右边的部分也叫函数表达式
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>也可以用构造函数来进行定义</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>ES 6 新语法中引入了箭头函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">输入参数</span> <span class="p">=&gt;</span> <span class="nx">输出参数</span>
+<span class="p">(</span> <span class="nx">输入参数1</span><span class="p">,</span> <span class="nx">输入参数2</span> <span class="p">)</span>  <span class="p">=&gt;</span> <span class="nx">输出参数</span>
+<span class="p">(</span> <span class="nx">输入参数1</span><span class="p">,</span> <span class="nx">输入参数2</span> <span class="p">)</span>  <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">语句1</span>
+    <span class="nx">语句2</span>
+    <span class="k">return</span> <span class="nx">语句</span>
+<span class="p">}</span>
+<span class="nx">x</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span> <span class="p">}</span><span class="p">)</span> <span class="c1">// 如果要返回对象，就要加圆括号
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="作用域"><a href="#作用域" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:作用域" class="headings">作用域</a></h2>
+
+<p>Key Points:</p>
+
+<ul>
+<li><strong>全局变量与局部变量</strong>：在 <strong>顶级作用域</strong> 声明的变量是全局变量（比如 window 上的变量是全局变量）；其他的都是局部变量</li>
+<li><strong>就近原则</strong>：如果有多个作用域有同名变量 <code>a</code>，那么查找 <code>a</code> 的声明时，就向上取最近的作用域</li>
+<li><strong>闭包</strong>：函数用到了外部的变量，则 <strong>函数 + 这个变量 = 闭包</strong></li>
+<li><strong>作用域的确定与函数的执行无关（JavaScript 的作用域为静态作用域），但变量的值在函数执行的时候才能确定</strong></li>
+</ul>
+
+<p>下一段将会讲解一个关于作用域的比较麻烦的情况</p>
+
+<h2 id="函数的执行时机"><a href="#函数的执行时机" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:函数的执行时机" class="headings">函数的执行时机</a></h2>
+
+<blockquote>
+<p>函数中变量的值是在执行的时候确定的，而不是在定义的时候。</p>
+</blockquote>
+
+<p>我们再来看一下这一段代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// 创建一个全局变量 i
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>上面代码运行的结果是将会打印出 6 个 <code>6</code>，这是因为 setTimeout 有 <strong>超时延迟</strong> ，如果当前页面（或者操作系统/浏览器本身）<strong>被其他任务占用</strong>，则会产生延时，<strong>等到其他任务执行完之后，setTimeout 里面的函数才会被执行</strong>。</p>
+
+<p>也就是说，等到该执行 <code>console.log(i)</code> 这句话的时候，<code>i</code> 的值已经被因为循环而修改成了 <code>6</code>。</p>
+
+<p>为了让上面的代码能够打印出 <code>0 1 2 3 4 5</code>，我们可以这样改写代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样 <code>i</code> 的作用域就只在 <code>for 循环</code> 内部，同时每次循环的时候，都会创建一个 <strong>新的局部变量 <code>i</code></strong>。当然要注意的是，这并不是改变了函数的执行顺序，<code>console.log(i)</code> 这句话仍然是在 <code>for 循环</code> 执行完毕之后再执行的，我们可以做一个实验：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样写代码最后将会先打印 6 个 <code>'End'</code>，再打印 <code>0 1 2 3 4 5</code>。</p>
+
+<blockquote>
+<p>那么还没有别的解决方法呢？</p>
+</blockquote>
+
+<p>其实是有的，在 <code>let</code> 出现之前，我们仍然有其他的方法来达到想要的效果，下面就简单介绍一下其中的几种方法，他们的核心思路其实都是 <strong>把每一次的 <code>i</code> 都保存起来</strong>：</p>
+
+<p><strong>第一种方法</strong> 实际上跟刚才的新语法原理上差不多，只不过更容易理解一些，先上代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span>   <span class="c1">// 创建局部变量 j
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>原理非常简单，我们在 <code>for 循环</code> 内部创建了一个新的 <strong>具有块级作用域的局部变量 <code>j</code></strong>，每次循环的时候，都会创建一个新的 <code>j</code>，于是我们用 <code>j</code> 来保存了每次的 <code>i</code>，当然他也会先打印 6 个 <code>'End'</code>，再打印 <code>0 1 2 3 4 5</code>。</p>
+
+<p><strong>第二种方法</strong>，在 <code>let</code> 诞生之前，我们可以借助函数的传值来保存每一次的 <code>i</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 这里是 let 还是 var 都不要紧，都是创建了一个全局变量，就像最开始的情况一样
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>看看代码执行的流程：</p>
+
+<ol>
+<li>首先我们定义了一个中间函数 <code>doSetTimeout</code></li>
+<li>然后在 <code>for 循环</code> 中调用了这个函数</li>
+<li>每次循环调用的时候，就传入一个参数 <code>i</code> 给 <code>doSetTimeout</code>，</li>
+<li><code>doSetTimeout</code> 用形参 <code>i</code> 接收了这个传给他的参数，在这一步，实际上已经产生了 <strong>2 个 <code>i</code></strong>：
+
+<ul>
+<li>一个是 <strong>全局变量 <code>i</code></strong>（也就是 <code>for 循环</code> 中的 <code>i</code>）</li>
+<li>一个是 <code>doSetTimeout</code> 这个函数里面的 <strong>局部变量 <code>i</code></strong></li>
+</ul></li>
+<li>每一次循环就会调用 <code>doSetTimeout</code> 一次，同时 <code>doSetTimeout</code> 会给自己创建一个 <strong>不一样的、新的局部变量 <code>i</code></strong></li>
+<li>等循环结束后，<code>doSetTimeout</code> 再打印出所有的 <strong>局部变量 <code>i</code></strong></li>
+</ol>
+
+<blockquote>
+<p>注意这里仍然没有改变执行的顺序！最终的结果仍然是先打印出 6 个 <code>'End'</code>，再打印 <code>0 1 2 3 4 5</code>。</p>
+</blockquote>
+
+<p>当我们理解了上面的写法的时候，我们可以最后看一下在 <code>let</code> 还没有出来的时代，是怎么借助函数创建 <strong>块级局部变量</strong> 的，也就是我们的 <strong>第三种写法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span>   <span class="c1">// 创建局部变量 j
+</span><span class="c1"></span>        <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
+        <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>这里，我们使用了 <strong>立即执行函数</strong>：<code>(function(...){...})()</code>，这种写法表示我声明一个函数，并且马上执行他。当执行结束之后，因为这个函数没有名字，也没有将地址赋值给某个变量，因此我们没办法再从别的地方再调用他，相当于是“一次性函数”。</p>
+
+<p><code>var</code> 的作用域是函数级作用域，因此每个函数里面的 <code>j</code> 都是不一样的，我们再一次聪明地用 <strong>局部变量</strong> 保存了每一次 <strong>全局变量</strong> 的变化！</p>
+
+<blockquote>
+<p>总结：这几种写法都是为了利用 <strong>局部作用域</strong> ——他们有的利用了 ES 6 为我们提供的 <strong><code>let</code></strong>，有的使用了 <strong>函数</strong> ——来保存每一次 <code>for 循环</code> 中 <strong>全局变量</strong> 不同的值，<strong>但是，他们均不会改变执行的顺序！</strong></p>
+</blockquote>
+
+<h2 id="参数"><a href="#参数" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:参数" class="headings">参数</a></h2>
+
+<p>Key Points：</p>
+
+<ul>
+<li><strong>参数传递</strong>：简单类型复制值，对象复制地址</li>
+<li><strong>形参</strong>：实际上就函数中一个<strong>新变量的声明</strong>：<code>var x = arguments[0]</code></li>
+<li><strong><code>arguments</code></strong>：调用函数就会传入 <code>arguments</code>，他实际上是一个包含传入参数的 <strong>伪数组</strong></li>
+</ul>
+
+<p>形参传递可多可少，看下面一段代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1">// 此时若执行 add(1, 2)，将会返回 3
+</span><span class="c1"></span>
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+<span class="p">}</span>
+<span class="c1">// 此时若执行 add(1, 2)，将会返回 3
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="this"><a href="#this" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:this" class="headings">this</a></h2>
+
+<p>Key Points:</p>
+
+<ul>
+<li>如果不给定任何条件，<code>this</code> 为 <code>window</code></li>
+<li>如果想要指定 <code>this</code>，需要使用 <code>fn.call(..., 1, 2, 3)</code>，如果传入的 <code>this</code> 不是对象，则将会默认会被封装成对象</li>
+</ul>
+
+<h3 id="this-解决了什么问题"><a href="#this-解决了什么问题" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:this-解决了什么问题" class="headings">this 解决了什么问题？</a></h3>
+
+<blockquote>
+<p>this 的存在是为了解决函数想要获取一个对象的引用的问题</p>
+</blockquote>
+
+<p>直接看 this 是怎么解决这个问题的吧：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;harvey&#39;</span><span class="p">,</span>
+        <span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span>  <span class="c1">// 在这句话中，系统会自动地把 person 作为 this 传给 sayHi，这样就解决了 sayHi 想要用到某个对象的问题了
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>因为平时都是 JavaScript 自动帮我们传递了 <code>this</code>，所以我们可能对其中发生了什么并不了解。</p>
+
+<p>在这里，我们把常用的函数调用的方法称为 <code>this</code> 的 <strong>隐式传递</strong>，与之相对应的则是使用 <code>call</code> 或者 <code>apply</code> 的 <strong>显式传递</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span>              <span class="c1">// 隐式传递
+</span><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>   <span class="c1">// 显式传递
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>当然我们还可以再后面加参数：<code>person.sayHi.call(person, 1, 2, 3)</code>，使用 <code>apply</code> 和 <code>call</code> 的不同就在于 <code>apply</code> 后面的参数要用中括号括起来，因为他传递的是数组。</p>
+
+<h3 id="绑定-this"><a href="#绑定-this" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:绑定-this" class="headings">绑定 this</a></h3>
+
+<p>使用 <code>bind</code> 可以绑定 <code>this</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">f1</span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">f3</span> <span class="o">=</span> <span class="nx">f1</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;hai&#39;</span><span class="p">}</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span> <span class="p">)</span>  <span class="c1">// 相当于让 f3 的 this 和 arguments 永远等于 bind 的内容
+</span><span class="c1"></span><span class="nx">f3</span><span class="p">(</span><span class="p">)</span>    <span class="c1">// 等价于 f1.call( {name:&#39;hai&#39;}, &#39;hi&#39; )，
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="箭头函数"><a href="#箭头函数" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:箭头函数" class="headings">箭头函数</a></h3>
+
+<p>箭头函数没有 <code>arguments</code> 和 <code>this</code>，箭头函数里面的 <code>this</code> 就是外面的 <code>this</code>，就算加 <code>call</code> 也没有</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>                   <span class="c1">// window
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<span class="nx">fn</span><span class="p">(</span><span class="p">)</span>                                <span class="c1">// window
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;hai&#39;</span><span class="p">}</span> <span class="p">)</span>             <span class="c1">// window
+</span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-28 11:35:42 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-28</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-24-this/" class="related-link">再看 this</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-22-mvc/" class="related-link">浅析 MVC</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-21-inheritance/" class="related-link">再看 JavaScript 继承</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-17-usagi-piske/" class="related-link">小项目：会动的代码 - Usagi &amp; Piske</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-08-jquery/" class="related-link">jQuery 初见</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/javascript/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>JavaScript</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>前端</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%85%A5%E9%97%A8/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>入门</a>
+                
+            
+        </div>
+    
+
+
+        
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/post/2019-12-08-jquery/" rel="prev">< jQuery 初见</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/post/2019-12-02-js-4/" rel="next">JavaScript 入门 IV：数组 ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner"><div class="site-info">©&nbsp;2019–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Harvey Zhang</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
+
+            
+        </div>
+    </footer>
+
+        </div>
+        <script src="/js/meme.min.29d7c0ac6f58249eb9e1d6e5085f6da35af90d1dd45b21ae2082bcd9afa4101e.js" integrity="sha256-KdfArG9YJJ654dblCF9to1r5DR3UWyGuIIK82a+kEB4=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            }
+        });
+    </script>
+
+    
+
+
+
+
+    <script>
+    if (typeof MathJax === 'undefined') {
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mhchem']
+            },
+            
+            tex: {
+                inlineMath: {'[+]': [['$', '$']]},
+                tags: 'ams',
+                packages: {'[+]': ['mhchem']}
+            }
+        };
+        (function () {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    } else {
+        MathJax.texReset();
+        MathJax.typeset();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

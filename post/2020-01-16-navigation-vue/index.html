@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+            }
+            function changeModeMeta() {
+                document.documentElement.setAttribute('data-theme', arguments[0]);
+                if (arguments[0] === "dark") {
+                    changeThemeColor("#1c1c21");
+                } else {
+                    changeThemeColor("#fff");
+                }
+            }
+            function changeThemeColor() {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', arguments[0]);
+            }
+        </script>
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.63.2" />
+
+    <title>小项目：前端导航页面 - 维生素导航·Vue | Hai&#39;s Teatime</title>
+
+    <link rel="stylesheet" href="/css/meme.min.cbc9653abca27a53a6c4f4cdd4d458af03748a097f11c12004350cdf883f5414.css" integrity="sha256-y8llOryielOmxPTN1NRYrwN0igl/EcEgBDUM34g/VBQ=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="Harvey Zhang" />
+    
+    
+    <meta name="description" content="初学 Vue，将第一个项目——用 jQuery 和原生 CSS 所做的一个导航页面——给 Renew 了一下。点击可以查看 代码仓库 和 效果预览。" />
+    <meta name="keywords" content="从小白开始的前端学习之旅, vue, 前端, 入门, 项目" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hai&#39;s Teatime" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Hai&#39;s Teatime" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="http://hais-teatime.com/post/2020-01-16-navigation-vue/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-01-16T17:14:39+08:00",
+        "dateModified": "2020-01-28T21:15:51+08:00",
+        "url": "http://hais-teatime.com/post/2020-01-16-navigation-vue/",
+        "headline": "小项目：前端导航页面 - 维生素导航·Vue",
+        "description": "初学 Vue，将第一个项目——用 jQuery 和原生 CSS 所做的一个导航页面——给 Renew 了一下。点击可以查看 代码仓库 和 效果预览。",
+        "keywords": "从小白开始的前端学习之旅, vue, 前端, 入门, 项目",
+        "inLanguage" : "zh-CN",
+        "articleSection": "post",
+        "wordCount":  1855 ,
+        "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "description": "我们所生活的日常，也许就是由一个个奇迹堆叠而成的",
+            "email": "Hyuain97@163.com",
+            "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
+            "url": "http://hais-teatime.com/",
+            "name": "Harvey Zhang"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Hai's Teatime",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://hais-teatime.com/icons/apple-touch-icon.png"
+            },
+            "url": "http://hais-teatime.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "http://hais-teatime.com/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="小项目：前端导航页面 - 维生素导航·Vue" />
+<meta property="og:description" content="初学 Vue，将第一个项目——用 jQuery 和原生 CSS 所做的一个导航页面——给 Renew 了一下。点击可以查看 代码仓库 和 效果预览。" />
+<meta property="og:url" content="http://hais-teatime.com/post/2020-01-16-navigation-vue/" />
+<meta property="og:site_name" content="Hai&#39;s Teatime" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="http://hais-teatime.com/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-01-16T17:14:39+08:00" />
+    <meta property="article:modified_time" content="2020-01-28T21:15:51+08:00" />
+    
+    <meta property="article:section" content="post" />
+    <meta property="article:tag" content="从小白开始的前端学习之旅, vue, 前端, 入门, 项目" />
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">Hai&#39;s Teatime</a>
+            
+        </div>
+    </header>
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/post/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+    
+        
+            
+        
+        <div id="theme-toggle" onclick="modeSwitcher()">🌞</div>
+    
+
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="post">
+
+            <h1 class="post-title">小项目：前端导航页面 - 维生素导航·Vue</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-01-16T17:14:39+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.1.16</time>
+    
+    
+        
+        <time datetime="2020-01-28T21:15:51+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.1.28</time>
+    
+    
+    
+        
+        
+        
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" class="category-link">从小白开始的前端学习之旅</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1855</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            
+                <nav class="contents">
+<ul>
+<li><a id="contents:功能介绍" href="#功能介绍">功能介绍</a></li>
+<li><a id="contents:在项目中学习" href="#在项目中学习">在项目中学习</a>
+<ul>
+<li><a id="contents:搜索框" href="#搜索框">搜索框</a>
+<ul>
+<li><a id="contents:1-如何实现三个不同搜索引擎的切换" href="#1-如何实现三个不同搜索引擎的切换">1. 如何实现三个不同搜索引擎的切换？</a></li>
+</ul></li>
+<li><a id="contents:网页列表" href="#网页列表">网页列表</a>
+<ul>
+<li><a id="contents:1-如何实现移动端的长按效果" href="#1-如何实现移动端的长按效果">1. 如何实现移动端的长按效果？</a></li>
+<li><a id="contents:2-如何获取网页的-icon" href="#2-如何获取网页的-icon">2. 如何获取网页的 ICON ？</a></li>
+</ul></li>
+<li><a id="contents:添加网页对话框" href="#添加网页对话框">添加网页对话框</a>
+<ul>
+<li><a id="contents:1-如何呼出对话框" href="#1-如何呼出对话框">1. 如何呼出对话框？</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav><div class="post-body"><p>初学 Vue，将第一个项目——用 jQuery 和原生 CSS 所做的一个导航页面——给 Renew 了一下。点击可以查看 <a href="https://github.com/Hyuain/navigation-vue" target="_blank">代码仓库</a> 和 <a href="http://hais-teatime.com/navigation-vue" target="_blank">效果预览</a>。</p>
+
+<!--more-->
+
+<h1 id="功能介绍"><a href="#功能介绍" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:功能介绍" class="headings">功能介绍</a></h1>
+
+<p>目前维生素导航主要分为两个部分：<strong>搜索框</strong> 和 <strong>网页导航</strong>。</p>
+
+<p>在上方的搜索框中输入文字可以使用对应的搜索引擎进行搜索，目前内置三款搜索引擎：Google、百度、Bing，默认为 Google。</p>
+
+<p>点击下方的网页收藏可以进入到对应的页面，目前已经内置了一些默认的页面。</p>
+
+<p>鼠标浮动到图标上会出现删除按钮，点击可以将网页删除；移动设备长按会弹出删除框，点击中间的红色小叉叉也可以删除网页。</p>
+
+<p>点击 <strong>'+'</strong> 会弹出新增网页的对话框，可以输入网页的名称和 URL；若没有输入名称，则将默认使用域名作为名称。然后会自动请求图标，若图标请求失败，将会使用名称的第一个字符作为网页的图标。</p>
+
+<p>网站的信息是存储在 LocalStorage 中的，所以清除历史记录的操作会清空之前添加的网站。</p>
+
+<h1 id="在项目中学习"><a href="#在项目中学习" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:在项目中学习" class="headings">在项目中学习</a></h1>
+
+<h2 id="搜索框"><a href="#搜索框" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:搜索框" class="headings">搜索框</a></h2>
+
+<h3 id="1-如何实现三个不同搜索引擎的切换"><a href="#1-如何实现三个不同搜索引擎的切换" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-如何实现三个不同搜索引擎的切换" class="headings">1. 如何实现三个不同搜索引擎的切换？</a></h3>
+
+<p>首先想到的是通过 <code>v-if</code> 来实现，设置一个变量 <code>searchEngine</code>，点到对应的搜索引擎的时候就将 <code>searchEngine</code> 变为对应的值。</p>
+
+<p>那么怎样知道被点击的是哪一个图标呢？好在我们的图标比较少，在 <code>@click</code> 的点击事件中，我们可以在 <code>$event</code> 之后再传入一个参数，用来表示搜索引擎即可。</p>
+
+<p>这样最简单的切换效果就实现了。</p>
+
+<p>但是我们想再加一点过渡效果，Vue 为我们准备了在 <code>v-if</code> 切换出现和消失的时候可以使用的过渡 API。但是简单的使用之后发现一个问题，由于点击切换标签之间实际上是无间隔的，<code>v-if</code> 值为 <code>false</code> 之后就会马上消失，值为 <code>true</code> 的时候又会马上出现，但是动画是需要时间的（进入和退出都有时间），这就导致页面上可能同时出现好几个 LOGO，会变得非常混乱；同时因为 LOGO 在 DOM 中是有上下顺序的，所以按照 DOM 结构从上到下点是正常的，但是如果倒着点就会出现 BUG。</p>
+
+<p>因此，我设计了这样的逻辑：</p>
+
+<p>当我们点击切换搜索引擎时——</p>
+
+<ol>
+<li>立即清除之前的计时器；</li>
+<li>立即置空 <code>searchEngine</code>（原来的 LOGO 退出 DOM）；</li>
+
+<li><p>延迟 <code>400ms</code> 为 <code>searchEngine</code> 赋新值（新的 LOGO 进入 DOM），并记下计时器的 <code>timerID</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">changeSearchEngine</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">clearTimeout</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">timer</span><span class="p">)</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">searchEngine</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">searchEngine</span> <span class="o">=</span> <span class="nx">value</span>
+  <span class="p">}</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h2 id="网页列表"><a href="#网页列表" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:网页列表" class="headings">网页列表</a></h2>
+
+<h3 id="1-如何实现移动端的长按效果"><a href="#1-如何实现移动端的长按效果" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-如何实现移动端的长按效果" class="headings">1. 如何实现移动端的长按效果？</a></h3>
+
+<p>由于网页组件本身就已经比较大了，而且为了通过练习加深对 Vue 的熟悉，我选择将长按效果封装成一个指令来实现，在这里我使用的是全局组件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// longpress.js
+</span><span class="c1"></span>    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+      <span class="nx">install</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">time</span><span class="o">:</span> <span class="mi">1000</span>
+      <span class="p">}</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Vue</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;longpress&#39;</span><span class="p">,</span> <span class="p">{</span>
+          <span class="nx">bind</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">,</span> <span class="nx">vnode</span><span class="p">,</span> <span class="nx">oldVnode</span><span class="p">)</span> <span class="p">{</span>
+          <span class="p">}</span>
+        <span class="p">}</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="c1">// main.js
+</span><span class="c1"></span>    <span class="kr">import</span> <span class="nx">LongPress</span> <span class="nx">from</span> <span class="s1">&#39;...&#39;</span>
+    <span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">LongPress</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">time</span><span class="o">:</span> <span class="mi">350</span>
+    <span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--</span><span class="c"> MyComponent.vue</span><span class="c">--&gt;</span>
+    <span class="nt">&lt;template</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">v-longpress=</span><span class="s">&#34;doSomething&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/template&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>指令的钩子函数包含 <code>el</code>、<code>binding</code>、<code>vnode</code>、<code>oldVnode</code> 这四个参数，指令 <code>v-longpress</code> 的主要部分将会用到 <code>el</code> 和 <code>binding</code>：通过 <code>el</code> 我可以获取到指令绑定的元素，也就是现在正在被长按的元素；通过 <code>binding.value</code> 我可以获取到指令的绑定值，这里 Vue 会自动识别我的绑定值，我们可以让他绑定值为一个回调函数，在指令中来调用这个函数。</p>
+
+<p>在移动端，我们主要依靠 <code>touchstart</code> <code>touchend</code> <code>touchmove</code> <code>touchcancel</code> 来监听触摸状态。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// pressTimer 变量用来存放计时器的 ID
+</span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">pressTimer</span> <span class="o">=</span> <span class="kc">null</span>
+
+<span class="c1">// longPress 变量用来标记是否是长按
+</span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">longPress</span> <span class="o">=</span> <span class="kc">false</span>
+
+<span class="c1">// handler 函数用来执行回调函数
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">handler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">el</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="c1">// start 用来启动长按事件：options.time 的时间之后触发 handler
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">(</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;click&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">pressTimer</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">pressTimer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">handler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+          <span class="nx">longPress</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="p">}</span><span class="p">,</span> <span class="nx">options</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="c1">// cancel 用来取消长按事件：清除计时器
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cancel</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">pressTimer</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">pressTimer</span><span class="p">)</span>
+        <span class="nx">pressTimer</span> <span class="o">=</span> <span class="kc">null</span>
+        <span class="nx">longPress</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="c1">// 绑定事件
+</span><span class="c1"></span><span class="c1">// touchstart 触发长按
+</span><span class="c1"></span>    <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="nx">start</span><span class="p">)</span>
+<span class="c1">// touchend 时进行判断，是长按还是短按，短按则触发 click 事件
+</span><span class="c1"></span>    <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchend&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">pressTimer</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">longPress</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">el</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="p">)</span>
+     <span class="p">}</span>
+      <span class="nx">cancel</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">)</span>
+<span class="c1">// touchcancel 和 touchmove 时取消长按事件
+</span><span class="c1"></span>    <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchcancel&#39;</span><span class="p">,</span><span class="nx">cancel</span><span class="p">)</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="nx">cancel</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-如何获取网页的-icon"><a href="#2-如何获取网页的-icon" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-如何获取网页的-icon" class="headings">2. 如何获取网页的 ICON ？</a></h3>
+
+<p>这一步实际上是在添加网页的对话框组件中实现的，在输入的 URL 进行处理之后，将得到 <code>https://domain</code>，先直接在其后面加上 <code>/favicon.ico</code> 作为其 ICON。在这之前其实也尝试了一些网络上的 API，但是效果其实都不太好，跟直接用 <code>/favicon.ico</code> 获取到的差别不大，并且最终图片也不是很大，不需要清晰度特别高。</p>
+
+<p>然后在网页组件列表组件中直接作为 <code>&lt;img/&gt;</code> 的 <code>src</code> 尝试获取，若失败再通过 <code>@error=&quot;handelIcoError&quot;</code> 来调用函数进行处理，替换成文本。</p>
+
+<h2 id="添加网页对话框"><a href="#添加网页对话框" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:添加网页对话框" class="headings">添加网页对话框</a></h2>
+
+<h3 id="1-如何呼出对话框"><a href="#1-如何呼出对话框" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-如何呼出对话框" class="headings">1. 如何呼出对话框？</a></h3>
+
+<p>为了减小组件的逻辑复杂性，我并没有将对话框组件放在网页列表组件之中，而是设计成了第三个平行的组件，当网页列表中的 <strong>'+'</strong> 被点击时，网页列表通过 <code>eventBus</code> 将 <code>addFormOpen</code> 置为 <code>true</code>，从而打开对话框。</p>
+
+<p>我是这样使用 <code>eventBus</code> 的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// App.vue
+</span><span class="c1"></span>    <span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>  
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+      <span class="nx">data</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+          <span class="nx">eventBus</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+            <span class="nx">data</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">addFormOpen</span><span class="o">:</span> <span class="kc">false</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span><span class="p">)</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">provide</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+          <span class="nx">eventBus</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">eventBus</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="c1">// MyComponent.vue
+</span><span class="c1"></span>    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+      <span class="nx">inject</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;eventBus&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>当对话框确认提交时，他将 <code>addFormOpen</code> 置为 <code>false</code>，并且将信息通过 <code>eventBus</code> 传给网页列表组件。</p>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-28 21:15:51 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-28</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-27-vue-4/" class="related-link">Vue 第四课：模板语法</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-25-vue-3/" class="related-link">Vue 第三课：computed 和 watch</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-25-vue-2/" class="related-link">Vue 第二课：data 与 响应式</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-22-vue-1/" class="related-link">Vue 第一课：安装</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2019-12-17-usagi-piske/" class="related-link">小项目：会动的代码 - Usagi &amp; Piske</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/vue/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Vue</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>前端</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%85%A5%E9%97%A8/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>入门</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>项目</a>
+                
+            
+        </div>
+    
+
+
+        
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/post/2019-12-27-vue-4/" rel="next">Vue 第四课：模板语法 ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner"><div class="site-info">©&nbsp;2019–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Harvey Zhang</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a></div>
+
+            
+        </div>
+    </footer>
+
+        </div>
+        <script src="/js/meme.min.29d7c0ac6f58249eb9e1d6e5085f6da35af90d1dd45b21ae2082bcd9afa4101e.js" integrity="sha256-KdfArG9YJJ654dblCF9to1r5DR3UWyGuIIK82a+kEB4=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            }
+        });
+    </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
