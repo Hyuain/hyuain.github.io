@@ -45,7 +45,7 @@
 
     <meta name="generator" content="Hugo 0.63.2" />
 
-    <title>Vue 第二课：data 与 响应式 | Hai&#39;s Teatime</title>
+    <title>Vue 中 computed 和 watch 的区别 | Hai&#39;s Teatime</title>
 
     <link rel="stylesheet" href="/css/meme.min.cbc9653abca27a53a6c4f4cdd4d458af03748a097f11c12004350cdf883f5414.css" integrity="sha256-y8llOryielOmxPTN1NRYrwN0igl/EcEgBDUM34g/VBQ=" data-instant-track />
 
@@ -54,7 +54,7 @@
     <meta name="author" content="Harvey Zhang" />
     
     
-    <meta name="description" content="聊聊 options 中的 data。" />
+    <meta name="description" content="聊聊 options 中的 computed 和 watch。" />
     <meta name="keywords" content="从小白开始的前端学习之旅, vue, 前端, 入门" />
     
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -83,16 +83,16 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2019-12-25T16:30:24+08:00",
-        "dateModified": "2020-01-28T11:35:42+08:00",
+        "datePublished": "2019-12-25T18:32:33+08:00",
+        "dateModified": "2020-01-31T19:59:44+08:00",
         "url": "http://hais-teatime.com/post/2019-12-25-vue-2/",
-        "headline": "Vue 第二课：data 与 响应式",
-        "description": "聊聊 options 中的 data。",
+        "headline": "Vue 中 computed 和 watch 的区别",
+        "description": "聊聊 options 中的 computed 和 watch。",
         "keywords": "从小白开始的前端学习之旅, vue, 前端, 入门",
         "inLanguage" : "zh-CN",
         "articleSection": "post",
-        "wordCount":  1499 ,
-        "image": ["https://cn.vuejs.org/images/data.png"],
+        "wordCount":  1208 ,
+        "image": "http://hais-teatime.com/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
             "description": "我们所生活的日常，也许就是由一个个奇迹堆叠而成的",
@@ -122,8 +122,7 @@
 
 
 
-<meta name="twitter:card" content="summary_large_image" />
-
+<meta name="twitter:card" content="summary" />
 
 
     
@@ -133,14 +132,14 @@
 
 
 
-<meta property="og:title" content="Vue 第二课：data 与 响应式" />
-<meta property="og:description" content="聊聊 options 中的 data。" />
+<meta property="og:title" content="Vue 中 computed 和 watch 的区别" />
+<meta property="og:description" content="聊聊 options 中的 computed 和 watch。" />
 <meta property="og:url" content="http://hais-teatime.com/post/2019-12-25-vue-2/" />
 <meta property="og:site_name" content="Hai&#39;s Teatime" />
-<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://cn.vuejs.org/images/data.png" />
-<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2019-12-25T16:30:24+08:00" />
-    <meta property="article:modified_time" content="2020-01-28T11:35:42+08:00" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="http://hais-teatime.com/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-12-25T18:32:33+08:00" />
+    <meta property="article:modified_time" content="2020-01-31T19:59:44+08:00" />
     
     <meta property="article:section" content="post" />
     <meta property="article:tag" content="从小白开始的前端学习之旅, vue, 前端, 入门" />
@@ -201,7 +200,7 @@
 
         <article class="content post" data-align="justify" data-type="post">
 
-            <h1 class="post-title">Vue 第二课：data 与 响应式</h1>
+            <h1 class="post-title">Vue 中 computed 和 watch 的区别</h1>
 
             
 
@@ -215,11 +214,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2019-12-25T16:30:24+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.25</time>
+        <time datetime="2019-12-25T18:32:33+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.25</time>
     
     
         
-        <time datetime="2020-01-28T11:35:42+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.1.28</time>
+        <time datetime="2020-01-31T19:59:44+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.1.31</time>
     
     
     
@@ -234,7 +233,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1499</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1208</span>
     
     
         
@@ -250,15 +249,11 @@
 <li>
 <ul>
 <li><a id="contents:key-points" href="#key-points">Key Points</a></li>
-<li><a id="contents:getter-和-setter" href="#getter-和-setter">getter 和 setter</a></li>
-<li><a id="contents:object-defineproperty" href="#object-defineproperty">Object.defineProperty</a></li>
-<li><a id="contents:vue-中是怎么做的" href="#vue-中是怎么做的">Vue 中是怎么做的</a>
-<ul>
-<li><a id="contents:问题" href="#问题">问题</a></li>
-</ul></li>
+<li><a id="contents:computed" href="#computed">computed</a></li>
+<li><a id="contents:watch" href="#watch">watch</a></li>
 </ul></li>
 </ul>
-</nav><div class="post-body"><p>聊聊 options 中的 data。</p>
+</nav><div class="post-body"><p>聊聊 options 中的 computed 和 watch。</p>
 
 <!--more-->
 
@@ -267,169 +262,24 @@
 <h2 id="key-points"><a href="#key-points" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:key-points" class="headings">Key Points</a></h2>
 
 <ol>
-<li>Vue 的 data 是响应式的，如果改变 data，那么 UI 就会刷新</li>
-<li>Vue 2 通过 Object.defineProperty 实现数据响应式</li>
-<li>Vue 2 会将原来的属性变为 getter-setter 属性，并创建一个代理来操纵数据</li>
+<li>computed 是用来计算一个值的，跟 getter-setter 用法差不多，调用的时候不需要加括号</li>
+<li>computed 有缓存，如果依赖的值没有改变，那么他也不会进行重新计算</li>
+<li>watch 是异步的，必要时使用 <code>Vue.nextTick(callback)</code></li>
+<li>watch 有 immediate 和 deep 这两个选项</li>
+<li>watch 侦听变化的规则是 <code>===</code> 规则，简单类型看值，对象看地址</li>
 </ol>
 
 <hr />
 
 <blockquote>
 <p>可参考：
-<a href="https://cn.vuejs.org/v2/api/#data" target="_blank">Vue 文档 - data</a>；
-<a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank">Vue 文档 - 深入解响应式原理</a>；
-<a href="https://cn.vuejs.org/v2/guide/list.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" target="_blank">Vue 文档 - 列表渲染</a></p>
+<a href="https://cn.vuejs.org/v2/api/#computed" target="_blank">Vue 文档 - computed</a>；
+<a href="https://cn.vuejs.org/v2/api/#watch" target="_blank">Vue 文档 - watch</a></p>
 </blockquote>
 
-<h2 id="getter-和-setter"><a href="#getter-和-setter" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:getter-和-setter" class="headings">getter 和 setter</a></h2>
+<h2 id="computed"><a href="#computed" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:computed" class="headings">computed</a></h2>
 
-<p>由于 getter 和 setter 是 Vue 数据响应式中运用到的非常重要的一环，我们得先把这两个东西搞清楚。</p>
-
-<p>通过下面这段代码，我们可以很清楚地了解到 get 和 set 其实就是两个函数：get 返回了一个拼凑的字符串，set 则修改了 person 内部的 firstName 和 lastName 两个真实存在的属性——但是这两个函数的定义和调用稍稍有点特别。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Harvey&#39;</span><span class="p">,</span>
-  <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Zhang&#39;</span><span class="p">,</span>
-  <span class="nx">get</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// getter
-</span><span class="c1"></span>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter
-</span><span class="c1"></span>    <span class="nx">newName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-  <span class="p">}</span><span class="p">,</span> 
-  <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;name： &#39;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// 这就是 getter，我们在调用的时候不需要再使用 obj.name()
-</span><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Kate Wu&#39;</span> <span class="c1">// 这就是 setter，用 = &#39;xxx&#39; 触发 set 函数
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>我们可以看到 <code>person</code> 中的 <code>name</code> 表示得有点特别，事实上他并不是一个真实存在的属性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="p">(</span><span class="p">...</span><span class="p">)</span><span class="p">,</span> <span class="c1">// name 不是一个真实的属性，但我们确实可以读写 name
-</span><span class="c1"></span>  <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Kate&#34;</span><span class="p">,</span>
-  <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Wu&#34;</span><span class="p">,</span>
-  <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
-  <span class="nx">get</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
-  <span class="nx">set</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="object-defineproperty"><a href="#object-defineproperty" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:object-defineproperty" class="headings">Object.defineProperty</a></h2>
-
-<p>我们可以使用 <code>Object.defineProperty()</code> 方法来给对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象，详细的用法可以参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty]" target="_blank">MDN 文档</a>，我们这里只介绍影响后续理解的部分。</p>
-
-<p>基本语法是：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">  <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">descriptor</span><span class="p">)</span>
-<span class="c1">// Object.defineProperty
-</span><span class="c1"></span><span class="c1">// (要在上面定义属性的对象, 要定义或修改的属性的名称, 将被定义或修改的属性描述符)
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>这里需要介绍一个概念—— <strong>描述符</strong>。目前我们的描述符有两种：<strong>数据描述符</strong> 和 <strong>存取描述符</strong>。</p>
-
-<ul>
-<li><p><strong>数据描述符</strong> 是一个具有值的属性，该值可能是可写的，也可能不是可写的——也就是类似于我们常见的那种普通属性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-
-<span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-<span class="nx">value</span><span class="o">:</span><span class="mi">0</span>
-<span class="c1">// 数据描述符，这里的意思是：给 data 定义一个新属性 n，他的值为 0
-</span><span class="c1"></span><span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p><strong>存取描述符</strong> 是由 getter-setter 函数对描述的属性——也就是上文说的并不真实存在的属性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-
-<span class="nx">data</span><span class="p">.</span><span class="nx">_n</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// _n 用来存实际上不存在的 n 的值
-</span><span class="c1"></span>
-<span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-<span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="c1">// getter-setter 函数是存取描述符，可以用来在存取的时候做校验
-</span><span class="c1"></span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_n</span>
-<span class="p">}</span><span class="p">,</span>
-<span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">_n</span> <span class="o">=</span> <span class="nx">value</span>
-<span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<p>至此，我们学会了使用 getter-setter 来为函数新增属性，但是我们可能还需要借助代理，并且监听原来的属性来防止直接对 <code>this._n</code> 进行篡改。</p>
+<p><code>computed</code> 其实跟我们之前讨论的 getter-setter 属性在形式上比较像，下面代码中的 <code>displayName</code> 就是计算属性。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -461,99 +311,174 @@
 </span><span class="lnt">27
 </span><span class="lnt">28
 </span><span class="lnt">29
+</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{</span><span class="nx">n</span><span class="o">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">myData</span> <span class="p">}</span><span class="p">)</span> <span class="c1">// data 即为 myData 代理
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 解构赋值，data 即为 myData，即为 {n: 0}
-</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 存下 n 原来的值
-</span><span class="c1"></span>  <span class="k">delete</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 删除掉 data 中原来的 n，这句可以不用写，因为下面声明新的虚拟 n 的时候会删掉之前的
-</span><span class="c1"></span>  <span class="c1">// 声明一个虚拟的 n，放到 myData 上面，防止直接修改 myData（监听 myData）
-</span><span class="c1"></span>  <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">return</span> <span class="nx">value</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">set</span><span class="p">(</span><span class="nx">newValue</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">newValue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-      <span class="nx">value</span> <span class="o">=</span> <span class="nx">newValue</span>
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">user</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;harvey@example.com&#34;</span><span class="p">,</span>
+      <span class="nx">nickname</span><span class="o">:</span> <span class="s2">&#34;hai&#34;</span><span class="p">,</span>
+      <span class="nx">phone</span><span class="o">:</span> <span class="s1">&#39;1234567890&#39;</span><span class="p">,</span>
     <span class="p">}</span>
-  <span class="p">}</span><span class="p">)</span>
-  <span class="c1">// 声明代理
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-  <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span>
+  <span class="p">}</span><span class="p">,</span>
+  <span class="nx">computed</span><span class="o">:</span><span class="p">{</span> <span class="c1">// 能够将计算而来的属性作为属性
+</span><span class="c1"></span>    <span class="nx">displayName</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="c1">// 只读
+</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span>
+      <span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">phone</span>
+    <span class="p">,</span>
+    <span class="c1">// 或者写成：
+</span><span class="c1"></span>    <span class="nx">displayName</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 存取
+</span><span class="c1"></span>      <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span>
+        <span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">phone</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">=</span> <span class="nx">value</span>
+      <span class="p">}</span>
     <span class="p">}</span>
-    <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="o">=</span> <span class="nx">value</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">)</span>
-  <span class="k">return</span> <span class="nx">obj</span> <span class="c1">// obj 就是代理
-</span><span class="c1"></span><span class="p">}</span>
+  <span class="p">}</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span><span class="sb">`</span><span class="sb">
+</span><span class="sb">    &lt;div&gt;
+</span><span class="sb">      {{displayName}}
+</span><span class="sb">    &lt;/div&gt;
+</span><span class="sb">  </span><span class="sb">`</span>
+<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="vue-中是怎么做的"><a href="#vue-中是怎么做的" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:vue-中是怎么做的" class="headings">Vue 中是怎么做的</a></h2>
+<p>这里要注意的是，<code>computed</code> 是有缓存的，如果 <code>computed</code> 依赖的属性没有变化，那么就不会重新计算；而 getter-setter 默认是不会做缓存的。</p>
+
+<h2 id="watch"><a href="#watch" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:watch" class="headings">watch</a></h2>
+
+<p>简单来说，watch 就是观察到变化之后就执行一段函数。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">myData</span> <span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>从原理上讲其实是差不多的，Vue 拿到我们传入的 myData 之后，做了这么几件事情：</p>
-
-<ol>
-<li>让 <code>vm</code> 成为 <code>myData</code> 的代理，以后我们用 <code>vm.xxx</code> 或者 <code>this.xxx</code> 就可以直接操作原来在 <code>myData</code> 中的数据了；</li>
-<li>删除掉 <code>myData</code> 上原来的所有属性，并改成 getter-setter 属性，防止 myData 上面的属性被越过 <code>vm</code> 直接篡改；</li>
-<li>这么做的好处是可以让 <code>vm</code> 知道属性变化之后触发 <code>render</code></li>
-</ol>
-
-<p><img src="https://cn.vuejs.org/images/data.png" alt="Vue-data" /></p>
-
-<h3 id="问题"><a href="#问题" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:问题" class="headings">问题</a></h3>
-
-<p>事实上因为 <code>Object.defineProperty()</code> 其实是有一些问题的，因此 Vue 中也会存在这些问题，尽管 Vue 已经对他们进行了处理，但仍然应当注意。</p>
-
-<ul>
-<li><p>如果最开始属性不存在，后来想要加属性，那么新加的属性就没有被 getter-setter 化，因此就不具备响应式。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-<span class="nx">a</span><span class="o">:</span> <span class="mi">1</span>
-<span class="p">}</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nx">d</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="nx">e</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">f</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">g</span><span class="o">:</span> <span class="mi">5</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span><span class="p">,</span>
+  <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">a</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;new: %s, old: %s&#39;</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">b</span><span class="o">:</span> <span class="s1">&#39;someMethod&#39;</span><span class="p">,</span>
+    <span class="nx">c</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
+      <span class="nx">deep</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 这个可以使得监听到内部数据的变化，如果里面变了，那么就触发
+</span><span class="c1"></span>    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">d</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">handler</span><span class="o">:</span> <span class="s1">&#39;someMethod&#39;</span><span class="p">,</span> <span class="c1">// 使用什么方法
+</span><span class="c1"></span>      <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 在侦听开始之后被立即调用
+</span><span class="c1"></span>    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">e</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s1">&#39;handle1&#39;</span><span class="p">,</span>
+      <span class="kd">function</span> <span class="nx">handle2</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span> <span class="nx">handle3</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
+        <span class="cm">/* ... */</span>
+      <span class="p">}</span>
+    <span class="p">]</span><span class="p">,</span>
+    <span class="c1">// watch vm.e.f&#39;s value: {g: 5}
+</span><span class="c1"></span>    <span class="s1">&#39;e.f&#39;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span><span class="p">)</span>
-
-<span class="nx">vm</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="c1">// vm.b 不是响应式的
+<span class="nx">vm</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// =&gt; new: 2, old: 1
 </span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<p>解决方法：要么最开始就把所有的属性名写好，要么就使用 <code>Vue.set(this.obj, 'key', 'value')</code> 或者 <code>vm.$set(this.obj, 'key', value)</code> 来添加新的属性。</p>
-
-<ul>
-<li>对于数组来说，使用 <code>arr[index] = value</code> 来添加值将同样不会被检测到。</li>
-</ul>
-
-<p>解决办法：Vue 实际上已经给我们的数组加上了一层新的原型，并提供了 <code>push</code> <code>pop</code> <code>shift</code> <code>unshift</code> <code>splice</code> <code>sort</code> <code>reverse</code> 这个 7 个常用的 API。</p>
 </div>
+<p><strong>注意：不要使用箭头函数来定义 watcher，<code>this</code> 是 <code>window</code></strong>，事实上，在 Vue 的很多地方（比如 data、computed 等)，都是不推荐使用箭头函数的，因为这样会使得函数中的 this 没有值，至于为什么没有值，可以参考 <a href="http://hais-teatime.com/post/再看this/" target="_blank">这篇文章</a>。</p>
+
+<p><strong>注意：Vue 在更新 DOM 时是异步执行的。</strong></p>
+
+<blockquote>
+<p>只要侦听到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个 watcher 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。然后，在下一个的事件循环“tick”中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部对异步队列尝试使用原生的 Promise.then、MutationObserver 和 setImmediate，如果执行环境不支持，则会采用 setTimeout(fn, 0) 代替。</p>
+
+<p>例如，当你设置 <code>vm.someData = 'new value'</code>，该组件不会立即重新渲染。当刷新队列时，组件会在下一个事件循环“tick”中更新。多数情况我们不需要关心这个过程，但是如果你想基于更新后的 DOM 状态来做点什么，这就可能会有些棘手。虽然 Vue.js 通常鼓励开发人员使用“数据驱动”的方式思考，避免直接接触 DOM，但是有时我们必须要这么做。为了在数据变化之后等待 Vue 完成更新 DOM，可以在数据变化之后立即使用 Vue.nextTick(callback)。这样回调函数将在 DOM 更新完成后被调用。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
+  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#example&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span>
+  <span class="p">}</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span><span class="sb">
+</span><span class="sb">    &lt;div id=&#34;example&#34;&gt;{{message}}&lt;/div&gt;
+</span><span class="sb">  </span><span class="sb">`</span>
+<span class="p">}</span><span class="p">)</span>
+<span class="nx">vm</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// 更改数据
+</span><span class="c1"></span><span class="nx">vm</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">===</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// false
+</span><span class="c1"></span><span class="nx">Vue</span><span class="p">.</span><span class="nx">nextTick</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">vm</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">===</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// true
+</span><span class="c1"></span><span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
 
         </article>
 
@@ -562,9 +487,9 @@
         
 
         
-    <div class="updated-badge-container"><div title="Updated @ 2020-01-28 11:35:42 CST" style="cursor:help;display:inline-block">
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-31 19:59:44 CST" style="cursor:help;display:inline-block">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-28</text></g></svg></div></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-31</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-31</text></g></svg></div></div>
 
 
         
@@ -577,19 +502,19 @@
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/post/2019-12-27-vue-4/" class="related-link">Vue 第四课：模板语法</a>
+                        <a href="/post/2019-12-25-vue-1/" class="related-link">理解 Vue 的 data 与 响应式</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/post/2019-12-25-vue-3/" class="related-link">Vue 第三课：computed 和 watch</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/post/2019-12-22-vue-1/" class="related-link">Vue 第一课：安装</a>
+                        <a href="/post/2020-01-29-new-blog/" class="related-link">新的笔记本</a>
                     </li>
                 
                     <li class="related-item">
                         <a href="/post/2020-01-16-navigation-vue/" class="related-link">小项目：前端导航页面 - 维生素导航·Vue</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/2020-01-15-sharing-garden/" class="related-link">小项目：多人共享博客 - Sharing Garden</a>
                     </li>
                 
                     <li class="related-item">
@@ -648,12 +573,12 @@
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/post/2019-12-25-vue-3/" rel="prev">< Vue 第三课：computed 和 watch</a>
+                    <a href="/post/2020-01-15-sharing-garden/" rel="prev">< 小项目：多人共享博客 - Sharing Garden</a>
                 </li>
             
             
                 <li class="post-nav-next">
-                    <a href="/post/2019-12-24-this/" rel="next">再看 this ></a>
+                    <a href="/post/2019-12-25-vue-1/" rel="next">理解 Vue 的 data 与 响应式 ></a>
                 </li>
             
         </ul>

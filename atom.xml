@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Hai&#39;s Teatime</title>
     <subtitle type="html">我的第一个博客，记录了一些学习随笔。</subtitle>
-    <updated>2020-01-28T21:17:34+08:00</updated>
+    <updated>2020-01-31T20:01:11+08:00</updated>
     <id>http://hais-teatime.com/</id>
     <link rel="alternate" type="text/html" href="http://hais-teatime.com/" />
     <link rel="self" type="application/atom+xml" href="http://hais-teatime.com/atom.xml" />
@@ -16,6 +16,81 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.63.2">Hugo</generator>
+        <entry>
+            <title type="text">新的笔记本</title>
+            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2020-01-29-new-blog/" />
+            <id>http://hais-teatime.com/post/2020-01-29-new-blog/</id>
+            <updated>2020-01-29T16:16:24+08:00</updated>
+            <published>2020-01-29T16:03:43+08:00</published>
+            <author>
+                    <name>Harvey Zhang</name>
+                    <uri>http://hais-teatime.com/</uri>
+                    <email>Hyuain97@163.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    
+    <summary type="html"><![CDATA[以前一直用的 Notion 做笔记，感觉体验很不错，这几天复习一下基础知识，顺便把笔记都搬家啦。]]></summary>
+            
+                <content type="html"><![CDATA[<p>以前一直用的 Notion 做笔记，感觉体验很不错，这几天复习一下基础知识，顺便把笔记都搬家啦。</p>
+
+<p>因为 Notion 每个月要收 5 美刀（有点小贵），现在试用的两个月快完了，得赶紧把笔记给换个地方存起来，于是新建了一个博客专门用来放笔记哦。</p>
+
+<p>链接在这里：<a href="https://hais-teatime.com/hais-notebook/" target="_blank">小海的笔记本</a></p>
+
+<p>同时这个博客里面的笔记性质的文章也将会全部移动到新的笔记本中，新的笔记本使用了自带的搜索插件，也有很棒的分类系统，可以很方便地找到以前的东西哦。</p>
+
+<p>但是所谓笔记本，就是到处抄抄抄得来的东西，因此，不允许用作商业用途，目前笔记的来源包括但不限于：</p>
+
+<p>饥人谷的内容、腾讯课堂的内容、慕课网的内容、各类文档、各种博客、各种百科资料、互联网上的公开内容等等，为避免法律纠纷，在这里特别说明一下。当然一般是不会一字未动复制粘贴过来的，也不会出现大段的课件、PPT 等原版资料。</p>
+
+<p>与此同时这个博客将会更多专注于原创的内容，可能不久之后也会 Renew 一下。</p>]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/tags/vue/" term="Vue" label="Vue" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/tags/%E9%A1%B9%E7%9B%AE/" term="项目" label="项目" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">小项目：前端导航页面 - 维生素导航·Vue</title>
             <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2020-01-16-navigation-vue/" />
@@ -375,11 +450,11 @@
         </entry>
     
         <entry>
-            <title type="text">Vue 第四课：模板语法</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-27-vue-4/" />
-            <id>http://hais-teatime.com/post/2019-12-27-vue-4/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-27T16:34:09+08:00</published>
+            <title type="text">小项目：多人共享博客 - Sharing Garden</title>
+            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2020-01-15-sharing-garden/" />
+            <id>http://hais-teatime.com/post/2020-01-15-sharing-garden/</id>
+            <updated>2020-01-29T10:09:34+08:00</updated>
+            <published>2020-01-15T09:57:43+08:00</published>
             <author>
                     <name>Harvey Zhang</name>
                     <uri>http://hais-teatime.com/</uri>
@@ -387,374 +462,15 @@
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     
-    <summary type="html"><![CDATA[看看 Vue 中的模板语法。]]></summary>
+    <summary type="html"><![CDATA[初学 Vue，一直想给女朋友搞一个博客，不过目前还太会数据库之类的东西，先学习一下多人共享博客的前端页面是如何搭建的，用 Vue 做了一个单页单页应用。点击可以查看 代码仓库 和 效果预览。]]></summary>
             
-                <content type="html"><![CDATA[<p>看看 Vue 中的模板语法。</p>
+                <content type="html"><![CDATA[<p>初学 Vue，一直想给女朋友搞一个博客，不过目前还太会数据库之类的东西，先学习一下多人共享博客的前端页面是如何搭建的，用 Vue 做了一个单页单页应用。点击可以查看 <a href="https://github.com/Hyuain/kates-blog-client" target="_blank">代码仓库</a> 和 <a href="http://hais-teatime.com/kates-blog-client" target="_blank">效果预览</a>。</p>
 
-<hr />
+<h1 id="项目介绍">项目介绍</h1>
 
-<h2 id="key-points">Key Points</h2>
+<p>Sharing Garden 一共有这样几个页面：首页、注册页、登录页、我的页面、用户页面、博客详情、新建博客、编辑博客。</p>
 
-<ol>
-<li>三种方式书写 <code>template</code>： HTML 中、options 中、.vue 文件中</li>
-<li><code>.sync</code> 使得当一个子组件改变了一个 <code>prop</code> 的值时，这个父组件中绑定的值也会跟着改变。</li>
-</ol>
-
-<hr />
-
-<h2 id="开始">开始</h2>
-
-<p>通常，我们说 “模板”，说的就是 <code>template</code> 这样一个东西，我们可以在里面书写类似 HTML 的代码，从而得到自己想要的页面效果。在 Vue 中，这样的一个 <code>template</code> 可以写在以下三个地方：</p>
-
-<ol>
-<li><p>HTML 文件中，需要使用 Vue 完整版</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;xxx&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  {{n}}
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;+1&#34;</span><span class="p"></span><span class="p">&gt;</span>+1<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s2">&#34;#xxx&#34;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 可以改成函数
-</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>options 中，需要使用 Vue 完整版</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">app</span><span class="p"></span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span><span class="sb">
-</span><span class="sb">    &lt;div id=xxx&gt;
-</span><span class="sb">      {{n}}
-</span><span class="sb">      &lt;button @click=&#34;add&#34;&gt;+1&lt;/button&gt;
-</span><span class="sb">    &lt;/div&gt;
-</span><span class="sb">   </span><span class="sb">`</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 可以改成函数
-</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span> <span class="c1">// 注意这个时候 div#app 会被替代
-</span></code></pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>.vue 文件中，可以使用 Vue 运行时版本</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="na">xxx</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">{</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span><span class="p">}</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;add&#34;</span><span class="p">&gt;</span><span class="err">+</span><span class="na">1</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">return</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span><span class="mi">0</span> <span class="p">}</span> <span class="p">}</span><span class="p">,</span> <span class="c1">// data 必须为函数
-</span><span class="c1"></span>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span> <span class="nx">add</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
-<span class="cm">/*CSS-Code*/</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./app.vue&#39;</span> <span class="c1">// App 是一个 options 对象
-</span><span class="c1"></span><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
-<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-
-<p>这里我们要注意的是，<code>template</code> 里面书写的其实不是 HTML 代码，<strong>而是 XML 代码</strong>，二者有所不同，比如HTML 与 XML 写法不同，比如在 XML 中，自闭合标签要加上 <code>/</code>，而且空标签需要写成自闭合的形式——尽管官方文档称 “Vue.js 使用了基于 HTML 的模板语法”。</p>
-
-<h2 id="语法">语法</h2>
-
-<h3 id="插值">插值</h3>
-
-<ul>
-<li><p>插入 JavaScript 表达式</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ number + 1 }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ ok ? &#39;YES&#39; : &#39;NO&#39; }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span><span class="p"></span><span class="p">&gt;</span>{{ message.split(&#39;&#39;).reverse().join(&#39;&#39;) }}<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<p>如果表达式的值为 <code>undefined</code> 或者 <code>null</code>，则页面上将不会显示。</p>
-
-<ul>
-<li><p>插入原始 HTML</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span>Using v-html directive: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-html</span><span class="o">=</span><span class="s">&#34;rawHtml&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<p><code>span</code> 将会被 <code>rawHtml</code> 的内容所替换，并且 <code>rawHtml</code> 里面的数据绑定将会失效，因此我们不能用 <code>v-html</code> 来在 <code>template</code> 里面使用 <code>template</code>，这个时候需要用 <code>component</code> 来进行组件的组合。</p>
-
-<ul>
-<li>插入特性</li>
-</ul>
-
-<p>像 <code>{{}}</code> 这样的语法并不能使用在 HTML 属性上，这时我们需要依靠 <code>v-bind</code> 来帮我们绑定特性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:src</span><span class="s">=&#34;x&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-<span class="c">&lt;!--</span> <span class="nx">可以简写为</span> <span class="o">--</span><span class="o">&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="nt">:src</span><span class="s">=&#34;x&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span>
-      <span class="o">:</span><span class="na">style</span><span class="o">=</span><span class="s">&#34;{border: &#39;1px solid red&#39;}&#34;</span> <span class="p">/</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="指令">指令</h3>
-
-<p>在 Vue 中，指令（Directives）就是带有 v- 前缀的特殊特性，里面的值应该是 JavaScript 表达式。</p>
-
-<p>有的指令是可以接受 <strong>参数</strong> 的，一般的指令看起来就像 <code>v-指令名:参数=值</code>。</p>
-
-<p>而我们用方括号将参数括起来，则可以构成 <strong>动态参数</strong>，他会被先当做 JavaScript 表达式进行求值操作，比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:[attributeName]</span><span class="s">=&#34;url&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="p">...</span> <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>如果我们的 data 中有一个叫 <code>attributeName</code> 的属性，他的值为 <code>href</code>，那么上面这句话将等价为：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">v</span><span class="nt">-bind</span><span class="nt">:href</span><span class="s">=&#34;url&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="p">...</span> <span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>我们常用的指令可以在 <a href="https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4" target="_blank">Vue 文档 - 指令</a> 中找到。</p>
-
-<h3 id="修饰符">修饰符</h3>
-
-<p>有的指令有 <strong>修饰符</strong>，比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">@click.stop=&#34;add&#34; 阻止冒泡
-@click.prevent=&#34;add&#34; 阻止默认动作
-@click.stop.prevent=&#34;add&#34;
-@keypress.13 或 @keypress.enter 按下回车之后执行</code></pre></td></tr></table>
-</div>
-</div>
-<p>我们同样可以在刚才的文档中找到关于修饰符的说明，这里主要讲一下 <code>.sync</code> 修饰符。</p>
-
-<p>我们可以有这样一个例子：</p>
-
-<ul>
-<li>有一个组件 <code>total.vue</code>，用来显示 <strong>总共点击的次数</strong>，其 <code>data</code> 中的 <code>clickNum</code> 记录了这个值；</li>
-
-<li><p><code>total.vue</code> 引入了一个子组件 <code>me.vue</code>，他可以接受来自 <code>total.vue</code> 传来的 <strong>总共点击的次数</strong>；并且，我们点击他的按钮，就可以在 <strong>总共点击的次数</strong> 上加 1</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 在 total.vue 中
-</span><span class="c1"></span>
-<span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>
-<span class="nx">一共点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">clickNum</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span>
-<span class="p">&lt;</span><span class="nt">Me</span> <span class="nt">:totalClick</span><span class="s">=&#34;clickNum&#34;</span> <span class="err">@</span><span class="na">update</span><span class="o">:</span><span class="na">totalClick</span><span class="o">=</span><span class="s">&#34;clickNum = $event&#34;</span><span class="p">/</span><span class="p">&gt;</span>
-<span class="c">&lt;!--</span> <span class="nx">$event</span> <span class="nx">保存了</span> <span class="nx">$emit</span> <span class="nx">后面的传过来的那个值</span> <span class="o">--</span><span class="o">&gt;</span>
-<span class="c">&lt;!--</span> <span class="nx">这句话也可以用</span> <span class="p">.</span><span class="nx">sync</span> <span class="nx">来写</span> <span class="o">--</span><span class="o">&gt;</span>
-<span class="p">&lt;</span><span class="nt">Me</span> <span class="nt">:totalClick.sync</span><span class="s">=&#34;clickNum&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-<span class="kr">import</span> <span class="nx">Me</span> <span class="nx">from</span> <span class="s1">&#39;./me.vue&#39;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-<span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-<span class="k">return</span> <span class="p">{</span> <span class="nx">clickNum</span><span class="o">:</span> <span class="mi">100</span> <span class="p">}</span>  
-<span class="p">}</span><span class="p">,</span>
-<span class="nx">components</span><span class="o">:</span> <span class="p">{</span> <span class="nx">Me</span> <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 在 me.vue 中
-</span><span class="c1"></span>
-<span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>
-<span class="nx">我点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">myClick</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span><span class="err">，</span><span class="nx">我知道现在所有人一共点击了</span> <span class="p">{</span><span class="p">{</span><span class="nx">totalClick</span><span class="p">}</span><span class="p">}</span> <span class="nx">次</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;clicked&#34;</span><span class="p">&gt;</span><span class="na">点击</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span><span class="p">{</span>
-<span class="nx">props</span><span class="o">:</span><span class="p">[</span><span class="nx">totalClick</span><span class="p">]</span><span class="p">,</span>
-<span class="nx">data</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-<span class="k">return</span> <span class="p">{</span> <span class="nx">myClick</span><span class="o">:</span><span class="mi">0</span> <span class="p">}</span>  
-<span class="p">}</span><span class="p">,</span>
-<span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
-<span class="nx">clicked</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">myClicked</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;update-totalClick&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">totalClick</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<p>下面是代码的预览效果：
-<img src="/images/vue-1.gif" alt="preview" /></p>
-
-<p>这段代码也可以在 <a href="https://codesandbox.io/s/kind-cookies-1o6rs" target="_blank">Codesandbox</a> 中进行预览。</p>
-
-<p>看一下过程：</p>
-
-<ol>
-<li>将父组件的值传给子组件，子组件需用 <code>props</code> 接收这个值；</li>
-<li>子组件触发 <code>clicked</code> 事件之后，调用 <code>$emit('update-totalClick', this.totalClick + 1)</code></li>
-<li>父组件原来要写成 <code>&lt;Me :totalClick=&quot;clickNum&quot; @update:totalClick=&quot;clickNum = $event&quot;/&gt;</code>，而现在只需要写 <code>Me :totalClick.sync=&quot;clickNum&quot; /</code>就可以了。</li>
-</ol>
-
-<p>总而言之，<code>.sync</code> 使得当一个子组件改变了一个 <code>prop</code> 的值时，这个父组件中绑定的值也会跟着改变——而此前我们需要比较麻烦的监听过程。</p>]]></content>
+<p>项目通过 Vue-Router 来进行前端页面的跳转，用 Vuex 存储用户数据</p>]]></content>
             
             
             
@@ -791,16 +507,22 @@
                                 <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="http://hais-teatime.com/tags/%E9%A1%B9%E7%9B%AE/" term="项目" label="项目" />
+                            
+                        
                     
                 
             
         </entry>
     
         <entry>
-            <title type="text">Vue 第三课：computed 和 watch</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-25-vue-3/" />
-            <id>http://hais-teatime.com/post/2019-12-25-vue-3/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
+            <title type="text">Vue 中 computed 和 watch 的区别</title>
+            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-25-vue-2/" />
+            <id>http://hais-teatime.com/post/2019-12-25-vue-2/</id>
+            <updated>2020-01-31T19:59:44+08:00</updated>
             <published>2019-12-25T18:32:33+08:00</published>
             <author>
                     <name>Harvey Zhang</name>
@@ -1077,10 +799,10 @@
         </entry>
     
         <entry>
-            <title type="text">Vue 第二课：data 与 响应式</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-25-vue-2/" />
-            <id>http://hais-teatime.com/post/2019-12-25-vue-2/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
+            <title type="text">理解 Vue 的 data 与 响应式</title>
+            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-25-vue-1/" />
+            <id>http://hais-teatime.com/post/2019-12-25-vue-1/</id>
+            <updated>2020-01-31T19:59:15+08:00</updated>
             <published>2019-12-25T16:30:24+08:00</published>
             <author>
                     <name>Harvey Zhang</name>
@@ -1215,10 +937,10 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-
+    
 <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-<span class="nx">value</span><span class="o">:</span><span class="mi">0</span>
-<span class="c1">// 数据描述符，这里的意思是：给 data 定义一个新属性 n，他的值为 0
+  <span class="nx">value</span><span class="o">:</span><span class="mi">0</span>
+  <span class="c1">// 数据描述符，这里的意思是：给 data 定义一个新属性 n，他的值为 0
 </span><span class="c1"></span><span class="p">}</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -1243,17 +965,17 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-
+    
 <span class="nx">data</span><span class="p">.</span><span class="nx">_n</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// _n 用来存实际上不存在的 n 的值
-</span><span class="c1"></span>
+</span><span class="c1"></span>    
 <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-<span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="c1">// getter-setter 函数是存取描述符，可以用来在存取的时候做校验
-</span><span class="c1"></span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_n</span>
-<span class="p">}</span><span class="p">,</span>
-<span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">_n</span> <span class="o">=</span> <span class="nx">value</span>
-<span class="p">}</span>
+  <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="c1">// getter-setter 函数是存取描述符，可以用来在存取的时候做校验
+</span><span class="c1"></span>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_n</span>
+  <span class="p">}</span><span class="p">,</span>
+  <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_n</span> <span class="o">=</span> <span class="nx">value</span>
+  <span class="p">}</span>
 <span class="p">}</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -1294,35 +1016,35 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{</span><span class="nx">n</span><span class="o">:</span> <span class="mi">0</span><span class="p">}</span>
-<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">myData</span> <span class="p">}</span><span class="p">)</span> <span class="c1">// data 即为 myData 代理
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 解构赋值，data 即为 myData，即为 {n: 0}
-</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 存下 n 原来的值
-</span><span class="c1"></span>  <span class="k">delete</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 删除掉 data 中原来的 n，这句可以不用写，因为下面声明新的虚拟 n 的时候会删掉之前的
-</span><span class="c1"></span>  <span class="c1">// 声明一个虚拟的 n，放到 myData 上面，防止直接修改 myData（监听 myData）
-</span><span class="c1"></span>  <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">return</span> <span class="nx">value</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">set</span><span class="p">(</span><span class="nx">newValue</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">newValue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-      <span class="nx">value</span> <span class="o">=</span> <span class="nx">newValue</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">)</span>
-  <span class="c1">// 声明代理
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-  <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span>
-    <span class="p">}</span>
-    <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="o">=</span> <span class="nx">value</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">)</span>
-  <span class="k">return</span> <span class="nx">obj</span> <span class="c1">// obj 就是代理
-</span><span class="c1"></span><span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{</span><span class="nx">n</span><span class="o">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">myData</span> <span class="p">}</span><span class="p">)</span> <span class="c1">// data 即为 myData 代理
+</span><span class="c1"></span>    
+    <span class="kd">function</span> <span class="nx">proxy</span><span class="p">(</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 解构赋值，data 即为 myData，即为 {n: 0}
+</span><span class="c1"></span>      <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 存下 n 原来的值
+</span><span class="c1"></span>      <span class="k">delete</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="c1">// 删除掉 data 中原来的 n，这句可以不用写，因为下面声明新的虚拟 n 的时候会删掉之前的
+</span><span class="c1"></span>      <span class="c1">// 声明一个虚拟的 n，放到 myData 上面，防止直接修改 myData（监听 myData）
+</span><span class="c1"></span>      <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+          <span class="k">return</span> <span class="nx">value</span>
+        <span class="p">}</span><span class="p">,</span>
+        <span class="nx">set</span><span class="p">(</span><span class="nx">newValue</span><span class="p">)</span><span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">newValue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+          <span class="nx">value</span> <span class="o">=</span> <span class="nx">newValue</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">)</span>
+      <span class="c1">// 声明代理
+</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
+      <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+          <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">n</span>
+        <span class="p">}</span>
+        <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+          <span class="nx">data</span><span class="p">.</span><span class="nx">n</span> <span class="o">=</span> <span class="nx">value</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">obj</span> <span class="c1">// obj 就是代理
+</span><span class="c1"></span>    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -1740,125 +1462,6 @@
                             
                             
                                 <category scheme="http://hais-teatime.com/tags/javascript/" term="JavaScript" label="JavaScript" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Vue 第一课：安装</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-22-vue-1/" />
-            <id>http://hais-teatime.com/post/2019-12-22-vue-1/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-22T18:57:07+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[聊聊 Vue 的两个版本。]]></summary>
-            
-                <content type="html"><![CDATA[<p>聊聊 Vue 的两个版本。</p>
-
-<p>我们比较关注的 Vue 的版本主要有两个：</p>
-
-<ul>
-<li><p><strong>完整版</strong>：同时包含编译器和运行时的版本，也就是 CDN 里面的 <code>vue.js</code>。</p></li>
-
-<li><p><strong>运行时</strong>：用来创建 Vue 实例、渲染并处理虚拟 DOM 等的代码。基本上就是除去编译器的其它一切，也就是 CDN 里面的 <code>vue.runtime.js</code>。</p></li>
-</ul>
-
-<p>他们之间的区别就是差在 <strong>编译器</strong> 上，也就是一段 <em>用来将模板字符串编译成为 JavaScript 渲染函数</em> 的代码。</p>
-
-<p>我们在创建一个 Vue 实例的时候，可能需要在里面加上 <code>template</code>，来给我们想要操作的元素添上一段 HTML 内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span><span class="sb">
-</span><span class="sb">    &lt;div&gt;
-</span><span class="sb">      Hello Vue!
-</span><span class="sb">    &lt;/div&gt;
-</span><span class="sb">  </span><span class="sb">`</span><span class="p">,</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>也有可能会直接去 HTML 里面写上一段内容作为我们元素内部的 HTML。编译器的作用就是让这段模板成为 JavaScript 能看懂的东西，并且能够最后渲染到页面上。——这就是 <strong>完整版</strong>。</p>
-
-<p>如果没有编译器的话（也就是使用 <strong>运行时</strong> 版本），我们就只能直接写成 JavaScript 代码，比如下面这段（<code>h</code> 表示 <code>createElement</code>）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
-  <span class="nx">render</span> <span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">h</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello Vue&#39;</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>但是运行时版本因为没有编译器，所以体积要小 30% 左右。因此对于开发者而言，完整版无疑是更方便的；但对于用户而言，轻量的运行时版本更加符合需求。</p>
-
-<p>为了解决这个矛盾，就出现了 <code>vue-loader</code>，他会在打包的时候将 <code>vue</code> 文件内部的模板预编译成 JavaScript，这样我们就可以在开发的时候放心使用模板字符串，打包后通过 <code>vue-loader</code> 自然就变成了不用再编译一次的 JavaScript 代码，用户就可以使用运行时版本进行查看了。</p>
-
-<p>同时，在使用 @vue/cli 和 webpack 引入的时候，默认使用的是运行时版本。</p>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/vue/" term="Vue" label="Vue" />
                             
                         
                             
@@ -3219,579 +2822,6 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
         </entry>
     
         <entry>
-            <title type="text">AJAX 和前后端分离</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-17-ajax/" />
-            <id>http://hais-teatime.com/post/2019-12-17-ajax/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-17T11:04:23+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[AJAX 也是前端相关的比较难理解的概念之一，本文对其进行说明，并介绍一些与之相关的概念，比如异步、跨域等。]]></summary>
-            
-                <content type="html"><![CDATA[<p>AJAX 也是前端相关的比较难理解的概念之一，本文对其进行说明，并介绍一些与之相关的概念，比如异步、跨域等。</p>
-
-<blockquote>
-<p>本文部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
-</blockquote>
-
-<h2 id="ajax">AJAX</h2>
-
-<blockquote>
-<p>AJAX 即 Asynchronous JavaScript and XML（异步的 JavaScript 与 XML 技术），其实就是一套综合了多项技术的浏览器端网页开发技术。Google 在它多个著名的交互应用程序中使用了这套技术，如 Google 讨论组、Google 地图、Google 搜索建议、Gmail 等，这使得人们看到了前端领域新的可能性。</p>
-
-<p>传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求；服务器接收并处理传来的表单，然后送回一个<strong>新的网页</strong>。</p>
-
-<p>但这个做法浪费了许多带宽，因为在前后两个页面中的大部分 HTML 码往往是相同的。由于每次应用的沟通都需要向服务器发送请求，应用的回应时间依赖于服务器的回应时间。这导致了用户界面的回应比本机应用慢得多。</p>
-
-<p>与此不同，AJAX 应用可以仅向服务器发送并取回必须的数据，并在客户端采用 JavaScript 处理来自服务器的回应。因为在服务器和浏览器之间交换的数据大量减少，服务器回应更快了。同时，很多的处理工作可以在发出请求的客户端机器上完成，因此Web服务器的负荷也减少了。</p>
-</blockquote>
-
-<p>简单来讲：</p>
-
-<ol>
-<li>AJAX 是浏览器上的功能，浏览器可以使用 AJAX 发请求、收响应；</li>
-<li>浏览器在 <code>window</code> 上面加了一个 <code>XMLHttpRequest</code>，方便开发者通过 JS 来发请求、收响应，这是一个构造函数</li>
-</ol>
-
-<p>如果想要使用 <code>XMLHttpRequest</code> 让浏览器来帮我们加载 CSS / JS / HTML / XML，一共需要进行四步：</p>
-
-<ol>
-<li>创建 XMLHttpResquest 对象</li>
-<li>调用他的 open() 方法</li>
-<li>使用 onreadystatechange 监听他的成功和失败事件</li>
-
-<li><p>调用他的 send() 方法</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">(</span><span class="p">)</span>
-<span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;/{url}&#39;</span><span class="p">)</span>
-<span class="nx">request</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Success&#39;</span><span class="p">)</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-
-<p>这样我们在监听成功事件的时候，就可以对其 <code>request.response</code> 进行解析，比如如果是 CSS，我们可以新建一个 <code>style</code> 标签，把 <code>innerHTML</code> 填上；如果是 JS，可以新建一个 <code>script</code> 标签；如果是 HTML，可以新建一个 <code>div</code>；如果是 XML，我们拿到的 <code>request.responseXML</code> 实际上就已经是一个 DOM 节点了；那么如果拿到的是 JSON 怎么办呢？JSON 实际上是什么呢？</p>
-
-<h2 id="json">JSON</h2>
-
-<p>实际上，JSON 也是一种标记语言（就像 HTML、XML、Markdown 一样），他的全称是（JavaScript Object Natation），这里可以看到他的 <a href="http://json.org/json-zh.html" target="_blank">中文官网</a></p>
-
-<p>从官网中我们可以看到 JSON 支持的变量类型，包括：</p>
-
-<ul>
-<li>string（但是只支持双引号）</li>
-<li>number（支持科学计数法）</li>
-<li>bool</li>
-<li>null</li>
-<li>object</li>
-<li>array</li>
-</ul>
-
-<p>注意在 JSON 中，不支持函数和变量</p>
-
-<h3 id="json-parse">JSON.parse()</h3>
-
-<ul>
-<li>将符合 JSON 语法的字符串转换为 JS 对应类型的数据</li>
-<li>JSON 字符串 ⇒ JS 数据</li>
-<li>由于 JSON 只有六种类型，所以转换出的数据也只有六种</li>
-
-<li><p>如果不符合 JSON 语法，则会抛出 Error，一般用 try catch 捕获错误，比如</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">object</span>
-<span class="k">try</span> <span class="p">{</span>
-	<span class="nx">object</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="sb">`</span><span class="sb">{&#39;name&#39;:&#39;harvey&#39;}</span><span class="sb">`</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;出错了，错误详情是：&#39;</span><span class="p">)</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
-	<span class="nx">object</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;no name&#39;</span><span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<h3 id="json-stringify">JSON.stringify()</h3>
-
-<ul>
-<li>是 JSON.parse 的逆运算</li>
-<li>JS 数据 ⇒ JSON 字符串</li>
-<li>由于 JS 的数据类型比 JSON 多，所以不一定能够成功</li>
-<li>如果失败，则会抛出一个 Error 对象</li>
-</ul>
-
-<h2 id="异步">异步</h2>
-
-<h3 id="同步与异步">同步与异步</h3>
-
-<p>简单来说，<strong>同步</strong> 就是指 <strong>能直接拿到结果，不拿到结果就不离开</strong>，就像医院挂号一样，可能需要花上几分钟，但是 <strong>拿到号之后才会离开窗口</strong>；</p>
-
-<p><strong>异步</strong> 则 <strong>不能直接拿到结果</strong>，比如在餐厅门口等位，拿到号之后我们可以去逛街，那什么时候真正吃上饭呢？我们可以：</p>
-
-<ul>
-<li>每 10 分钟去餐厅问一下（<strong>轮询</strong>）</li>
-<li>也可以扫码用微信接收通知（<strong>回调</strong>）</li>
-</ul>
-
-<p>拿 AJAX 的栗子来说，当 <code>request.send()</code> 之后，并不能直接得到 <code>response</code>，必须要等待 <code>readyState</code> 变成 <code>4</code> 之后，浏览器回头调用 <code>request.onreadystatechange</code> 函数</p>
-
-<h3 id="回调-callback">回调（callback）</h3>
-
-<p>回调就是 <strong>给别人写了一个函数</strong>，放在一个地方，<strong>让他来调用</strong>，而不是我自己调用。</p>
-
-<p>举个栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">f1</span><span class="p">(</span><span class="p">)</span><span class="p">{</span><span class="p">}</span>
-    <span class="kd">function</span> <span class="nx">f2</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span><span class="p">{</span>
-        <span class="nx">fn</span><span class="p">(</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nx">f2</span><span class="p">(</span><span class="nx">f1</span><span class="p">)</span>
-    <span class="c1">// 我调用了 f2，因此 f2 不是回调
-</span><span class="c1"></span>    <span class="c1">// 我把 f1 传给了 f2
-</span><span class="c1"></span>    <span class="c1">// 我没有调用，而是 f2 调用了 f1
-</span><span class="c1"></span>    <span class="c1">// 所以 f1 是回调
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="异步与回调">异步与回调</h3>
-
-<p><strong>关联</strong></p>
-
-<p>异步任务需要在得到结果时通知 JS 来拿结果，怎么通知呢？</p>
-
-<ul>
-<li>可以让 JS 留一个函数地址（电话号码）给浏览器</li>
-<li>异步任务 浏览器调用该函数的地址（拨打电话）</li>
-<li>同时 <strong>把结果作为参数</strong> 传给该函数（电话里说可以来吃了）</li>
-</ul>
-
-<p>这个函数是我写给浏览器调用的，所以是回调函数</p>
-
-<p><strong>区别</strong></p>
-
-<ul>
-<li>异步任务需要用回调函数来通知结果</li>
-<li>但异步可以用 <strong>轮询</strong></li>
-<li>回调也不一定用在异步里面，比如 <code>array.forEach( n ⇒ console.log(n) )</code>，这就是 <strong>同步回调</strong></li>
-</ul>
-
-<blockquote>
-<p>如何判断一个函数是同步回调还是异步回调？</p>
-</blockquote>
-
-<p>如果一个函数的返回值处于以下这三个内部，即为异步函数：</p>
-
-<ul>
-<li>setTimeout</li>
-<li>AJAX（即 XMLHttpRequest）</li>
-<li>AddEventListener</li>
-</ul>
-
-<p>举个栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">摇骰子</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-	<span class="nx">setTimeout</span><span class="p">(</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-	<span class="p">}</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-	<span class="c1">// return undefined
-</span><span class="c1"></span><span class="p">}</span>
-
-<span class="c1">// 如果是按上面这样写，将拿不到 1 ~ 6 的随机数，而是 undefined
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">摇骰子</span><span class="p">(</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="c1">// undefined
-</span><span class="c1"></span>
-<span class="c1">// 通过回调来拿到异步的结果
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">摇骰子</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span><span class="p">{</span>
-	<span class="nx">setTimeout</span><span class="p">(</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="nx">fn</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-	<span class="p">}</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="kd">function</span> <span class="nx">f1</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">}</span>
-<span class="nx">摇骰子</span><span class="p">(</span><span class="nx">f1</span><span class="p">)</span>
-
-<span class="c1">// 可以简化代码，因为 f1 只用了一次
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">摇骰子</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span><span class="p">{</span>
-	<span class="nx">setTimeout</span><span class="p">(</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="nx">fn</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-	<span class="p">}</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="nx">摇骰子</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
-<span class="p">}</span><span class="p">)</span>
-
-<span class="c1">// 可以再简化为
-</span><span class="c1"></span><span class="nx">摇骰子</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span> <span class="c1">// 但是如果参数个数不一致就不能这样简化
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>可以再看一下下面这道题：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="c1">// [1, NaN, NaN]
-</span><span class="c1"></span>    
-    <span class="c1">// 正确的写法，i 和 arr 可以省略
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    	<span class="k">return</span> <span class="nx">paseInt</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">)</span>
-    
-    <span class="c1">// 最开始的写法相当于
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    	<span class="k">return</span> <span class="nx">paseInt</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span>
-    	<span class="c1">// parseInt(&#39;1&#39;, 0, arr)，0 为无效参数，忽略
-</span><span class="c1"></span>    	<span class="c1">// parseInt(&#39;2&#39;, 1, arr)，相当于把 &#39;2&#39; 作为 1 进制来进行解析 =&gt; NaN
-</span><span class="c1"></span>    	<span class="c1">// parseInt(&#39;3&#39;, 2, arr)，相当于把 &#39;3&#39; 作为 2 进制来进行解析 =&gt; NaN
-</span><span class="c1"></span>    <span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="promise">Promise</h2>
-
-<blockquote>
-<p>如果异步任务有两个结果：成功或失败，怎么做？</p>
-</blockquote>
-
-<p>方法一：回调接受两个参数</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;./1.txt&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    	<span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;失败&#39;</span><span class="p">)</span><span class="p">;</span> <span class="k">return</span> <span class="p">}</span>
-    	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>方法二：使用两个回调</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/1.json&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">=&gt;</span><span class="p">{</span><span class="p">}</span><span class="p">,</span> <span class="nx">error</span><span class="p">=&gt;</span><span class="p">{</span><span class="p">}</span><span class="p">)</span>
-<span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/1.json&#39;</span><span class="p">,</span> <span class="p">{</span>
-	<span class="nx">success</span><span class="o">:</span> <span class="p">(</span><span class="p">)</span><span class="p">=&gt;</span><span class="p">{</span><span class="p">}</span><span class="p">,</span> <span class="nx">fail</span><span class="o">:</span> <span class="p">(</span><span class="p">)</span><span class="p">=&gt;</span><span class="p">{</span><span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>但是这两个方法都有问题：</p>
-
-<ol>
-<li>不规范，名称五花八门，有人用 <code>success + error</code>，有人用 <code>success + fail</code>，有人用 <code>done + fail</code></li>
-<li>容易出现回调地狱，代码看不懂</li>
-<li>很难进行错误处理</li>
-</ol>
-
-<p>下面以 AJAX 的封装为例介绍 Promise 的基本用法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">ajax</span> <span class="o">=</span> <span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="kr">const</span> <span class="p">{</span><span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">}</span> <span class="o">=</span> <span class="nx">options</span>
-	<span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">(</span><span class="p">)</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-			<span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-				<span class="nx">success</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">)</span>
-			<span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-				<span class="nx">fail</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">request</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/xxx&#39;</span><span class="p">,</span> <span class="p">{</span>
-	<span class="nx">success</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="p">{</span><span class="p">}</span><span class="p">,</span> <span class="nx">fail</span><span class="o">:</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">status</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>  <span class="c1">// 左边是 function 的缩写，右边是箭头函数
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>↑ 上面是普通的写法，↓ 下面是 Promise 的写法</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">ajax</span> <span class="o">=</span> <span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>  <span class="c1">// return new Promise((resolve, reject)=&gt;{..})
-</span><span class="c1"></span>    	<span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">(</span><span class="p">)</span>
-    	<span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
-    	<span class="nx">request</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    		<span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-    			<span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-    				<span class="nx">resolve</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">)</span>  <span class="c1">// 成功调用 resolve(result)，他再回调用第一个函数
-</span><span class="c1"></span>    			<span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-    				<span class="nx">reject</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">request</span><span class="p">)</span>  <span class="c1">// 失败调用 reject(error)，他再会调用第二个函数
-</span><span class="c1"></span>    			<span class="p">}</span>
-    		<span class="p">}</span>
-    	<span class="p">}</span>
-    	<span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">)</span>
-<span class="p">}</span>
-    
-<span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;/xxx&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="p">}</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="p">}</span> <span class="p">)</span>   <span class="c1">// Promise 的回调（成功/失败）只能接受一个参数
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="跨域">跨域</h2>
-
-<h3 id="同源">同源</h3>
-
-<p>输入 <code>window.origin</code> 或者 <code>location.origin</code>，我们就可以看到 <strong>源</strong>，实际上他就是 <strong>协议 + 域名 + 端口号</strong>。</p>
-
-<p>当两个 url 的源（协议、域名、端口号）完全一致，则称之为 <strong>同源</strong>，比如 <code>https://baidu.com</code> 和 <code>https://www.baidu.com</code> 就不同源。</p>
-
-<p><strong>浏览器</strong> 规定：如果 JS <strong>运行在</strong>源 A 里，那么就不能获取源 B 的数据，这就是 <strong>同源策略</strong> ——不允许不同源的资源 <strong>跨域访问</strong>。</p>
-
-<p>要注意的是，同源策略限制的是 <strong>数据的访问</strong>，引用 CSS、JS 和图片的时候，其实并不知道其内容，只是在 <strong>引用</strong>，因此不受同源策略限制。</p>
-
-<p>下面将介绍两种跨域的解决方案。</p>
-
-<h3 id="cors">CORS</h3>
-
-<p>CORS 的全称是 Cross-Origin Resource Sharing，操作起来很简单，只需要在响应头里面写 <code>Access-Control-Allow-Origin: http://foo.example</code> 就可以了，但是 IE 6、7、8、9 都不支持，得用 JSONP。</p>
-
-<h3 id="jsonp">JSONP</h3>
-
-<p>其实 JSONP 和 JSON 并没有多大的关系，下面介绍一下他的思路：</p>
-
-<p>如果我们想让 <code>frank.com</code> 访问 <code>qq.com</code></p>
-
-<ol>
-<li><code>qq.com</code> 将 数据写到 <code>/friends.js</code></li>
-<li><code>frank.com</code> 用 <code>script</code> 标签引用 <code>/friends.js</code></li>
-<li><code>/friends.js</code> 执行，执行 <code>frank.com</code> 事先定义好的 <code>window.xxx</code> 函数（<code>window.xxx({friends:[...]})</code>）</li>
-<li>然后 <code>frank.com</code> 通过 <code>window.xxx</code> 获取到了数据，这也是一个回调</li>
-</ol>
-
-<p>但是，JSONP 存在安全性问题</p>
-
-<ul>
-<li>因为每个人都可以引用 js，需要进行 <code>referer</code> 检查</li>
-<li>仍然存在安全问题，如果 <code>frank.com</code> 被攻陷，则 <code>qq.com</code> 也被攻陷</li>
-</ul>
-
-<p>如何自动生成 window.xxx（如何把 frank.com 定义好的函数传给后台）？</p>
-
-<ul>
-<li>通过查询参数</li>
-</ul>
-
-<blockquote>
-<p>什么是 JSONP？</p>
-
-<p>背景：当前浏览器或者由于某些因素导致不支持跨域</p>
-
-<p>方法：请求一个 JS 文件，文件会执行一个回调，回调里面有我们的数据，回调的名字可以随机生成，我们把名字用 callback 参数传给后台，后台再返回给我们再执行</p>
-
-<p>优点：兼容 IE、可以跨域</p>
-
-<p>缺点：由于是 <code>script</code> 标签，所以读不到 AJAX 那么精确的状态（比如 Status、响应头等等），并且只能发 <code>GET</code> 请求，不支持 <code>POST</code></p>
-</blockquote>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/html/" term="HTML" label="HTML" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/ajax/" term="AJAX" label="AJAX" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
             <title type="text">jQuery 初见</title>
             <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-08-jquery/" />
             <id>http://hais-teatime.com/post/2019-12-08-jquery/</id>
@@ -3915,10 +2945,10 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
         </entry>
     
         <entry>
-            <title type="text">JavaScript 入门 V：函数</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-06-js-5/" />
-            <id>http://hais-teatime.com/post/2019-12-06-js-5/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
+            <title type="text">函数的执行时机</title>
+            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-06-js-1/" />
+            <id>http://hais-teatime.com/post/2019-12-06-js-1/</id>
+            <updated>2020-01-29T19:37:24+08:00</updated>
             <published>2019-12-03T09:00:59+08:00</published>
             <author>
                     <name>Harvey Zhang</name>
@@ -3927,86 +2957,11 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     
-    <summary type="html"><![CDATA[本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。]]></summary>
+    <summary type="html"><![CDATA[本文将着重探讨函数的执行实机这个问题。]]></summary>
             
-                <content type="html"><![CDATA[<p>本文将介绍对象的另外的一种比较重要的形式：函数。除了比较函数一些比较基本的概念以外，也记录了关于 this、作用域、调用时机等对于新手来说比较复杂的东西。</p>
+                <content type="html"><![CDATA[<p>本文将着重探讨函数的执行实机这个问题。</p>
 
-<blockquote>
-<p>本文大部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
-</blockquote>
-
-<h2 id="函数的定义">函数的定义</h2>
-
-<p>函数的定义大致有以下几种：</p>
-
-<p>具名函数</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">函数名</span><span class="p">(</span><span class="nx">形参</span><span class="p">)</span> <span class="p">{</span> <span class="nx">函数体</span> <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>匿名函数</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">形参</span><span class="p">)</span> <span class="p">{</span> <span class="nx">函数体</span> <span class="p">}</span> <span class="c1">// 右边的部分也叫函数表达式
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>也可以用构造函数来进行定义</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>ES 6 新语法中引入了箭头函数</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">输入参数</span> <span class="p">=&gt;</span> <span class="nx">输出参数</span>
-<span class="p">(</span> <span class="nx">输入参数1</span><span class="p">,</span> <span class="nx">输入参数2</span> <span class="p">)</span>  <span class="p">=&gt;</span> <span class="nx">输出参数</span>
-<span class="p">(</span> <span class="nx">输入参数1</span><span class="p">,</span> <span class="nx">输入参数2</span> <span class="p">)</span>  <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">语句1</span>
-    <span class="nx">语句2</span>
-    <span class="k">return</span> <span class="nx">语句</span>
-<span class="p">}</span>
-<span class="nx">x</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span> <span class="p">}</span><span class="p">)</span> <span class="c1">// 如果要返回对象，就要加圆括号
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="作用域">作用域</h2>
-
-<p>Key Points:</p>
-
-<ul>
-<li><strong>全局变量与局部变量</strong>：在 <strong>顶级作用域</strong> 声明的变量是全局变量（比如 window 上的变量是全局变量）；其他的都是局部变量</li>
-<li><strong>就近原则</strong>：如果有多个作用域有同名变量 <code>a</code>，那么查找 <code>a</code> 的声明时，就向上取最近的作用域</li>
-<li><strong>闭包</strong>：函数用到了外部的变量，则 <strong>函数 + 这个变量 = 闭包</strong></li>
-<li><strong>作用域的确定与函数的执行无关（JavaScript 的作用域为静态作用域），但变量的值在函数执行的时候才能确定</strong></li>
-</ul>
-
-<p>下一段将会讲解一个关于作用域的比较麻烦的情况</p>
-
-<h2 id="函数的执行时机">函数的执行时机</h2>
+<h1 id="函数的执行时机">函数的执行时机</h1>
 
 <blockquote>
 <p>函数中变量的值是在执行的时候确定的，而不是在定义的时候。</p>
@@ -4023,12 +2978,12 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// 创建一个全局变量 i
-</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// 创建一个全局变量 i
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4046,11 +3001,11 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+      <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4065,12 +3020,12 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
-<span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4095,14 +3050,14 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
-</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span>   <span class="c1">// 创建局部变量 j
-</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span>   <span class="c1">// 创建局部变量 j
+</span><span class="c1"></span>      <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
-<span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4123,16 +3078,16 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 这里是 let 还是 var 都不要紧，都是创建了一个全局变量，就像最开始的情况一样
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 这里是 let 还是 var 都不要紧，都是创建了一个全局变量，就像最开始的情况一样
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
-<span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">doSetTimeout</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4171,16 +3126,16 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
-</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">var</span> <span class="nx">i</span>   <span class="c1">// 创建全局变量 i
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span>   <span class="c1">// 创建局部变量 j
-</span><span class="c1"></span>        <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="c1"></span>          <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
-        <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
-<span class="p">}</span>
+          <span class="p">}</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;End&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -4190,1177 +3145,7 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
 
 <blockquote>
 <p>总结：这几种写法都是为了利用 <strong>局部作用域</strong> ——他们有的利用了 ES 6 为我们提供的 <strong><code>let</code></strong>，有的使用了 <strong>函数</strong> ——来保存每一次 <code>for 循环</code> 中 <strong>全局变量</strong> 不同的值，<strong>但是，他们均不会改变执行的顺序！</strong></p>
-</blockquote>
-
-<h2 id="参数">参数</h2>
-
-<p>Key Points：</p>
-
-<ul>
-<li><strong>参数传递</strong>：简单类型复制值，对象复制地址</li>
-<li><strong>形参</strong>：实际上就函数中一个<strong>新变量的声明</strong>：<code>var x = arguments[0]</code></li>
-<li><strong><code>arguments</code></strong>：调用函数就会传入 <code>arguments</code>，他实际上是一个包含传入参数的 <strong>伪数组</strong></li>
-</ul>
-
-<p>形参传递可多可少，看下面一段代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="p">}</span>
-<span class="c1">// 此时若执行 add(1, 2)，将会返回 3
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
-<span class="p">}</span>
-<span class="c1">// 此时若执行 add(1, 2)，将会返回 3
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="this">this</h2>
-
-<p>Key Points:</p>
-
-<ul>
-<li>如果不给定任何条件，<code>this</code> 为 <code>window</code></li>
-<li>如果想要指定 <code>this</code>，需要使用 <code>fn.call(..., 1, 2, 3)</code>，如果传入的 <code>this</code> 不是对象，则将会默认会被封装成对象</li>
-</ul>
-
-<h3 id="this-解决了什么问题">this 解决了什么问题？</h3>
-
-<blockquote>
-<p>this 的存在是为了解决函数想要获取一个对象的引用的问题</p>
-</blockquote>
-
-<p>直接看 this 是怎么解决这个问题的吧：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;harvey&#39;</span><span class="p">,</span>
-        <span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span>  <span class="c1">// 在这句话中，系统会自动地把 person 作为 this 传给 sayHi，这样就解决了 sayHi 想要用到某个对象的问题了
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>因为平时都是 JavaScript 自动帮我们传递了 <code>this</code>，所以我们可能对其中发生了什么并不了解。</p>
-
-<p>在这里，我们把常用的函数调用的方法称为 <code>this</code> 的 <strong>隐式传递</strong>，与之相对应的则是使用 <code>call</code> 或者 <code>apply</code> 的 <strong>显式传递</strong>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="p">)</span>              <span class="c1">// 隐式传递
-</span><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>   <span class="c1">// 显式传递
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>当然我们还可以再后面加参数：<code>person.sayHi.call(person, 1, 2, 3)</code>，使用 <code>apply</code> 和 <code>call</code> 的不同就在于 <code>apply</code> 后面的参数要用中括号括起来，因为他传递的是数组。</p>
-
-<h3 id="绑定-this">绑定 this</h3>
-
-<p>使用 <code>bind</code> 可以绑定 <code>this</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">f1</span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="kd">let</span> <span class="nx">f3</span> <span class="o">=</span> <span class="nx">f1</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;hai&#39;</span><span class="p">}</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span> <span class="p">)</span>  <span class="c1">// 相当于让 f3 的 this 和 arguments 永远等于 bind 的内容
-</span><span class="c1"></span><span class="nx">f3</span><span class="p">(</span><span class="p">)</span>    <span class="c1">// 等价于 f1.call( {name:&#39;hai&#39;}, &#39;hi&#39; )，
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="箭头函数">箭头函数</h3>
-
-<p>箭头函数没有 <code>arguments</code> 和 <code>this</code>，箭头函数里面的 <code>this</code> 就是外面的 <code>this</code>，就算加 <code>call</code> 也没有</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>                   <span class="c1">// window
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
-<span class="nx">fn</span><span class="p">(</span><span class="p">)</span>                                <span class="c1">// window
-</span><span class="c1"></span><span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;hai&#39;</span><span class="p">}</span> <span class="p">)</span>             <span class="c1">// window
-</span></code></pre></td></tr></table>
-</div>
-</div>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/javascript/" term="JavaScript" label="JavaScript" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">JavaScript 入门 IV：数组</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-02-js-4/" />
-            <id>http://hais-teatime.com/post/2019-12-02-js-4/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-02T15:35:22+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[本文将介绍对象的其中的一种比较特别的形式：数组。
-这里需要注意的是，JavaScript 中的数组不是典型的数组，而是一个对象；具体表现在：元素的 数据类型可以不同，内存不一定连续，并且是通过字符串下标 （而不是数字下标）获取元素。]]></summary>
-            
-                <content type="html"><![CDATA[<p>本文将介绍对象的其中的一种比较特别的形式：数组。</p>
-
-<p>这里需要注意的是，JavaScript 中的数组不是典型的数组，<strong>而是一个对象</strong>；具体表现在：元素的 <strong>数据类型可以不同</strong>，<strong>内存不一定连续</strong>，并且是通过<strong>字符串下标</strong> （而不是数字下标）获取元素。</p>
-
-<blockquote>
-<p>本文大部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
-</blockquote>
-
-<h2 id="新建数组">新建数组</h2>
-
-<p>我们可以通过以下两种方式来新建一个数组：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 数组的简便定义
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="c1">// 数组的标准写法
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1">// 或者只传入一个参数，表示数组的长度
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>除此之外，数组还可以从字符串或对象转化而来：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 以&#39;,&#39;分隔的字符串
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="s1">&#39;1,2,3&#39;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="c1">// 没有间隔的字符串
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
-<span class="c1">// 由对象转换
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>当然数组也可以重新转换为字符串：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>数组对象除了 <code>__proto__</code> 之外，还包括 <strong>索引</strong> 和 <strong>长度（<code>length</code>）</strong> 这两个自身属性。</p>
-
-<blockquote>
-<p>什么是伪数组？</p>
-
-<p>伪数组看起来像 JavaScript 的数组，但是他的的原型链中 <strong>没有数组的原型</strong>，不能使用数组常用的一些方法，比如一个普通的对象只是加上 <code>length</code> 属性，得到的是一个伪数组。</p>
-
-<p>一些 DOM 操作也会产生伪数组：<code>let divList = document.querySelector('div')</code>。</p>
-
-<p>但是因为伪数组很不方便，我们通常还是会再将其转换为数组：<code>let divArray = Array.from(divList)</code>。</p>
-</blockquote>
-
-<p>我们还可以通过其他的一些操作得到一些新数组：</p>
-
-<ul>
-<li><strong>合并数组</strong>：<code>let arr3 = arr1.concat(arr2)</code>，生成新数组，原数组不变</li>
-<li><strong>截取数组</strong>：<code>let arr2 = arr1.slice(2)</code>，生成新数组，原数组不变</li>
-<li><strong>复制数组</strong>：<code>let arr2 = arr1.slice(0)</code>，生成新数组，原数组不变</li>
-</ul>
-
-<h2 id="删除元素">删除元素</h2>
-
-<p>我们可以用对象通用的 <code>delete</code> 方法删除元素：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-<span class="k">delete</span> <span class="nx">arr</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span>
-<span class="c1">// 之后 arr 变成 [ empty, &#39;b&#39;, &#39;c&#39;]，如果 3 个值都是 empty，则称为稀疏数组，不推荐这种方法
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>此外，我们也可以通过改 <code>length</code> 也可以删除数组的元素，但同样不推荐。</p>
-
-<p>下面是推荐的元素删除方法，每种方法均不会生成新的数组，原来的数组会被修改。</p>
-
-<ul>
-<li><code>arr.shift()</code>，删除最开始的元素，并返回他，<code>arr</code> 被修改</li>
-<li><code>arr.pop()</code>，删除最后一个元素，并返回他，<code>arr</code> 被修改</li>
-<li><code>arr.splice(2, 3)</code>，从 <code>2</code> 开始，删除 <code>3</code> 个，并返回删除的部分，<code>arr</code> 被修改</li>
-<li><code>arr.splice(2, 3, 'x', 'y')</code>，从 <code>2</code> 开始，删除 <code>3</code> 个，增加 <code>'x'</code> 和 <code>'y'</code>，并返回删除的部分，<code>arr</code> 被修改</li>
-</ul>
-
-<h2 id="查看元素">查看元素</h2>
-
-<p>首先是数组的遍历。同样的，我们可以使用对象通用的 <code>Object.keys(arr)</code> 和 <code>Object.values(arr)</code> 方法，也可以使用 <code>for in</code> 来打印，但这三种方法我们均不推荐。</p>
-
-<p>我们可以采用以下方法来遍历数组：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> : </span><span class="si">${</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-
-<span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span><span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">$</span><span class="sb">(index) : </span><span class="sb">$</span><span class="sb">(item)</span><span class="sb">`</span><span class="p">)</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>以上两种基本没有区别，但 <code>for</code> 关键字有 <code>continue</code> 和 <code>break</code>，<code>forEach</code> 没有；<code>for</code> 是块级作用域，<code>forEach</code> 是函数作用域。</p>
-
-<p>同时我们可以自己尝试手写一个 <code>forEach</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">forEach</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span><span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="p">{</span>
-        <span class="nx">fn</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<blockquote>
-<p>注意有时会遇到索引越界的情况，比如 <code>arr[arr.length] === undefined</code> 或者 <code>a[-1] === undefined</code></p>
-</blockquote>
-
-<p>我们可以通过 <code>arr.indexOf(item)</code> 来查找 <code>item</code> 是否在数组里面，若存在就会返回索引，否则就返回 <code>-1</code>；</p>
-
-<p>还可以通过条件来查找元素：<code>arr.find(item =&gt; item % 2 === 0)</code>，找到第一个偶数；也可以用 <code>arr.findIndex(item =&gt; item % 2 === 0)</code>，找到第一个偶数的索引</p>
-
-<h2 id="增加元素">增加元素</h2>
-
-<p>通过下面这三种方法可以实现在尾部、头部、中间增加元素，每种方法都会改变原数组，但他们的返回值有所不同：</p>
-
-<ul>
-<li><code>arr.push()</code>，在尾部添加，返回数组长度，<code>arr</code> 被修改</li>
-<li><code>arr.unshift()</code>，在头部添加，返回数组长度，<code>arr</code> 被修改</li>
-<li><code>arr.splice(8, 0, 'x', 'y')</code>，增加 <code>'x'</code> 和 <code>'y'</code>，并返回删除的部分 <code>[]</code> ，arr 被修改</li>
-</ul>
-
-<h2 id="修改元素">修改元素</h2>
-
-<p>数组还提供了一些其他方法来操作元素：</p>
-
-<p><code>arr.reverse()</code>，数组反向，<code>arr</code> 被修改</p>
-
-<p><code>arr.sort()</code>，数组排序，<code>arr</code> 被修改，通过下面这种方式可以修改排序的方式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="p">)</span><span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-<span class="p">}</span>
-<span class="c1">// 若返回 1，则 a 在 b 后面；返回 0，则不变，返回 -1 则 b 在 a 后面。
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>还可以进行自定义排序：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="p">)</span><span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">score</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">score</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">score</span> <span class="o">===</span> <span class="nx">b</span><span class="p">.</span><span class="nx">score</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-<span class="p">}</span>
-<span class="c1">// 以上可以简写为
-</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">score</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">score</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="数组变换">数组变换</h2>
-
-<p>有三种方法可以实现数组变换：</p>
-
-<p><code>map</code>：n 变 n</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="nx">item</span> <span class="o">*</span> <span class="nx">item</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p><code>filter</code>：n 变少</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="nx">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p><code>reduce</code>：n 变 1</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">item</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">result</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">item</span> <span class="o">*</span> <span class="nx">item</span><span class="p">)</span><span class="p">,</span> <span class="p">[</span><span class="p">]</span><span class="p">)</span>
-<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">result</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">?</span> <span class="p">[</span><span class="p">]</span> <span class="o">:</span> <span class="nx">item</span><span class="p">)</span><span class="p">,</span> <span class="p">[</span><span class="p">]</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/javascript/" term="JavaScript" label="JavaScript" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">JavaScript 入门 III：对象</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-02-js-3/" />
-            <id>http://hais-teatime.com/post/2019-12-02-js-3/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-02T12:14:00+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[本文将介绍 JavaScript 中非常重要的一个知识点——对象，以及关于原型的相关内容。]]></summary>
-            
-                <content type="html"><![CDATA[<p>本文将介绍 JavaScript 中非常重要的一个知识点——对象，以及关于原型的相关内容。</p>
-
-<blockquote>
-<p>本文大部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
-</blockquote>
-
-<p>简单来说，对象实际上就是无序的数据集合，或者说是 <strong>键/值对（Key/Value Paris）</strong>的集合，他可以有以下几种写法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 对象的简便声明
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;harvey&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;age&#39;</span><span class="o">:</span> <span class="mi">18</span>
-    <span class="p">}</span>
-<span class="c1">// 对象的标准写法
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">(</span><span class="p">{</span>
-    <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;harvey&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;age&#39;</span><span class="o">:</span> <span class="mi">18</span>
-<span class="p">}</span><span class="p">)</span>
-<span class="c1">// 对象也可以作为参数直接传入函数
-</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="p">{</span>
-    <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;harvey&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;age&#39;</span><span class="o">:</span> <span class="mi">18</span>
-<span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>在这里我们需要注意以下几个细节：</p>
-
-<ul>
-<li>键名是 <strong>字符串</strong>，<strong>不是标识符</strong>，可以是任意字符</li>
-<li>引号可以省略，省略之后就只能写标识符或者以数字开头</li>
-<li><strong>但就算引号省略了，键名也还是字符串</strong>
-
-<ul>
-<li>有时候遇到一些奇怪的属性名，比如 <code>1e2</code> 会变成 <code>'100'</code>，<code>.234</code> 会变成 <code>'0.234'</code>，<code>0xFF</code> 会变成 <code>'255'</code></li>
-</ul></li>
-<li>变量也可以作为属性名，比如：<code>let obj = { [p1]: 'harvey' }</code>，这样就会用 <code>p1</code> 里面的值了，<strong>中括号里面的东西都会先求值</strong></li>
-</ul>
-
-<h2 id="对象的属性">对象的属性</h2>
-
-<h3 id="隐藏的属性">隐藏的属性</h3>
-
-<p><strong>每一个</strong> 对象都有一个隐藏属性 <code>__proto__</code>，这个属性存着 <strong>一个对象的地址</strong>，这个对象包含了这类对象（普通对象、数组、函数等）的 <strong>共有属性</strong>。</p>
-
-<p><code>__proto__</code> 里面存的实际上就是 <strong>原型的地址</strong>。</p>
-
-<p>因此，<strong>每一个对象都有原型</strong>。</p>
-
-<p>比如 <code>obj = {}</code>，他的原型的地址就存储在 <code>obj.__proto__</code> 中，而<code>obj.__proto__</code> 也是一个对象，因此他也有原型，但我们规定，他的原型值为 <code>null</code>。</p>
-
-<h3 id="属性的删除">属性的删除</h3>
-
-<p>有以下两种删除对象属性的方法：</p>
-
-<ol>
-<li><code>obj.name = undefined</code>，这样做只会删除属性的值，不会把属性完全删除</li>
-<li><code>delete obj.name</code>，同时删除属性名和属性值，或者用 <code>delete obj['name']</code> 也是可以的</li>
-</ol>
-
-<p>删除完成后我们可以对删除的结果进行检查：</p>
-
-<ol>
-<li><code>'name' in obj</code>，检查 <code>'name'</code> 是不是 <code>obj</code> 的属性名，如果是用上面的第一种方法删除，检查的结果将是 <code>true</code>；如果是第二种方法删除，则会返回 <code>false</code>；注意属性名有引号（因为属性名实际上是字符串）</li>
-<li><code>'name' in obj &amp;&amp; obj.name === undefined</code>，检查是否含有属性名且值为 <code>undefined</code>，如果是上面第一种方法删除，则会返回 <code>true</code></li>
-</ol>
-
-<h3 id="属性的查看">属性的查看</h3>
-
-<p>有以下几种方法可以查看对象的属性名（或属性值）</p>
-
-<ul>
-<li><code>Object.keys(obj)</code>，查看 <code>obj</code> 的 <strong>自身</strong> 属性名</li>
-<li><code>Object.values(obj)</code>，查看 <code>obj</code> 的  <strong>自身</strong> 属性值</li>
-<li><code>Object.entries(obj)</code>，返回结果包含两个数组，第一个数组是 <code>obj</code> 的 <strong>自身</strong> 属性名，第二个数组是 <code>obj</code> 的 <strong>自身</strong> 属性值</li>
-<li><code>console.dir(obj)</code>，查看 <code>obj</code> 的 <strong>自身属性 + 共有属性</strong></li>
-<li><code>in</code>，查看是不是 <strong>自身属性 + 共有属性</strong> （相当于所有属性）</li>
-<li><code>obj.hasOwnProperty('toString')</code>，查看 <code>'toString'</code> 是不是 <code>'obj'</code> <strong>自身的</strong> 属性</li>
-</ul>
-
-<blockquote>
-<p>注意 <code>obj.name</code> 等价于 <code>obj['name']</code>，不等价于 <code>obj[name]</code></p>
-</blockquote>
-
-<h3 id="添加或修改属性">添加或修改属性</h3>
-
-<p>我们可以直接为原有属性进行赋值，或者增加新的属性并赋值：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;harvey&#39;</span>
-<span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;harvey&#39;</span>
-<span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;na&#39;</span><span class="o">+</span><span class="s1">&#39;me&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;harvey&#39;</span> <span class="c1">// 因为属性名本质是字符串，上面三句话实际上是一样的
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>我们也可以批量进行赋值</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span><span class="nx">p1</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">p2</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span> <span class="nx">p3</span><span class="o">:</span><span class="mi">3</span><span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>但是，我们无法直接修改共有属性（原型上的属性），比如，我们不能通过 <code>obj.toString</code> 来修改原型上的<code>'toString'</code>，这样只会为 <code>obj</code> 增添一个本身的<code>'toString'</code> 属性，而不会修改原型。</p>
-
-<p>如果我们一定要修改原型的属性，我们可以这样做，但是我们非常不建议这样做。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">obj</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> 
-<span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> 
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>我们也可以将 <code>obj</code> 的原型改成别的值，比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 先创建一个对象，叫做 people，注意 people 的原型是这类对象的共有属性的集合（里面系统默认创建了一些属性）
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">people</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
-<span class="c1">// 我们再以 people 为原型创建一个新的对象，叫做 chinese
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">chinese</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">people</span><span class="p">)</span>
-<span class="c1">// 上面这句话相当于 chinese.__proto__ = people，但是我们非常不建议直接操作 __proto__ 属性
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>经过上面这一番操作之后，我们来分析一下：</p>
-
-<p><code>chinese</code> 的原型（也就是说 <code>chinese.__proto__</code>）实际上已经变成了 <code>people</code>，而 <code>people</code> 的原型（<code>people.__proto__</code>）是这类对象的<strong>共有属性的集合</strong>——这就形成了 <strong>原型链</strong>。</p>
-
-<h2 id="对象的分类">对象的分类</h2>
-
-<blockquote>
-<p>所有的函数自带 <code>prototype</code></p>
-
-<p><code>prototype</code> 中自带 <code>constructor</code></p>
-
-<p><code>constructor</code> 里面的东西就是函数的内容</p>
-</blockquote>
-
-<p>当我们使用 <code>new X()</code> 的时候，系统自动帮我们做了 4 件事情：</p>
-
-<ol>
-<li>自动创建了一个空对象</li>
-<li>自动为空对象关联原型（即为 <code>新对象.__protp__</code> 赋值），原型的地址为 <code>X.prototype</code></li>
-<li>自动将空对象作为 <code>this</code> 关键字运行构造函数</li>
-<li>自动 <code>return this</code></li>
-</ol>
-
-<p>我们将 <code>X</code> 称为 <strong>构造函数</strong>，他有以下两个功能：</p>
-
-<ol>
-<li><code>X</code> 自己里面写的东西，用于添加新对象的 <strong>自身属性</strong></li>
-<li><code>X.prototype</code> 负责保存对象的 <strong>共有属性</strong></li>
-</ol>
-
-<p>用另种方式表达，也就是说，当我们执行 <code>let 对象 = new 构造函数()</code> 之后，将会得到结果 <code>对象.__proto__ === 其构造函数.prototype</code></p>
-
-<blockquote>
-<p>插播两条代码规范：</p>
-
-<ol>
-<li>所有构造函数首字母大写（这就是为什么上文用大写的 <code>X</code> 表示构造函数，被构造出来的对象首字母小写）</li>
-<li><code>new</code> 后面的函数使用名词；其他的函数一般用动词开头</li>
-</ol>
-
-<p>区别 <strong>数据类型</strong> 与 <strong>对象的分类</strong>：</p>
-
-<ul>
-<li>数据类型是 JavaScript 数据的类型，一共有 7 种；</li>
-<li>对象的分类则有无数种，常见的有 Array、Function、Date、RegExp 等</li>
-</ul>
-</blockquote>
-
-<p>我们常见的有这几种类型的对象：</p>
-
-<ul>
-<li><p>数组对象</p>
-
-<ul>
-<li>自身属性：<code>'0'</code> <code>'1'</code> <code>'2'</code> <code>'length'</code></li>
-<li>共有属性：<code>'push'</code> <code>'pop'</code> <code>'shift'</code> <code>'unshift'</code> <code>'join'</code></li>
-</ul></li>
-
-<li><p>函数对象</p>
-
-<ul>
-<li>自身属性：<code>'name'</code> <code>'length'</code></li>
-<li>共有属性：<code>'call'</code> <code>'apply'</code> <code>'bind'</code></li>
-</ul></li>
-</ul>
-
-<blockquote>
-<p>Extra Questions:</p>
-
-<p><strong>Q: window 是谁构造出来的？</strong></p>
-
-<p>A: 可以通过 constructor 属性看出构造者</p>
-
-<p><strong>Q: window.Object 是谁构造的？</strong></p>
-
-<p>A: window.Function，所有的函数都是 window.Function 构造的</p>
-
-<p><strong>Q: window.Function 是谁构造的？</strong></p>
-
-<p>A: window.Function，所有的函数都是 window.Function 构造的，浏览器构造了 Function，然后指定它的构造者是自己</p>
-</blockquote>
-
-<h3 id="class-语法糖">class 语法糖</h3>
-
-<p>关于 class 的相关用法详见 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes" target="_blank">MDN 文档</a>，相对简单，这里不再赘述。</p>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/javascript/" term="JavaScript" label="JavaScript" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">JavaScript 入门 II：数据类型</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-02-js-2/" />
-            <id>http://hais-teatime.com/post/2019-12-02-js-2/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-02T11:21:59+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[本文将介绍 JavaScript 的 7 种数据类型、变量声明，以及类型转换相关的知识，主要是为下一篇对象的介绍做准备。]]></summary>
-            
-                <content type="html"><![CDATA[<p>本文将介绍 JavaScript 的 7 种数据类型、变量声明，以及类型转换相关的知识，主要是为下一篇对象的介绍做准备。</p>
-
-<blockquote>
-<p>本文大部分内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，并参考了 Wikipedia 和互联网上的其他公开资料。</p>
-</blockquote>
-
-<h2 id="数据类型">数据类型</h2>
-
-<h3 id="number">number</h3>
-
-<p>Key Points:</p>
-
-<ul>
-<li>由 64 位浮点数组成</li>
-<li>特殊值：
-
-<ul>
-<li><code>0</code>、<code>+0</code>、<code>-0</code>；</li>
-<li><code>Infinity</code>、<code>+Infinity</code>（1/0 得到）、<code>-Infinity</code>（1/-0 得到）；</li>
-<li><code>NaN</code>（0/0 得到，注意他也是 number 类型的，此外 NaN === NaN 为 false）</li>
-</ul></li>
-<li>范围和精度：从 <code>Number.MIN_VALUE 到 Number.MAX_VALUE</code>，精度大概是 15 个 10 进制有效数字</li>
-</ul>
-
-<h3 id="string">string</h3>
-
-<p>Key Points:</p>
-
-<ul>
-<li>每个字符两个字节（JavaScript 使用阉割版 UTF-8，两个字符定长）</li>
-<li>写法：单引号、双引号、反引号，注意 <strong>引号不是字符串的一部分</strong></li>
-<li>转义：<code>\r</code> 表示回车，<code>\uFFFF</code> 表示对应的 Unicode 字符，<code>\xFF</code> 表示前 256 个 Unicode 字符</li>
-<li>字符串的属性：<em>（字符串本来不应该有属性，只有对象才有属性，这里面有故事，后续填坑）</em>
-
-<ul>
-<li>长度：<code>s.length</code></li>
-<li>下标：<code>s[0]</code></li>
-</ul></li>
-<li>Base64 转码：<code>window.btoa</code> 编码，<code>window.atob</code> 反编码，注意这个编码不是加密，很容易解开</li>
-</ul>
-
-<h3 id="bool">bool</h3>
-
-<p>Key Points:</p>
-
-<ul>
-<li>否定运算、相等运算、比较运算可以得到 bool 值</li>
-<li><strong>五个 falsy 值：<code>undefined</code> <code>null</code> <code>0</code> <code>NaN</code> <code>''</code></strong></li>
-</ul>
-
-<h3 id="symbol">symbol</h3>
-
-<h3 id="undefined">undefined</h3>
-
-<p>Key Points:</p>
-
-<ul>
-<li>如果声明了没有赋值，默认是 <code>undefined</code></li>
-<li>如果函数没有写 <code>return</code>，默认是 <code>undefined</code></li>
-</ul>
-
-<h3 id="null">null</h3>
-
-<p>习惯上把非对象空值写成 <code>undefined</code>，对象空值写成 <code>null</code></p>
-
-<h3 id="object">object</h3>
-
-<p><strong>数组、函数、日期</strong>都是 <code>object</code>，不是单独的数据类型，关于对象的相关问题可以参考下一篇文章。</p>
-
-<h2 id="变量声明">变量声明</h2>
-
-<p>目前 JavaScript 一共有三种声明方式：</p>
-
-<ul>
-<li><code>var</code>：过时的，不好的</li>
-<li><code>let</code>：新的，更合理的，跟 <code>var</code> 主要有以下几点不同：
-
-<ul>
-<li>遵循块作用域</li>
-<li>不能重复声明</li>
-<li>声明时可以赋值，也可以不赋值</li>
-<li>必须先声明再使用</li>
-<li>全局声明的 <code>let</code> 变量不会再变成 <code>window</code> 的属性</li>
-<li><code>let</code> 配合 <code>for 循环</code> 有奇效，因为每次循环都会新加一个 let</li>
-</ul></li>
-<li><code>const</code>：跟 let 几乎一样，但声明时必须赋值，且不能再更改（类似于常量声明）</li>
-</ul>
-
-<blockquote>
-<p>注意：</p>
-
-<p>变量声明指定值的时候同时 <strong>也指定了类型</strong>，但是值和类型都可以随意变化</p>
 </blockquote>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/javascript/" term="JavaScript" label="JavaScript" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">JavaScript 入门 I：诞生与基础语法</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2019-12-01-js-1/" />
-            <id>http://hais-teatime.com/post/2019-12-01-js-1/</id>
-            <updated>2020-01-28T11:35:42+08:00</updated>
-            <published>2019-12-01T17:17:48+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[JavaScript 的诞生为网页的互动带来了更多的可能性，虽然现在已经出现了很多方便好用的 JavaScript 库，但我们还是应该认真学习原生 JS 的相关知识。本文是 JavaScript 入门系列的第一篇，将从 JavaScript 的诞生和基本的一些语法开始着手介绍。]]></summary>
-            
-                <content type="html"><![CDATA[<p>JavaScript 的诞生为网页的互动带来了更多的可能性，虽然现在已经出现了很多方便好用的 JavaScript 库，但我们还是应该认真学习原生 JS 的相关知识。本文是 JavaScript 入门系列的第一篇，将从 JavaScript 的诞生和基本的一些语法开始着手介绍。</p>
-
-<blockquote>
-<p>本文参考了：</p>
-
-<p><a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师上课讲的内容；</p>
-
-<p>阮一峰的博客 <a href="http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html" target="_blank">JavaScript 诞生记</a> 和 <a href="http://www.ruanyifeng.com/blog/2011/06/10_design_defects_in_javascript.html" target="_blank">JavaScript 的 10 个设计缺陷</a>；</p>
-
-<p><a href="https://zh.wikipedia.org/wiki/JavaScript#%E5%8E%86%E5%8F%B2" target="_blank">JavaScript 的维基百科</a>；</p>
-
-<p>以及其他在互联网上未标明出处的内容。</p>
-</blockquote>
-
-<h2 id="javascript-的诞生">JavaScript 的诞生</h2>
-
-<p>1994 年，网景公司（当时叫 Mosaic Communications）发布了一款名为 <strong>Mosaic Netscape</strong> 的网页浏览器，在四个月内，这款浏览器就占据了四分之三的浏览器市场，并成为 1990 年代互联网的主要浏览器。</p>
-
-<blockquote>
-<p>因为世界最早流行的图形接口网页浏览器 <strong>NCSA Mosaic</strong> 是美国国家超级电脑应用中心（NCSA）与 1993 年发布的，网景公司为了避免版权纠纷，将浏览器改名为 <strong>Netscape Navigator</strong>，而公司则改名为 <strong>Netscape Communications</strong>。</p>
-</blockquote>
-
-<p>这款浏览器发布之后，网景意识到，<strong>光有静态的页面是不行的，需一种网页脚本语言，使得浏览器可以与网页互动。</strong></p>
-
-<p>1995 年，昇阳（Sun）正式向市场推出 Java，网景公司看到 Java 的前景，决定与之结盟，并在浏览器中支持 Java，但如果直接将Java作为脚本语言嵌入网页，只是因为这样会使HTML网页过于复杂。</p>
-
-<p>同年，网景招募了布兰登（Brendan Eich），授意其开发一款 <strong>“未来的脚本语言”</strong> ，这种语言需要：“看上去与Java足够相似，但是比Java简单，使得非专业的网页作者也能很快上手。”——这个决定就排除了 Perl、Python、Tcl 或 Scheme 这些选项，同时也促成了 JavaScript 的诞生。</p>
-
-<p>由于对 Java 不感兴趣，布兰登只用了十天时间就设计出了这款语言的原型，并命名为 <strong>Mocha</strong>，后续又改名为 <strong>LiveScript</strong>，但在 1995 年 12 月，公司为了蹭 Java 的热度，改名为 <strong>JavaScript</strong>。而事实上，JavaScript 和 Java 关系并不大。</p>
-
-<blockquote>
-<p>总的来说，布兰登的设计思路是这样的：</p>
-
-<ol>
-<li>借鉴 C 的基本语法；</li>
-<li>借鉴 Java 的数据类型和内存管理；</li>
-<li>借鉴 Scheme，将函数提升到“第一等公民”（first class）的地位；</li>
-<li>借鉴 Self，使用基于原型（prototype）的继承机制。</li>
-</ol>
-</blockquote>
-
-<p>由于 JavaScript 在浏览器上的大获成功，微软（Microsoft）在后续推出的 IE 3 上也使用了 <strong>JScript</strong> ——这与 JavaScript 是类似、但不同标准的语言。于是当年市场上出现了两者对峙的情况，网页设计者通常会在主页放上“用Netscape可达到最佳效果”或“用IE可达到最佳效果”的标志。</p>
-
-<p>1996 年 11 月，网景正式向 <strong>欧洲计算机制造商协会（ECMA）</strong> 提交语言标准；1997 年 6 月，ECMA 以 JavaScript 语言为基础制定了 ECMAScript 标准规范 ECMA-262。自然 JavaScript 也成为了 ECMAScript 最著名的实现之一。</p>
-
-<p>由于只有短短十天的设计时间，而且世界上之前没有出现过结合了函数式编程和对象编程的语言，以及发展的迅速导致没有时间调整设计，JavaScript 成功成为了有着众多设计缺陷的语言，在这里不做细谈。</p>
-
-<p>2001 年，微软发布 Windows XP，并捆绑了 IE 6。由于 Windows XP 迅速爆火以及长期的垄断，IE 6 也随之占据非常高的市场份额。前文已经说过，IE 6 对 JavaScript 支持并不好，同时 IE 6 对 CSS 标准的支持也不尽完善，导致前端技术的发展进入了漫长的蛰伏期。</p>
-
-<p>2004 年，谷歌（Google）发布爆款应用 Gmail。这款应用在刚推出时，容量就比起其他受欢迎的电子邮箱服务如雅虎和微软的 Hotmail 多出过百倍，成为市场爆品，同时也让众多开发者看到了页面交互的巨大前景和可能性。</p>
-
-<p>2005 年，Jesse 将谷歌用到的技术命名为 AJAX。</p>
-
-<p>2006 年，至今为止最为长寿的 JavaScript 库—— jQuery，发布。</p>
-
-<p>2008 年，谷歌发布 Chrome 浏览器；同年，Chrome 的使用率上升至 1%。其使用高性能 JavaScript 引擎 V8。</p>
-
-<p>2009 年，Ryan 基于 V8 写了 Node.js。</p>
-
-<p>2010 年，Isaac 基于 Node.js 写了 npm。</p>
-
-<p>2010 年，TJ 受 Sinatra 启发，写了 Express.js。赶上了这几波顺风车的 JavaScript 迅速发展，并将触手伸向了后端。自此，JavaScript 也能胜任后端的一些工作了。</p>
-
-<p>2012 年，Chrome 全球占有率达到 33%，超越 IE 跃居首位。</p>
-
-<p>2015 年 12 月，Chrome 中国占有率大都 37%，超越 IE。</p>
-
-<h2 id="javascript-基础语法">JavaScript 基础语法</h2>
-
-<h3 id="表达式和语句">表达式和语句</h3>
-
-<p>Key Points:</p>
-
-<ul>
-<li>表达式一般都有值，语句可能有也可能没有</li>
-<li>语句一般会改变环境（声明、赋值），逗号表示语句没完</li>
-</ul>
-
-<p>举个栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 表达式
-</span><span class="c1"></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>          <span class="c1">// 值为 3
-</span><span class="c1"></span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>      <span class="c1">// 值为函数的返回值
-</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span>    <span class="c1">// 值为函数本身
-</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// 值为函数的返回值：undefined
-</span><span class="c1"></span>
-<span class="c1">// 语句
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="标识符">标识符</h3>
-
-<p>标识符是代码中用来标识变量、函数、或属性的字符序列。</p>
-
-<blockquote>
-<p>在 JavaScript 中，标识符只能包含字母或数字或下划线（“_”）或美元符号（“$”），且不能以数字开头。（有时候也可以用其他的 Unicode 字符，比如中文，比如 Emoji）</p>
-
-<p>标识符与字符串不同之处在于字符串是数据，而标识符是代码的一部分。在 JavaScript 中，无法将标识符转换为字符串，但有时可以将字符串解析为标识符。</p>
-</blockquote>
-
-<h3 id="if-else-语句">if...else 语句</h3>
-
-<p>与其他大多数语言的 if...else 没有区别，详见 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">MDN 文档</a>。</p>
-
-<p>举个栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">cipher_char</span> <span class="o">===</span> <span class="nx">from_char</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">result</span> <span class="o">=</span> <span class="nx">result</span> <span class="o">+</span> <span class="nx">to_char</span>
-   <span class="nx">x</span><span class="o">++</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-   <span class="nx">result</span> <span class="o">=</span> <span class="nx">result</span> <span class="o">+</span> <span class="nx">clear_char</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<blockquote>
-<p><code>&amp;&amp;</code>：如果前面是真的，就执行后面的（若前面是假的，表达式的值为前面；若前面是真的，表达式的值为后面）</p>
-
-<p>比如：</p>
-
-<p><code>window.f1 &amp;&amp; console.log('f1存在')</code></p>
-
-<p><code>console &amp;&amp; console.log &amp;&amp; console.log('hi')</code>，IE 没有 <code>console.log</code></p>
-
-<p><code>||</code>：如果前面是假的，就执行后面的</p>
-
-<p>比如：</p>
-
-<p><code>a = a || 100</code>，可以用于设置保底值</p>
-</blockquote>
-
-<h3 id="循环语句">循环语句</h3>
-
-<h4 id="while-循环">while 循环</h4>
-
-<p>与其他大多数语言的 while 循环没有区别，详见 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/while" target="_blank">MDN 文档</a>。</p>
-
-<p>举个栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">n</span><span class="o">++</span>
-  <span class="nx">x</span> <span class="o">+=</span> <span class="nx">n</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h4 id="for-循环">for 循环</h4>
-
-<p>与其他大多数语言的 for 循环区别不大，但注意 let 和 var 有区别，详见下面的栗子：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 使用 var
-</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-   <span class="p">}</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 输出 5 个 5，因为 setTimeout 表示过会儿再执行。
-</span><span class="c1"></span>
-<span class="c1">// 使用 let
-</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">setTimeout</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-   <span class="p">}</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 输出 0 1 2 3 4 5，因为 for 每一次循环都为 let 新建了一个作用域，他保留了每一次 i 的值
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="label">label</h3>
-
-<p>比较复杂，留个坑，以后再填，需要注意的是：
-<code>{ a:1 }</code> 这句话，不一定是表示一个对象，也可能表示 <strong>a 是一个 label，值为 1</strong>。</p>]]></content>
             
             
             
