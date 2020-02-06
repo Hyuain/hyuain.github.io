@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 31 Jan 2020 20:01:11 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 06 Feb 2020 16:27:46 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="http://hais-teatime.com/rss.xml" />
         
@@ -38,19 +38,807 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description><![CDATA[<p>以前一直用的 Notion 做笔记，感觉体验很不错，这几天复习一下基础知识，顺便把笔记都搬家啦。</p>
+                    <description><![CDATA[<p>以前一直用的 Notion 做笔记，感觉体验很不错，但还是不太如意，这几天复习一下基础知识，顺便把笔记都搬家啦。</p>
 
-<p>因为 Notion 每个月要收 5 美刀（有点小贵），现在试用的两个月快完了，得赶紧把笔记给换个地方存起来，于是新建了一个博客专门用来放笔记哦。</p>
+<p>因为 Notion 每个月要收 5 美刀（有点小贵），现在试用的两个月快完了，而且怕他的服务器不稳定，得赶紧把笔记给换个地方存起来，于是新建了一个博客专门用来放笔记。</p>
 
 <p>链接在这里：<a href="https://hais-teatime.com/hais-notebook/" target="_blank">小海的笔记本</a></p>
 
-<p>同时这个博客里面的笔记性质的文章也将会全部移动到新的笔记本中，新的笔记本使用了自带的搜索插件，也有很棒的分类系统，可以很方便地找到以前的东西哦。</p>
+<p><strong>同时这个博客里面的笔记性质的文章也将会全部移动到新的笔记本中，这个博客今后将会更多专注于原创的内容。</strong></p>
+
+<p>新的笔记本使用了自带的搜索插件，也有很棒的分类系统，可以很方便地找到以前的东西哦。</p>
 
 <p>但是所谓笔记本，就是到处抄抄抄得来的东西，因此，不允许用作商业用途，目前笔记的来源包括但不限于：</p>
 
-<p>饥人谷的内容、腾讯课堂的内容、慕课网的内容、各类文档、各种博客、各种百科资料、互联网上的公开内容等等，为避免法律纠纷，在这里特别说明一下。当然一般是不会一字未动复制粘贴过来的，也不会出现大段的课件、PPT 等原版资料。</p>
+<p>饥人谷、腾讯课堂、慕课网、BiliBili 上找的课程、各类文档、各种博客（掘金、知乎等等）、各种百科资料、互联网上的公开内容等等，为避免法律纠纷，在这里特别说明一下。当然一般是不会一字未动复制粘贴过来的，也不会出现大段的课件、PPT 等原版资料。</p>]]></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/vue/">Vue</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E9%A1%B9%E7%9B%AE/">项目</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>小项目：简单的 UI 框架 - Hais UI</title>
+                <link>http://hais-teatime.com/post/2020-01-27-hais-ui/</link>
+                <guid isPermaLink="true">http://hais-teatime.com/post/2020-01-27-hais-ui/</guid>
+                <pubDate>Mon, 27 Jan 2020 16:36:13 +0800</pubDate>
+                
+                    <author>Hyuain97@163.com (Harvey Zhang)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description><![CDATA[<p>尝试做了一个简单的基于 Vue 的 UI 框架，包含按钮、输入框、布局、弹出信息、标签、气泡卡片、折叠面板等常用组件。这篇博客是基于源码以及在搭建项目的过程中出现的问题进行的学习及讨论，而不是使用指导，组件的预览效果和使用方法可以查看 <a href="https://hais-teatime.com/hais-ui/" target="_blank">使用文档</a>，源代码可以查看 <a href="https://github.com/Hyuain/hais-ui" target="_blank">代码仓库</a> 。</p>
 
-<p>与此同时这个博客将会更多专注于原创的内容，可能不久之后也会 Renew 一下。</p>]]></description>
+<p>本项目基于 Vue，使用 parcel 搭建，最后发布到 npm 上可供下载，并使用 VuePress 撰写文档。</p>
+
+<h1 id="按钮与按钮组">按钮与按钮组</h1>
+
+<p>按钮组件相对比较简单，在这里我们需要的特别考虑的有以下几个点：</p>
+
+<h2 id="如何控制-icon-的位置">如何控制 icon 的位置</h2>
+
+<p>可以在组件的最外层加上一个动态绑定的 <code>class</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">:class</span><span class="o">=</span><span class="s">&#34;{[`icon-${iconPosition}`]: true}&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">hai-icon</span><span class="p">/</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p"></span><span class="p">&gt;</span>按钮<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这样就可以通过传入 <code>iconPosition</code> 这个 Prop 来给组件动态地加上一个 <code>icon-left</code> 或者 <code>icon-right</code> 的类，然后使用 <code>flex</code> 的 <code>order</code> 来控制里面 icon 的位置了。</p>
+
+<h2 id="如何让自定义组件响应原生的-click-事件">如何让自定义组件响应原生的 click 事件</h2>
+
+<p>为了让用户使用的时候不需要使用 <code>.native</code>，在这里我的处理方式比较单纯，就是让 <code>button</code> 在被点击的时候出发点击事件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;$emit(&#39;click&#39;)&#34;</span><span class="p"></span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">hai-icon</span><span class="p">/</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p"></span><span class="p">&gt;</span>按钮<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="如何让按钮合并为按钮组">如何让按钮合并为按钮组</h2>
+
+<p>这个只需要新增加一个按钮组组件，然后在这个按钮组组件里面修改 <code>:first-child</code> <code>:last-child</code> 和 <code>:not:first-child</code> 的样式即可</p>
+
+<h1 id="输入框">输入框</h1>
+
+<h2 id="如何让输入框能够使用-v-model">如何让输入框能够使用 <code>v-model</code></h2>
+
+<p>为了让自定义的输入框组件能够使用 Vue 提供的 <code>v-model</code>，需要给里面的原生 <code>input</code> 组件加上几个事件监听：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
+           <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&#34;$emit(&#39;change&#39;, $event.target.value)&#34;</span>
+           <span class="err">@</span><span class="na">input</span><span class="o">=</span><span class="s">&#34;$emit(&#39;input&#39;, $event.target.value)&#34;</span>
+           <span class="err">@</span><span class="na">focus</span><span class="o">=</span><span class="s">&#34;$emit(&#39;focus&#39;, $event.target.value)&#34;</span>
+           <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;$emit(&#39;blur&#39;, $event.target.value)&#34;</span>
+    <span class="p"></span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="网格系统">网格系统</h1>
+
+<h2 id="如何平均分配每个-col-的宽度">如何平均分配每个 <code>col</code> 的宽度</h2>
+
+<p>如果在 <code>row</code> 上使用 <code>display: flex</code> 的话，默认是不会换行，并且每个 <code>col</code> 的宽度是一样的，但是考虑到在有些时候，我们可能需要让他换行、或者自行控制他是否能换行（比如在 PC 端我们横向布局的模块，换到移动端可能需要变成纵向布局等），因此我考虑使用 <code>auto</code> 这一个属性来进行控制，在源代码中实际上是控制了 <code>flex-wrap</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-scss" data-lang="scss">    <span class="nc">.</span><span class="nc">row</span> <span class="p">{</span>
+      <span class="nt">display</span><span class="nd">:</span> <span class="nt">flex</span><span class="p">;</span>
+      <span class="nt">flex-wrap</span><span class="nd">:</span> <span class="nt">wrap</span><span class="p">;</span>
+      <span class="k">&amp;</span><span class="nc">.</span><span class="nc">auto</span> <span class="p">{</span>
+        <span class="nt">flex-wrap</span><span class="nd">:</span> <span class="nt">nowrap</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>最终得到的效果是：如果用户需要在同一行自动平均分配宽度，则使用 <code>auto</code>；若用户想要完全手动分配跨度比例则不使用 <code>auto</code>，在这种情况下，若总宽度超过一行，将会引起换行。</p>
+
+<h2 id="如何将一行划分成-24-份">如何将一行划分成 24 份</h2>
+
+<p>这其实是一个比较麻烦的问题，我们先假定用户可以用这种方式来使用我们的组件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">hai-row</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-col</span> <span class="na">span</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-col</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-col</span> <span class="na">span</span><span class="o">=</span><span class="s">&#34;12&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-col</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-col</span> <span class="na">span</span><span class="o">=</span><span class="s">&#34;8&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-col</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-row</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>可以传入一个 <code>span</code> 的 Prop 来告诉我们用户想让这个 <code>col</code> 占据二十四分之几的总宽度。那么比较简单粗暴的做法就是在这三个 <code>col</code> 上直接分别加 <code>col-4</code> <code>col-12</code> 和 <code>col-8</code>的类，对应样式分别是 <code>width: 4 / 24 * 100%</code> <code>width: 12 / 24 * 100%</code> 和 <code>width: 8 / 24 * 100%</code>。我们可以借助 SCSS 的循环来帮我们自动加样式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-scss" data-lang="scss">    <span class="nc">.</span><span class="nc">col</span><span class="p">{</span>
+      <span class="k">@for</span> <span class="nv">$n</span> <span class="ow">from</span> <span class="mi">1</span><span class="kt"></span> <span class="ow">through</span> <span class="mi">24</span><span class="kt"></span> <span class="p">{</span>
+        <span class="k">&amp;</span><span class="nc">.</span><span class="nc">col-</span><span class="si">#{</span><span class="nv">$n</span><span class="si">}</span> <span class="p">{</span>
+          <span class="nt">width</span><span class="nd">:</span> <span class="o">(</span><span class="err">$</span><span class="nt">n</span> <span class="o">/</span> <span class="nt">24</span><span class="o">)</span> <span class="o">*</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这样就写好了 <code>col-1</code> 到 <code>col-24</code> 的样式，我们只需要加上对应的 <code>class</code> 就行了。同样，我们的 <code>offset</code> 也是这样处理的。</p>
+
+<h2 id="响应式布局参数的校验">响应式布局参数的校验</h2>
+
+<p>在文档示例中的响应式部分我们可以看到这样的用法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">hai-row</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-col</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item1&#34;</span> <span class="na">span</span><span class="o">=</span><span class="s">&#34;24&#34;</span>
+             <span class="na">:pad</span><span class="o">=</span><span class="s">&#34;{span:8}&#34;</span>
+             <span class="na">:narrow-pc</span><span class="o">=</span><span class="s">&#34;{span:6}&#34;</span>
+             <span class="na">:pc</span><span class="o">=</span><span class="s">&#34;{span:4}&#34;</span>
+             <span class="na">:wide-pc</span><span class="o">=</span><span class="s">&#34;{span:2}&#34;</span>
+      <span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-col</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-col</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item2&#34;</span> <span class="na">span</span><span class="o">=</span><span class="s">&#34;24&#34;</span>
+             <span class="na">:pad</span><span class="o">=</span><span class="s">&#34;{span:15, offset:1}&#34;</span>
+             <span class="na">:narrow-pc</span><span class="o">=</span><span class="s">&#34;{span:17, offset:1}&#34;</span>
+             <span class="na">:pc</span><span class="o">=</span><span class="s">&#34;{span:18, offset:2}&#34;</span>
+             <span class="na">:wide-pc</span><span class="o">=</span><span class="s">&#34;{span:19, offset:3}&#34;</span>
+      <span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-col</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-row</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>为了保证用户传入的 <code>pad</code> <code>narrow-pc</code> <code>pc</code><code>wide-pc</code> 的值的有效性，我们需要做一些校验。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">validator</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+      <span class="kd">let</span> <span class="nx">valid</span> <span class="o">=</span> <span class="kc">true</span>
+      <span class="nx">keys</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">key</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="p">[</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="s1">&#39;offset&#39;</span><span class="p">]</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">valid</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">valid</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="如何动态添加类">如何动态添加类</h2>
+
+<p>如果只有一种或两种类需要动态添加上去还比较好处理，比如说可以这样写：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">:class</span><span class="o">=</span><span class="s">&#34;span &amp;&amp; `col-${span}`&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>但是现在情况比较麻烦，我们的用户可能会传入响应式布局所需要的一些对象值。我们可以考虑用两个函数来完成这个处理过程：</p>
+
+<p>首先使用用户输入的 <code>propsObj</code> 创建出我们想要加上去的 <code>classArray</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">createClass</span><span class="p">(</span><span class="nx">propsObj</span><span class="p">,</span> <span class="nx">device</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 如果没有传值，则输出的 classArray 为空
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">propsObj</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="p">[</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="kr">const</span> <span class="nx">classArray</span> <span class="o">=</span> <span class="p">[</span><span class="p">]</span>
+        <span class="c1">// 如果有 span 或者 offset 属性，就给 classArray 加上对应的部分
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">propsObj</span><span class="p">.</span><span class="nx">span</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">classArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`</span><span class="sb">col-</span><span class="si">${</span><span class="nx">device</span><span class="si">}</span><span class="si">${</span><span class="nx">propsObj</span><span class="p">.</span><span class="nx">span</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">propsObj</span><span class="p">.</span><span class="nx">offset</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">classArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`</span><span class="sb">offset-</span><span class="si">${</span><span class="nx">device</span><span class="si">}</span><span class="si">${</span><span class="nx">propsObj</span><span class="p">.</span><span class="nx">offset</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">classArray</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后我们再借助计算属性来将 <code>classArray</code> 加到组件上：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">colClass</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+        <span class="kr">const</span> <span class="p">{</span><span class="nx">span</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">pad</span><span class="p">,</span> <span class="nx">narrowPc</span><span class="p">,</span> <span class="nx">pc</span><span class="p">,</span> <span class="nx">widePc</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span>
+        <span class="kr">const</span> <span class="nx">createClass</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">createClass</span>
+        <span class="k">return</span> <span class="p">[</span>
+          <span class="p">...</span><span class="nx">createClass</span><span class="p">(</span><span class="p">{</span><span class="nx">span</span><span class="p">,</span> <span class="nx">offset</span><span class="p">}</span><span class="p">)</span><span class="p">,</span>
+          <span class="p">...</span><span class="nx">createClass</span><span class="p">(</span><span class="nx">pad</span><span class="p">,</span> <span class="s1">&#39;pad-&#39;</span><span class="p">)</span><span class="p">,</span>
+          <span class="p">...</span><span class="nx">createClass</span><span class="p">(</span><span class="nx">narrowPc</span><span class="p">,</span> <span class="s1">&#39;narrow-pc-&#39;</span><span class="p">)</span><span class="p">,</span>
+          <span class="p">...</span><span class="nx">createClass</span><span class="p">(</span><span class="nx">pc</span><span class="p">,</span> <span class="s1">&#39;pc-&#39;</span><span class="p">)</span><span class="p">,</span>
+          <span class="p">...</span><span class="nx">createClass</span><span class="p">(</span><span class="nx">widePc</span><span class="p">,</span> <span class="s1">&#39;wide-pc-&#39;</span><span class="p">)</span><span class="p">,</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">:class</span><span class="o">=</span><span class="s">&#34;colClass&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="弹出信息">弹出信息</h1>
+
+<h2 id="如何通过函数来触发-toast">如何通过函数来触发 <code>toast</code></h2>
+
+<p>为了让用户更方便地使用 <code>toast</code>，我采取了插件的形式来提供 <code>toast</code>，将他放在了 <code>Vue.prototype</code> 上：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+      <span class="nx">install</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">$toast</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">createToast</span><span class="p">(</span><span class="p">{</span><span class="nx">message</span><span class="p">,</span> <span class="nx">options</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kr">const</span> <span class="nx">Constructor</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Toast</span><span class="p">)</span>
+          <span class="kr">const</span> <span class="nx">toast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Constructor</span><span class="p">(</span><span class="p">{</span>
+            <span class="nx">data</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="p">{</span><span class="nx">message</span><span class="p">}</span>
+            <span class="p">}</span><span class="p">,</span>
+            <span class="nx">propsData</span><span class="o">:</span> <span class="nx">options</span>
+          <span class="p">}</span><span class="p">)</span>
+          <span class="nx">toast</span><span class="p">.</span><span class="nx">$slots</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="p">[</span><span class="nx">message</span><span class="p">]</span>
+          <span class="nx">toast</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="p">)</span>
+          <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">toast</span><span class="p">.</span><span class="nx">$el</span><span class="p">)</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="autoclose-的两种用法"><code>autoClose</code> 的两种用法</h2>
+
+<p>我将其设计为了如果 <code>autoClose</code> 为 <code>false</code> 则不自动关闭，否则就需要传入一个数字以指定自动关闭的时间，那么我们可以这样编写 <code>autoClose</code> 的验证：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">autoClose</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="p">[</span><span class="nb">Boolean</span><span class="p">,</span> <span class="nb">Number</span><span class="p">]</span><span class="p">,</span>
+        <span class="k">default</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nx">validator</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">value</span> <span class="o">===</span> <span class="kc">false</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="enablehtml-怎么实现"><code>enableHtml</code> 怎么实现</h2>
+
+<p><code>slot</code> 里面是不支持 HTML 的，我采用了比较粗暴的 <code>v-if</code> 来控制是否显示 HTML：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">slot</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;!enableHtml&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">slot</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span> <span class="na">v-html</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="如何实现不同时出现多个-toast">如何实现不同时出现多个 toast</h2>
+
+<p>这个时候我们就不能直接试用刚才的函数了，我们得把创建好的 <code>toast</code> 组件给记下来，然后在创建下一个组件之前销毁他：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">currentToast</span>
+    
+    <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+      <span class="nx">install</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">$toast</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 销毁之前的 toast
+</span><span class="c1"></span>          <span class="k">if</span> <span class="p">(</span><span class="nx">currentToast</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">currentToast</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="p">)</span>
+          <span class="p">}</span>
+          <span class="c1">// 创建一个新的 toast
+</span><span class="c1"></span>          <span class="nx">currentToast</span> <span class="o">=</span> <span class="nx">createToast</span><span class="p">(</span><span class="p">{</span>
+            <span class="nx">Vue</span><span class="p">,</span>
+            <span class="nx">message</span><span class="p">,</span>
+            <span class="nx">propsData</span><span class="o">:</span> <span class="nx">options</span><span class="p">,</span>
+            <span class="nx">onClose</span><span class="o">:</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+              <span class="nx">currentToast</span> <span class="o">=</span> <span class="kc">null</span>
+            <span class="p">}</span>
+          <span class="p">}</span><span class="p">)</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">createToast</span><span class="p">(</span><span class="p">{</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">propsData</span><span class="p">,</span> <span class="nx">onClose</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">Constructor</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Toast</span><span class="p">)</span>
+      <span class="kr">const</span> <span class="nx">toast</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Constructor</span><span class="p">(</span><span class="p">{</span>
+        <span class="nx">data</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="p">{</span><span class="nx">message</span><span class="p">}</span>
+        <span class="p">}</span><span class="p">,</span>
+        <span class="nx">propsData</span>
+      <span class="p">}</span><span class="p">)</span>
+      <span class="nx">toast</span><span class="p">.</span><span class="nx">$slots</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="p">[</span><span class="nx">message</span><span class="p">]</span>
+      <span class="nx">toast</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="p">)</span>
+      <span class="nx">toast</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">&#39;beforeClose&#39;</span><span class="p">,</span> <span class="nx">onClose</span><span class="p">)</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">toast</span><span class="p">.</span><span class="nx">$el</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">toast</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="标签">标签</h1>
+
+<h2 id="怎样切换标签页">怎样切换标签页</h2>
+
+<p>先看看用法示例以方便理解，由于我们的 <code>tabs-item</code> 和 <code>tabs-pane</code> 分属于不同的组件，所以就没办法简单地用 <code>v-if</code> 来实现这个标签页的切换效果。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">hai-tabs</span> <span class="na">selected</span><span class="o">=</span><span class="s">&#34;sports&#34;</span><span class="p"></span><span class="p">&gt;</span>
+    
+      <span class="p">&lt;</span><span class="nt">hai-tabs-head</span><span class="p"></span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-item</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;anime&#34;</span><span class="p"></span><span class="p">&gt;</span>动漫<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-item</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;finance&#34;</span><span class="p"></span><span class="p">&gt;</span>财经<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-item</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sports&#34;</span><span class="p"></span><span class="p">&gt;</span>体育<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-item</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-head</span><span class="p">&gt;</span>
+    
+      <span class="p">&lt;</span><span class="nt">hai-tabs-body</span><span class="p"></span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-pane</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;anime&#34;</span><span class="p"></span><span class="p">&gt;</span>动漫相关资讯<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-pane</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-pane</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;finance&#34;</span><span class="p"></span><span class="p">&gt;</span>财经相关资讯<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-pane</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hai-tabs-pane</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sports&#34;</span><span class="p"></span><span class="p">&gt;</span>体育相关资讯<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-pane</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs-body</span><span class="p">&gt;</span>
+    
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-tabs</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>我选择了 eventBus 来解决这个问题。</p>
+
+<ol>
+<li>点击 <code>tabs-item</code> 的时候，在 eventBus 上触发事件 <code>update:selected</code>，并且将 <code>tabs-item</code> 的 <code>name</code> 和组件本身（<code>vm</code>）都传出去；</li>
+<li><code>tabs-item</code> 监听事件，当事件中的 <code>name</code> 与自己的 <code>name</code> 相同，则激活这个 <code>tabs-item</code>（加上 <code>class</code>）；</li>
+<li><code>tabs-pane</code> 监听事件，当事件中的 <code>name</code> 与自己的 <code>name</code> 相同，则激活这个 <code>tabs-pane</code>（显示出来）；</li>
+<li><code>tabs-head</code> 监听事件，获取事件中的 <code>vm</code>，以做出线在不同的 <code>tabs-item</code> 之间来回滑动的感觉。</li>
+</ol>
+
+<p>这样，就基本实现了标签页的切换功能。</p>
+
+<h2 id="设置默认标签页">设置默认标签页</h2>
+
+<p>有些时候，我们还需要指定一个默认的标签页，在这里我认为直接以 Prop 的形式传给 <code>tabs</code> 比较合适：</p>
+
+<ol>
+<li>当拿到 <code>selected</code> 值的时候，遍历 <code>tabs</code> 的子元素，找到 <code>tabs-head</code>；</li>
+<li>再在 <code>tabs-head</code> 中遍历子元素，找到 <code>name</code> 与 <code>selected</code> 相同的那一项；</li>
+<li>触发 eventBus 上的 <code>update:selceted</code> 事件，并且将 <code>selected</code> 和这个子元素（<code>child</code>）都传出去。</li>
+</ol>
+
+<h2 id="如何实现-sync-语法">如何实现 <code>.sync</code> 语法</h2>
+
+<p>我们有时候需要动态获取到 <code>selected</code> 的值，Vue 为我们提供了很方便的 <code>.sync</code> 语法，为了兼容这个语法，<code>tabs</code> 组件也必须监听 eventBus 上的 <code>update:selected</code> 事件，然后再在 <code>tabs</code> 组件上触发 <code>update:selected</code> 事件，并且把 <code>name</code> 传出去。这样 Vue 就会帮我们监听这个事件，并且动态更新 <code>selected</code> 的值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="k">this</span><span class="p">.</span><span class="nx">eventBus</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">&#39;update:selected&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;update:selected&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+    <span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="如何切换-horizontal-和-vertical">如何切换 <code>horizontal</code> 和 <code>vertical</code></h2>
+
+<p>同样我也借助了 eventBus，在组件里面共享了 <code>direction</code> 这个值，各个部分拿到 <code>direction</code> 值之后对样式进行了修改。</p>
+
+<h1 id="气泡卡片">气泡卡片</h1>
+
+<h2 id="如何确定气泡卡片的位置">如何确定气泡卡片的位置？</h2>
+
+<p>由于气泡卡片的内容实际上是在点击按钮之后 <code>append</code> 到 <code>body</code> 里面的（这样做是为了防止气泡卡片被父元素遮住），所以我们需要给气泡卡片确定位置。所以实际上要经历以下两个过程：</p>
+
+<ol>
+<li>用户点击按钮，<code>visible</code> 变为 <code>true</code>，气泡卡片出现</li>
+
+<li><p>给气泡卡片定位</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">positioningConent</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">{</span><span class="nx">contentWrapper</span><span class="p">,</span> <span class="nx">triggerWrapper</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">contentWrapper</span><span class="p">)</span>
+    <span class="c1">// 获取按钮的位置和宽高
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span><span class="nx">top</span><span class="p">,</span> <span class="nx">left</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">width</span><span class="p">}</span> <span class="o">=</span> <span class="nx">triggerWrapper</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">(</span><span class="p">)</span>
+    <span class="c1">// 获取卡片的高度
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span><span class="nx">height</span><span class="o">:</span> <span class="nx">contentHeight</span><span class="p">}</span> <span class="o">=</span> <span class="nx">contentWrapper</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">(</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">positionTable</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">top</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// 为了保证即使在滚动了鼠标之后再触发卡片，位置也不会错误
+</span><span class="c1"></span>        <span class="nx">top</span><span class="o">:</span> <span class="nx">top</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span><span class="p">,</span>
+        <span class="nx">left</span><span class="o">:</span> <span class="nx">left</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollX</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">bottom</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span><span class="p">,</span>
+      <span class="nx">left</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span><span class="p">,</span>
+      <span class="nx">right</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>       
+    <span class="p">}</span>
+    <span class="c1">// 根据 this.position 的值来确定应该使用哪个气泡卡片的值
+</span><span class="c1"></span>    <span class="nx">contentWrapper</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="nx">positionTable</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">]</span><span class="p">.</span><span class="nx">top</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span>
+    <span class="nx">contentWrapper</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">positionTable</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">]</span><span class="p">.</span><span class="nx">left</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h2 id="事件监听">事件监听</h2>
+
+<p>气泡卡片组件还有一个比较麻烦的地方就是事件监听过程要考虑到的事情比较多。</p>
+
+<p>比如对于 <code>click</code> 事件，我们需要处理这样几个问题：</p>
+
+<ol>
+<li>点击 <code>button</code>，若此时无卡片，则弹出卡片；若此时有卡片，则关闭卡片</li>
+<li>卡片弹出后点击 <code>document</code>，关闭卡片（但是这个事件要排除之前的按钮上的事件，防止重复关闭）</li>
+<li>卡片弹出后点卡片里面的内容，不关闭卡片，方便用户复制</li>
+</ol>
+
+<p>对于 <code>hover</code> 事件，我们考虑的问题也不一样：</p>
+
+<ol>
+<li>鼠标移入 <code>button</code>，弹出卡片；鼠标移出 <code>button</code>，关闭卡片</li>
+<li>卡片弹出后，200ms 内鼠标移入卡片，卡片保持不关闭</li>
+<li>鼠标移出卡片，卡片关闭</li>
+</ol>
+
+<p>这里面的 <code>EventListener</code> 需要及时 <code>remove</code> 掉，否则就会出现很多多余的监听器</p>
+
+<h2 id="卡片里面的关闭按钮如何实现">卡片里面的关闭按钮如何实现</h2>
+
+<p>可以借助 Vue 中作用域插槽的使用，在组件里面将写好的 <code>close</code> 方法给传出去：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ref</span><span class="o">=</span><span class="s">&#34;contentWrapper&#34;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;visible&#34;</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">slot</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">:close</span><span class="o">=</span><span class="s">&#34;close&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">slot</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>=</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样在组件外面就可以这样来使用 <code>close</code> 方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-slot:content</span><span class="o">=</span><span class="s">&#34;methods&#34;</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>这是气泡卡片的内容<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;methods.close&#34;</span><span class="p"></span><span class="p">&gt;</span>点击<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>或者使用 ES 6 的解构语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-slot:content</span><span class="o">=</span><span class="s">&#34;{close}&#34;</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>这是气泡卡片的内容<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">hai-button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;close&#34;</span><span class="p"></span><span class="p">&gt;</span>点击<span class="p">&lt;</span><span class="p">/</span><span class="nt">hai-button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="折叠面板">折叠面板</h1>
+
+<h2 id="如何实现折叠面板的效果">如何实现折叠面板的效果</h2>
+
+<p>同样，我们需要借助 eventBus 来进行信息的传递，eventBus 上有这样几个事件：</p>
+
+<h3 id="update-selected"><code>update:selected</code></h3>
+
+<p><code>collapse-item</code> 会监听来自于父组件 <code>collapse</code> 的 <code>update:selected</code> 事件和一个数组 <code>selectedNames</code>，这个数组包含了当前被选中的（展开的）所有 <code>collapse-item</code> 的 <code>name</code>。</p>
+
+<p>若 <code>collapse-item</code> 发现自己的 <code>name</code> 存在于 <code>selectedNames</code> 之中，就会展开。</p>
+
+<h3 id="add-selected"><code>add:selected</code></h3>
+
+<p>当 <code>collapse-item</code> 被点击后，如果是没有展开的状态，就触发事件 <code>add:selected</code>，并传出自己的 <code>name</code>，这个事件将在父组件 <code>collapse</code> 中得到处理。</p>
+
+<p>父组件监听 <code>add:selected</code> 事件，但需要注意的是，父组件不能直接修改用户传进来的 <code>selected</code> 数组， 一来是这样不优雅，Vue 不建议我们修改用户传入的数据；二来是这样直接的修改并不能让外界（<code>collapse</code> 组件之外，以及 <code>collapse</code> 的各个子组件）感知到，并作出反应。因此，在作出一切的修改之前，我们需要对传入的 <code>selected</code> 数组做一次深拷贝：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="k">this</span><span class="p">.</span><span class="nx">selectedCopy</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">selected</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>父组件在收到 <code>add:selected</code> 事件之后，根据用户是否传入 <code>alone</code> 来选择更新的方式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">alone</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">selectedCopy</span> <span class="o">=</span> <span class="p">[</span><span class="nx">name</span><span class="p">]</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">selectedCopy</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后，再触发 <code>update:selected</code> 事件，让子组件 <code>collapse-item</code> 自己处理。当然，在这里为了支持 <code>.sync</code> 语法，<code>collapse</code> 还需要在自己（而不是 eventBus 上）触发一个<code>update:selected</code> 事件。</p>
+
+<h3 id="remove-selected"><code>remove:selected</code></h3>
+
+<p>对应的，当 <code>collapse-item</code> 被点击后，如果是已经展开的状态，就触发事件 <code>remove:selected</code>，并传出自己的 <code>name</code>，这个事件将在父组件 <code>collapse</code> 中得到处理。</p>
+
+<p>然后 <code>collapse</code> 中移除对应的 <code>name</code>，然后触发 <code>update:selected</code> 事件来更新。</p>]]></description>
                 
                 
                 
@@ -461,13 +1249,166 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description><![CDATA[<p>初学 Vue，一直想给女朋友搞一个博客，不过目前还太会数据库之类的东西，先学习一下多人共享博客的前端页面是如何搭建的，用 Vue 做了一个单页单页应用。点击可以查看 <a href="https://github.com/Hyuain/kates-blog-client" target="_blank">代码仓库</a> 和 <a href="http://hais-teatime.com/kates-blog-client" target="_blank">效果预览</a>。</p>
+                    <description><![CDATA[<p>初学 Vue，一直想给女朋友搞一个博客，不过目前还太会数据库之类的东西，先学习一下多人共享博客的前端页面是如何搭建的，用 Vue 做了一个单页应用。点击可以查看 <a href="https://github.com/Hyuain/kates-blog-client" target="_blank">代码仓库</a> 和 <a href="http://hais-teatime.com/kates-blog-client" target="_blank">效果预览</a>。</p>
 
 <h1 id="项目介绍">项目介绍</h1>
 
 <p>Sharing Garden 一共有这样几个页面：首页、注册页、登录页、我的页面、用户页面、博客详情、新建博客、编辑博客。</p>
 
-<p>项目通过 Vue-Router 来进行前端页面的跳转，用 Vuex 存储用户数据</p>]]></description>
+<p>用户可以查看别人的文章、用户信息，或者注册账号之后自己以 markdown 的语法发布或修改文章，也可以查看自己的主页。</p>
+
+<p>项目使用 Vue-cli 进行搭建，通过 Vue-Router 来进行前端页面的跳转，使用 Vuex 存储用户数据，使用 axios 发送请求，选用 element-ui 作为 UI 框架。</p>
+
+<h1 id="发送请求">发送请求</h1>
+
+<p>现在大多是使用 axios 来发送 AJAX 请求，本项目也是如此，同时为了再进一步熟悉 axios，我对 axios 文档进行了<a href="https://hais-teatime.com/hais-notebook/2020/02/02/2020-02-02-Tools-axios/" target="_blank">翻译</a>。原生的 axios 已经能够满足我们的大部分需求了，但是通常我们需要对其进行二次封装来让我们的其他组件使用起来更加方便。</p>
+
+<p>第一层封装：</p>
+
+<p>首先根据前后端约定的基本信息设置 <code>defaults</code>，然后统一我们在项目中传入 <code>config</code> 的格式，最后统一错误处理方式，因为我们需要处理服务器主动传回的错误和请求本身导致的错误。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="p">(</span><span class="p">...</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// ...
+</span><span class="c1"></span>      <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">axios</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="s1">&#39;ok&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">resolve</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">Message</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">msg</span><span class="p">)</span>
+            <span class="nx">reject</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+          <span class="p">}</span>
+        <span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">Message</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;网络异常&#39;</span><span class="p">)</span>
+          <span class="nx">reject</span><span class="p">(</span><span class="p">{</span><span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;网络异常&#39;</span><span class="p">}</span><span class="p">)</span>
+        <span class="p">}</span><span class="p">)</span>
+      <span class="p">}</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>第二层封装：</p>
+
+<p>服务器端的 API 有博客部分的 <code>/blog</code> 和用户部分的 <code>/auth</code>，同时我们数据也准备按照这两类来进行处理，所以我们最好对 axios 再进行一层封装，方便以后请求数据。比如在博客部分封装一个获取博客详情的方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">URL</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">GET_DETAIL</span><span class="o">:</span> <span class="s1">&#39;/blog/:blogId&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+    
+    <span class="kr">const</span> <span class="nx">blog</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">getDetail</span><span class="p">(</span><span class="p">{</span><span class="nx">blogId</span><span class="p">}</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">request</span><span class="p">(</span><span class="nx">URL</span><span class="p">.</span><span class="nx">GET_DETAIL</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;:blogId&#39;</span><span class="p">,</span> <span class="nx">blogId</span><span class="p">)</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 之后可以这样调用
+</span><span class="c1"></span>    <span class="nx">blog</span><span class="p">.</span><span class="nx">getDetail</span><span class="p">(</span><span class="p">{</span><span class="nx">blogId</span><span class="o">:</span> <span class="nx">anyBlogId</span><span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="页眉和页尾">页眉和页尾</h1>
+
+<p>这次项目是一个简单的单页应用，几个页面的页眉和页尾是差不多的，所以将其抽为 <code>Header</code> 和 <code>Footer</code> 组件，在这里只提一下 <code>Header</code> 组件。</p>
+
+<p><code>Header</code> 在登录和登录的状态下有所不同，因此在加载页面时我们需要对登录状态进行判断，这里我是通过 <code>dispatch</code> 一个 <code>action</code> 来修改登录状态，然后通过 <code>getter</code> 获取到当前的登录状态。</p>
+
+<h1 id="注册与登录页面">注册与登录页面</h1>
+
+<p>同样的，注册与登录都是 <code>dispatch</code> 了一个 <code>action</code>，在这两个 <code>action</code> 中，他们都使用之前封装好的 axios API 向服务器发送请求，在拿到结果之后修改用户信息和登录状态。</p>
+
+<h1 id="用户和我的页面">用户和我的页面</h1>
+
+<p>这两个页面也是比较类似的，我们可以点击用户头像进入用户页面，点击自己的头像进入我的页面。</p>
+
+<p>在用户页面通过 <code>$route.params</code> 获取到 <code>userId</code>，然后直接发送请求获取到博客数据和博主的用户数据，这些数据我没有用 Vuex 来存储，因为博客数据更新比较频繁，并且并不需要多个组件共享这个数据，通常只有几个页面需要，而且他们需要的博客数据的内容和形式也不尽相同。</p>
+
+<p>在我的页面就可以直接使用在 <code>store</code> 里面存好的 <code>userInfo</code>，当然博客数据还是要重新请求。通过删除功能可以向服务器发送请求删除博客，删除完成之后需要在本地更新一下博客列表。使用编辑功能将跳转到编辑页面。</p>
+
+<h1 id="创建与编辑页面">创建与编辑页面</h1>
+
+<p>在创建博客的页面直接向服务器发送请求，然后获取到创建的结果，并通过 <code>router.push</code> 跳转到创建好的博客详情页。编辑页面则要先通过 <code>$route.params</code> 获取到当前的 <code>blogId</code>，并发送请求获取到博客原来的内容。</p>
+
+<h1 id="博客详情页面">博客详情页面</h1>
+
+<p>博客详情部分主要就是需要将博客内容从 markdown 转换为 HTML 标签，并且给予合适的样式呈现，这里我使用了 <code>marked</code>，并且同时使用了 <code>DOMPurify</code> 来防止 XSS 攻击。</p>
+
+<h1 id="其他问题">其他问题</h1>
+
+<p>另外我们需要关注的一点是，如果我们在没有登录的时候，就不允许访问我的、创建与编辑博客的页面，并且访问上述页面会自动跳转到登录页面，这个时候我们就需要使用到路由元信息和导航守卫。</p>
+
+<p>下面这段代码将在一个导航触发的时候调用，当发现 <code>meta</code> 字段中有 <code>requiresAuth</code> 之后就会检查登录状态。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">(</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span> <span class="nx">from</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">matched</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">record</span> <span class="p">=&gt;</span> <span class="nx">record</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">requiresAuth</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="s1">&#39;checkLoginStatus&#39;</span><span class="p">)</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">loginStatus</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">loginStatus</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">next</span><span class="p">(</span><span class="p">{</span>
+              <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span><span class="p">,</span>
+              <span class="nx">query</span><span class="o">:</span> <span class="p">{</span><span class="nx">redirect</span><span class="o">:</span> <span class="nx">to</span><span class="p">.</span><span class="nx">fullPath</span><span class="p">}</span>
+            <span class="p">}</span><span class="p">)</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">next</span><span class="p">(</span><span class="p">)</span>
+          <span class="p">}</span>
+        <span class="p">}</span><span class="p">)</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">next</span><span class="p">(</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
                 
                 
                 
@@ -516,284 +1457,9 @@
             </item>
         
             <item>
-                <title>Vue 中 computed 和 watch 的区别</title>
-                <link>http://hais-teatime.com/post/2019-12-25-vue-2/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-25-vue-2/</guid>
-                <pubDate>Wed, 25 Dec 2019 18:32:33 +0800</pubDate>
-                
-                    <author>Hyuain97@163.com (Harvey Zhang)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description><![CDATA[<p>聊聊 options 中的 computed 和 watch。</p>
-
-<hr />
-
-<h2 id="key-points">Key Points</h2>
-
-<ol>
-<li>computed 是用来计算一个值的，跟 getter-setter 用法差不多，调用的时候不需要加括号</li>
-<li>computed 有缓存，如果依赖的值没有改变，那么他也不会进行重新计算</li>
-<li>watch 是异步的，必要时使用 <code>Vue.nextTick(callback)</code></li>
-<li>watch 有 immediate 和 deep 这两个选项</li>
-<li>watch 侦听变化的规则是 <code>===</code> 规则，简单类型看值，对象看地址</li>
-</ol>
-
-<hr />
-
-<blockquote>
-<p>可参考：
-<a href="https://cn.vuejs.org/v2/api/#computed" target="_blank">Vue 文档 - computed</a>；
-<a href="https://cn.vuejs.org/v2/api/#watch" target="_blank">Vue 文档 - watch</a></p>
-</blockquote>
-
-<h2 id="computed">computed</h2>
-
-<p><code>computed</code> 其实跟我们之前讨论的 getter-setter 属性在形式上比较像，下面代码中的 <code>displayName</code> 就是计算属性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">user</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;harvey@example.com&#34;</span><span class="p">,</span>
-      <span class="nx">nickname</span><span class="o">:</span> <span class="s2">&#34;hai&#34;</span><span class="p">,</span>
-      <span class="nx">phone</span><span class="o">:</span> <span class="s1">&#39;1234567890&#39;</span><span class="p">,</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">computed</span><span class="o">:</span><span class="p">{</span> <span class="c1">// 能够将计算而来的属性作为属性
-</span><span class="c1"></span>    <span class="nx">displayName</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="c1">// 只读
-</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span>
-      <span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">phone</span>
-    <span class="p">,</span>
-    <span class="c1">// 或者写成：
-</span><span class="c1"></span>    <span class="nx">displayName</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 存取
-</span><span class="c1"></span>      <span class="nx">get</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span>
-        <span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">||</span> <span class="nx">user</span><span class="p">.</span><span class="nx">phone</span>
-      <span class="p">}</span><span class="p">,</span>
-      <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">=</span> <span class="nx">value</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">template</span><span class="o">:</span><span class="sb">`</span><span class="sb">
-</span><span class="sb">    &lt;div&gt;
-</span><span class="sb">      {{displayName}}
-</span><span class="sb">    &lt;/div&gt;
-</span><span class="sb">  </span><span class="sb">`</span>
-<span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>这里要注意的是，<code>computed</code> 是有缓存的，如果 <code>computed</code> 依赖的属性没有变化，那么就不会重新计算；而 getter-setter 默认是不会做缓存的。</p>
-
-<h2 id="watch">watch</h2>
-
-<p>简单来说，watch 就是观察到变化之后就执行一段函数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="nx">d</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="nx">e</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">f</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">g</span><span class="o">:</span> <span class="mi">5</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">a</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;new: %s, old: %s&#39;</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">b</span><span class="o">:</span> <span class="s1">&#39;someMethod&#39;</span><span class="p">,</span>
-    <span class="nx">c</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
-      <span class="nx">deep</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 这个可以使得监听到内部数据的变化，如果里面变了，那么就触发
-</span><span class="c1"></span>    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">d</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">handler</span><span class="o">:</span> <span class="s1">&#39;someMethod&#39;</span><span class="p">,</span> <span class="c1">// 使用什么方法
-</span><span class="c1"></span>      <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 在侦听开始之后被立即调用
-</span><span class="c1"></span>    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">e</span><span class="o">:</span> <span class="p">[</span>
-      <span class="s1">&#39;handle1&#39;</span><span class="p">,</span>
-      <span class="kd">function</span> <span class="nx">handle2</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
-      <span class="p">{</span>
-        <span class="nx">handler</span><span class="o">:</span> <span class="kd">function</span> <span class="nx">handle3</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span><span class="p">,</span>
-        <span class="cm">/* ... */</span>
-      <span class="p">}</span>
-    <span class="p">]</span><span class="p">,</span>
-    <span class="c1">// watch vm.e.f&#39;s value: {g: 5}
-</span><span class="c1"></span>    <span class="s1">&#39;e.f&#39;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
-<span class="nx">vm</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// =&gt; new: 2, old: 1
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><strong>注意：不要使用箭头函数来定义 watcher，<code>this</code> 是 <code>window</code></strong>，事实上，在 Vue 的很多地方（比如 data、computed 等)，都是不推荐使用箭头函数的，因为这样会使得函数中的 this 没有值，至于为什么没有值，可以参考 <a href="http://hais-teatime.com/post/再看this/" target="_blank">这篇文章</a>。</p>
-
-<p><strong>注意：Vue 在更新 DOM 时是异步执行的。</strong></p>
-
-<blockquote>
-<p>只要侦听到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个 watcher 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。然后，在下一个的事件循环“tick”中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部对异步队列尝试使用原生的 Promise.then、MutationObserver 和 setImmediate，如果执行环境不支持，则会采用 setTimeout(fn, 0) 代替。</p>
-
-<p>例如，当你设置 <code>vm.someData = 'new value'</code>，该组件不会立即重新渲染。当刷新队列时，组件会在下一个事件循环“tick”中更新。多数情况我们不需要关心这个过程，但是如果你想基于更新后的 DOM 状态来做点什么，这就可能会有些棘手。虽然 Vue.js 通常鼓励开发人员使用“数据驱动”的方式思考，避免直接接触 DOM，但是有时我们必须要这么做。为了在数据变化之后等待 Vue 完成更新 DOM，可以在数据变化之后立即使用 Vue.nextTick(callback)。这样回调函数将在 DOM 更新完成后被调用。</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#example&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span><span class="sb">
-</span><span class="sb">    &lt;div id=&#34;example&#34;&gt;{{message}}&lt;/div&gt;
-</span><span class="sb">  </span><span class="sb">`</span>
-<span class="p">}</span><span class="p">)</span>
-<span class="nx">vm</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// 更改数据
-</span><span class="c1"></span><span class="nx">vm</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">===</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// false
-</span><span class="c1"></span><span class="nx">Vue</span><span class="p">.</span><span class="nx">nextTick</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">vm</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">===</span> <span class="s1">&#39;new message&#39;</span> <span class="c1">// true
-</span><span class="c1"></span><span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/vue/">Vue</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
                 <title>理解 Vue 的 data 与 响应式</title>
-                <link>http://hais-teatime.com/post/2019-12-25-vue-1/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-25-vue-1/</guid>
+                <link>http://hais-teatime.com/post/2019-12-25-vue-data/</link>
+                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-25-vue-data/</guid>
                 <pubDate>Wed, 25 Dec 2019 16:30:24 +0800</pubDate>
                 
                     <author>Hyuain97@163.com (Harvey Zhang)</author>
@@ -804,7 +1470,7 @@
 
 <hr />
 
-<h2 id="key-points">Key Points</h2>
+<h1 id="key-points">Key Points</h1>
 
 <ol>
 <li>Vue 的 data 是响应式的，如果改变 data，那么 UI 就会刷新</li>
@@ -821,7 +1487,7 @@
 <a href="https://cn.vuejs.org/v2/guide/list.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" target="_blank">Vue 文档 - 列表渲染</a></p>
 </blockquote>
 
-<h2 id="getter-和-setter">getter 和 setter</h2>
+<h1 id="getter-和-setter">getter 和 setter</h1>
 
 <p>由于 getter 和 setter 是 Vue 数据响应式中运用到的非常重要的一环，我们得先把这两个东西搞清楚。</p>
 
@@ -846,22 +1512,22 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Harvey&#39;</span><span class="p">,</span>
-  <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Zhang&#39;</span><span class="p">,</span>
-  <span class="nx">get</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// getter
-</span><span class="c1"></span>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter
-</span><span class="c1"></span>    <span class="nx">newName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-  <span class="p">}</span><span class="p">,</span> 
-  <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;name： &#39;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// 这就是 getter，我们在调用的时候不需要再使用 obj.name()
-</span><span class="c1"></span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Kate Wu&#39;</span> <span class="c1">// 这就是 setter，用 = &#39;xxx&#39; 触发 set 函数
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Harvey&#39;</span><span class="p">,</span>
+      <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Zhang&#39;</span><span class="p">,</span>
+      <span class="nx">get</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// getter
+</span><span class="c1"></span>        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter
+</span><span class="c1"></span>        <span class="nx">newName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">newName</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+      <span class="p">}</span><span class="p">,</span> 
+      <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span>
+    <span class="p">}</span>
+    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;name： &#39;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// 这就是 getter，我们在调用的时候不需要再使用 obj.name()
+</span><span class="c1"></span>    <span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Kate Wu&#39;</span> <span class="c1">// 这就是 setter，用 = &#39;xxx&#39; 触发 set 函数
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -879,19 +1545,19 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="p">(</span><span class="p">...</span><span class="p">)</span><span class="p">,</span> <span class="c1">// name 不是一个真实的属性，但我们确实可以读写 name
-</span><span class="c1"></span>  <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Kate&#34;</span><span class="p">,</span>
-  <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Wu&#34;</span><span class="p">,</span>
-  <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
-  <span class="nx">get</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
-  <span class="nx">set</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span>
-<span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="p">(</span><span class="p">...</span><span class="p">)</span><span class="p">,</span> <span class="c1">// name 不是一个真实的属性，但我们确实可以读写 name
+</span><span class="c1"></span>      <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Kate&#34;</span><span class="p">,</span>
+      <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Wu&#34;</span><span class="p">,</span>
+      <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="nx">get</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+      <span class="nx">set</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">name</span><span class="p">(</span><span class="nx">newName</span><span class="p">)</span><span class="p">,</span>
+      <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="object-defineproperty">Object.defineProperty</h2>
+<h1 id="object-defineproperty">Object.defineProperty</h1>
 
 <p>我们可以使用 <code>Object.defineProperty()</code> 方法来给对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象，详细的用法可以参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty]" target="_blank">MDN 文档</a>，我们这里只介绍影响后续理解的部分。</p>
 
@@ -1035,7 +1701,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="vue-中是怎么做的">Vue 中是怎么做的</h2>
+<h1 id="vue-中是怎么做的">Vue 中是怎么做的</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1055,7 +1721,7 @@
 
 <p><img src="https://cn.vuejs.org/images/data.png" alt="Vue-data" /></p>
 
-<h3 id="问题">问题</h3>
+<h2 id="问题">问题</h2>
 
 <p>事实上因为 <code>Object.defineProperty()</code> 其实是有一些问题的，因此 Vue 中也会存在这些问题，尽管 Vue 已经对他们进行了处理，但仍然应当注意。</p>
 
@@ -1074,11 +1740,11 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">(</span><span class="p">{</span>
-<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-<span class="nx">a</span><span class="o">:</span> <span class="mi">1</span>
-<span class="p">}</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="p">}</span>
 <span class="p">}</span><span class="p">)</span>
-
+    
 <span class="nx">vm</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1">// vm.b 不是响应式的
 </span></code></pre></td></tr></table>
@@ -1166,7 +1832,7 @@
 
 <hr />
 
-<h2 id="key-points">Key Points</h2>
+<h1 id="key-points">Key Points</h1>
 
 <ol>
 <li><code>this</code> 是为了解决 <strong>一个函数获取一个对象的引用</strong> 这个问题</li>
@@ -1178,7 +1844,7 @@
 
 <hr />
 
-<h2 id="函数体外部的-this">函数体外部的 this</h2>
+<h1 id="函数体外部的-this">函数体外部的 this</h1>
 
 <blockquote>
 <p><code>this</code> 必须在函数体的内部才有意义</p>
@@ -1206,7 +1872,7 @@
 </div>
 <p>注意了！这里说的函数体内部要与函数的调用区分开来！最显然的是上面的 <code>console.log(this.a)</code> 的括号中的 <code>this</code> <strong>并不是函数体内部的 <code>this</code></strong>，所以他也是没有意义的。</p>
 
-<h2 id="函数体内部的-this">函数体内部的 this</h2>
+<h1 id="函数体内部的-this">函数体内部的 this</h1>
 
 <blockquote>
 <p>函数内部 <code>this</code> 的值取决于函数被调用的方式</p>
@@ -1296,7 +1962,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="箭头函数的-this">箭头函数的 this</h2>
+<h1 id="箭头函数的-this">箭头函数的 this</h1>
 
 <blockquote>
 <p>箭头函数没有 <code>this</code></p>
@@ -1368,7 +2034,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="new-运算符">new 运算符</h2>
+<h1 id="new-运算符">new 运算符</h1>
 
 <p>在我们使用 <code>new</code> 去创建新对象的时候，系统自动帮我们做了 4 件事情</p>
 
@@ -1415,11 +2081,51 @@
 </div></li>
 </ul>
 
+<p>这里我自己尝试模拟了一下一个功能类似于 <code>new</code> 的函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 自己实现一个类似 new 的函数
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">X</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="nx">b</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">X</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="kd">function</span> <span class="nx">NEW</span><span class="p">(</span><span class="nx">fun</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">)</span><span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
+    <span class="nx">newObj</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="nx">fun</span><span class="p">.</span><span class="nx">prototype</span>
+    <span class="nx">fun</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">newObj</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">newObj</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">z</span> <span class="o">=</span> <span class="nx">NEW</span><span class="p">(</span><span class="nx">X</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 <p>好了，<code>this</code> 的讨论结束，理解的关键就在于我们最开始提到的 5 点 Key Points。</p>
 
 <hr />
 
-<h2 id="再看看网上总结的-this">再看看网上总结的 this</h2>
+<h1 id="再看看网上总结的-this">再看看网上总结的 this</h1>
 
 <p>留坑，以后再总结。</p>]]></description>
                 
@@ -1475,7 +2181,72 @@
                 
                     <description><![CDATA[<p>如果要说我目前在入门阶段遇到的几个让我最没自信的家伙，一个要数算法，然后就是 MVC 了。所以今天就简单写一下自己的一些思考。</p>
 
-<h2 id="mvc">MVC</h2>
+<p>可以先看一下 <a href="https://efe.baidu.com/blog/mvc-deformation/" target="_blank">这篇文章</a></p>
+
+<h1 id="为什么要有设计模式">为什么要有设计模式？</h1>
+
+<p>Dry 原则：Don't Repeat Yourself</p>
+
+<ul>
+<li>代码级别的重复（相同的三行代码写了两遍）</li>
+<li>页面级别（类似的页面做了十遍）</li>
+<li>所有的页面都可以使用 MVC 来优化代码结构（万金油）</li>
+</ul>
+
+<h1 id="抽象思维">抽象思维</h1>
+
+<ul>
+<li><strong>最小知识原则</strong>
+
+<ul>
+<li>引入一个模块需要 html css js</li>
+<li>引入一个模块需要 html js</li>
+<li>引入一个模块需要 js</li>
+<li>需要知道的知识越来越好，模块化为这一点奠定了基础</li>
+<li>代价：会让页面最开始是空白的，没有内容和样式
+
+<ul>
+<li>loading 图片、骨架、占位内容、SSR 技术（服务器端渲染）</li>
+</ul></li>
+</ul></li>
+<li><strong>以不变应万变</strong>
+
+<ul>
+<li>每一个模块都可以用 M + V + C 搞定，但有时候会多余一些用不到的代码，有时候遇到特殊情况不知道怎么变通</li>
+</ul></li>
+<li><strong>表驱动编程</strong>
+
+<ul>
+<li>当看到大批类似但不重复的代码，<strong>眯起眼睛，看哪些数据才是重要的</strong></li>
+<li>把<strong>重要的数据做成哈希表</strong>，代码会变简单</li>
+</ul></li>
+<li><strong>事不过三</strong>
+
+<ul>
+<li>同样的代码写了三遍，就抽象成函数</li>
+<li>同样属性写了三遍，就做成共用属性（原型或类）</li>
+<li>同样的原型写了三遍，就应该用继承</li>
+</ul></li>
+<li><strong>俯瞰全局</strong>
+
+<ul>
+<li>eventBus</li>
+</ul></li>
+<li><strong>view = render(data)</strong>
+
+<ul>
+<li>比起操作 DOM 对象，直接 render 简单多了，只要改变 data，就可以得到对应的 view</li>
+<li>数据永远从 JS（数据）流向页面（视图）</li>
+<li>代价：浪费性能
+
+<ul>
+<li>虚拟 DOM 让 render 只更新该更新的地方</li>
+</ul></li>
+</ul></li>
+<li><strong>解耦</strong></li>
+</ul>
+
+<h1 id="mvc">MVC</h1>
 
 <p>MVC 是一种有名的设计模式，我们可以把一个模块用三个对象表示出来，这三个对象就是 M、V 和 C：</p>
 
@@ -1487,7 +2258,7 @@
 <p><strong>C</strong> - <strong>Controller</strong>，控制器，负责其他</p>
 </blockquote>
 
-<h3 id="model">Model</h3>
+<h2 id="model">Model</h2>
 
 <p>我们可以用伪代码来尝试表示 Model 对象：</p>
 <div class="highlight"><div class="chroma">
@@ -1505,22 +2276,22 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">M = {
-  data: {
-    key: value,
-  },
-  methods: {
-    function Create: add data,
-    function Remove: delete data,
-    function Update: edit data,
-    function Get: print data,
-  }
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    M = {
+      data: {
+        key: value,
+      },
+      methods: {
+        function Create: add data,
+        function Remove: delete data,
+        function Update: edit data,
+        function Get: print data,
+      }
+    }</code></pre></td></tr></table>
 </div>
 </div>
 <p>他是一个专门用来存放数据的对象，并且可以提供一系列对数据进行操纵的 API，比如 Create、Remove、Update、Get 等。</p>
 
-<h3 id="view">View</h3>
+<h2 id="view">View</h2>
 
 <p>同样的，我们可以来表示一下 View 对象：</p>
 <div class="highlight"><div class="chroma">
@@ -1540,24 +2311,24 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">V = {
-  element,
-  innerHTML,
-  methods: {
-    function Render: reload innerHTML,
-    Operate: {
-      function Create: create newElement,
-      function Remove: remove innerElement,
-      function Edit: edit innerElement,
-      function Find: get innerElement,
-    }
-  }
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    V = {
+      element,
+      innerHTML,
+      methods: {
+        function Render: reload innerHTML,
+        Operate: {
+          function Create: create newElement,
+          function Remove: remove innerElement,
+          function Edit: edit innerElement,
+          function Find: get innerElement,
+        }
+      }
+    }</code></pre></td></tr></table>
 </div>
 </div>
 <p>我们可以在 View 指定一个元素 element，可以对他内部的 HTML 代码进行修改和重载，同时也可以对其内部的元素进行增删改查等操作。</p>
 
-<h3 id="control">Control</h3>
+<h2 id="control">Control</h2>
 
 <p>对于 Control 部分的伪代码，我们也许可以这样写：</p>
 <div class="highlight"><div class="chroma">
@@ -1572,21 +2343,21 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">C = {
-  function Init: init M V C,
-  function BindEvents: el.on(&#39;eventName&#39;, event),
-  events: {
-    function A: Update(data),
-    function B: Render(html)
-  }
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    C = {
+      function Init: init M V C,
+      function BindEvents: el.on(&#39;eventName&#39;, event),
+      events: {
+        function A: Update(data),
+        function B: Render(html)
+      }
+    }</code></pre></td></tr></table>
 </div>
 </div>
 <p>在 Control 中，我们可以完成初始化操作，可以为元素绑定事件，并书写事件方法，用来触发 M 或 V 的更改。</p>
 
 <p>当然，对 MVC 的理解不同的人可能有不同的想法，作为初学者我只是简单理解了一下。比如有时候，我们对 C 的界定可能并不是那么明显——它既可以操作视图，又可以操作数据，那么为什么不把他就放在 V 或者 M 中呢？</p>
 
-<h2 id="eventbus">EventBus</h2>
+<h1 id="eventbus">EventBus</h1>
 
 <p>个人认为 EventBus 的出现主要是由于模块化和 MVC 的推进。前文也说了，在一个模块中，我们可以把所有的东西都分成 M V C 这三个对象来表示，这样虽然我们可以用统一形式的代码来表示几乎所有的情况，但同时也会带来一些问题。</p>
 
@@ -1600,11 +2371,11 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">function X: 
-  if event.status == triggered:
-    data = element.getData();
-    newData = data.edit();
-    element.update(newData);</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    function X: 
+      if event.status == triggered:
+        data = element.getData();
+        newData = data.edit();
+        element.update(newData);</code></pre></td></tr></table>
 </div>
 </div>
 <p>是一个非常自然的线性关系，当事件被触发时，直接修改 DOM 来改变元素内容，DOM 操作和数据是混在一起的，我们并没有在代码中单独保存数据。</p>
@@ -1633,25 +2404,25 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">M = {
-  data,
-  function Update(data):
-    edit data;
-    eventBus.Trigger(&#39;data-updated&#39;)
-}
-
-V = {
-  element,
-  innerHTML,
-  eventBus.On(&#39;data-updated&#39;, run Render(data))
-  function Render(data): reload innerHTML
-}
-
-C = {
-  function X:
-    if event.status === triggered:
-      M.Update(data)
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    M = {
+      data,
+      function Update(data):
+        edit data;
+        eventBus.Trigger(&#39;data-updated&#39;)
+    }
+    
+    V = {
+      element,
+      innerHTML,
+      eventBus.On(&#39;data-updated&#39;, run Render(data))
+      function Render(data): reload innerHTML
+    }
+    
+    C = {
+      function X:
+        if event.status === triggered:
+          M.Update(data)
+    }</code></pre></td></tr></table>
 </div>
 </div>
 <p>看起来稍稍有些复杂：</p>
@@ -1678,14 +2449,14 @@ C = {
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">EventBus: {
-  function Trigger,
-  function On,
-  function Off
-}</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    EventBus: {
+      function Trigger,
+      function On,
+      function Off
+    }</code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="表驱动编程">表驱动编程</h2>
+<h1 id="表驱动编程">表驱动编程</h1>
 
 <blockquote>
 <p>表驱动法，又称之为表驱动、表驱动方法。 “表”是几乎所有数据结构课本都要讨论的非常有用的数据结构。表驱动方法出于特定的目的来使用表，程序员们经常谈到“表驱动”方法，但是课本中却从未提到过什么是&quot;表驱动&quot;方法。表驱动方法是一种使你可以在表中查找信息，而不必用很多的逻辑语句（ if 或 case ）来把它们找出来的方法。事实上，任何信息都可以通过表来挑选。在简单的情况下，逻辑语句往往更简单而且更直接。但随着逻辑链的复杂，表就变得越来越富有吸引力了。</p>
@@ -1711,24 +2482,24 @@ C = {
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Map = [
-  key1: value1,
-  key2: value2,
-  key3: value3,
-  key4: value4
-]
-
-// 可以用上面这个表来简化我们的 if 语句，这样我们就不用写很多 if 了：
-
-if key in Map: Map[key]
-
-// 也可以用上面这个表来简化函数的声明等：
-
-for key in Map:
-  function key: Map[key]</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    Map = [
+      key1: value1,
+      key2: value2,
+      key3: value3,
+      key4: value4
+    ]
+    
+    // 可以用上面这个表来简化我们的 if 语句，这样我们就不用写很多 if 了：
+    
+    if key in Map: Map[key]
+    
+    // 也可以用上面这个表来简化函数的声明等：
+    
+    for key in Map:
+      function key: Map[key]</code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="模块化">模块化</h2>
+<h1 id="模块化">模块化</h1>
 
 <p>我对模块化的理解其实很简单：</p>
 
@@ -1778,8 +2549,8 @@ for key in Map:
         
             <item>
                 <title>再看 JavaScript 继承</title>
-                <link>http://hais-teatime.com/post/2019-12-21-inheritance/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-21-inheritance/</guid>
+                <link>http://hais-teatime.com/post/2019-12-21-js-inheritance/</link>
+                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-21-js-inheritance/</guid>
                 <pubDate>Sat, 21 Dec 2019 11:47:50 +0800</pubDate>
                 
                     <author>Hyuain97@163.com (Harvey Zhang)</author>
@@ -1792,7 +2563,7 @@ for key in Map:
 
 <hr />
 
-<h2 id="key-points">Key Points</h2>
+<h1 id="key-points">Key Points</h1>
 
 <ul>
 <li><p>在 JavaScript 中，<strong>函数</strong> <code>Function</code> 也是一种 <strong>对象</strong> <code>Object</code></p></li>
@@ -1860,46 +2631,46 @@ for key in Map:
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Harvey&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="s1">&#39;22&#39;</span><span class="p">}</span>
-<span class="kd">let</span> <span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span> <span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  0: 1,
-</span><span class="cm">  1: 2,
-</span><span class="cm">  2: 3,
-</span><span class="cm">  length: 3,
-</span><span class="cm">  __proto__: Array(0)
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  name: &#34;Harvey&#34;,
-</span><span class="cm">  age: &#34;22&#34;,
-</span><span class="cm">  __proto__: Object
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  length: 0,
-</span><span class="cm">  name: &#34;fn&#34;,
-</span><span class="cm">  arguments: null,
-</span><span class="cm">  caller: null,
-</span><span class="cm">  prototype: {
-</span><span class="cm">    constructor: ƒ ()
-</span><span class="cm">    __proto__: Object
-</span><span class="cm">  }
-</span><span class="cm">  __proto__: ƒ ()
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">fn</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">===</span> <span class="nx">fn</span> <span class="c1">// true
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Harvey&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="s1">&#39;22&#39;</span><span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span><span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span> <span class="p">}</span>
+    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      0: 1,
+</span><span class="cm">      1: 2,
+</span><span class="cm">      2: 3,
+</span><span class="cm">      length: 3,
+</span><span class="cm">      __proto__: Array(0)
+</span><span class="cm">    }
+</span><span class="cm">    */</span>
+    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      name: &#34;Harvey&#34;,
+</span><span class="cm">      age: &#34;22&#34;,
+</span><span class="cm">      __proto__: Object
+</span><span class="cm">    }
+</span><span class="cm">    */</span>
+    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      length: 0,
+</span><span class="cm">      name: &#34;fn&#34;,
+</span><span class="cm">      arguments: null,
+</span><span class="cm">      caller: null,
+</span><span class="cm">      prototype: {
+</span><span class="cm">        constructor: ƒ ()
+</span><span class="cm">        __proto__: Object
+</span><span class="cm">      }
+</span><span class="cm">      __proto__: ƒ ()
+</span><span class="cm">    }
+</span><span class="cm">    */</span>
+    
+    <span class="nx">fn</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">===</span> <span class="nx">fn</span> <span class="c1">// true
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -1913,15 +2684,15 @@ for key in Map:
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="p">)</span><span class="p">{</span><span class="p">}</span>
-<span class="kd">let</span> <span class="nx">me</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span>
-<span class="nx">me</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="p">)</span><span class="p">{</span><span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">me</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span>
+    <span class="nx">me</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
 </span></code></pre></td></tr></table>
 </div>
 </div>
 <p>知道了这样几个前置的知识，我们就可以往下讨论了。</p>
 
-<h2 id="原型链">原型链</h2>
+<h1 id="原型链">原型链</h1>
 
 <p>原型链的精髓其实就是刚才已经提到过的一句话：</p>
 
@@ -1947,7 +2718,7 @@ for key in Map:
 
 <p><code>obj -&gt; Object.prototype</code></p>
 
-<h3 id="数组的原型链">数组的原型链</h3>
+<h2 id="数组的原型链">数组的原型链</h2>
 
 <blockquote>
 <p><strong>数组的原型是 Array</strong></p>
@@ -1968,8 +2739,8 @@ for key in Map:
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">arr</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
-</span><span class="c1"></span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">arr</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
+</span><span class="c1"></span>    <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -1979,7 +2750,7 @@ for key in Map:
 
 <p>等等，这意味着 <code>Object.prototype</code> 构造了 <code>Array.prototype</code>？这个问题我们稍后再谈。</p>
 
-<h3 id="函数的原型">函数的原型</h3>
+<h2 id="函数的原型">函数的原型</h2>
 
 <blockquote>
 <p><strong>函数的原型是 Function</strong></p>
@@ -1997,7 +2768,7 @@ for key in Map:
 
 <p><code>fn -&gt; Function.prototype -&gt; Object.prototype</code></p>
 
-<h3 id="修改原型链">修改原型链</h3>
+<h2 id="修改原型链">修改原型链</h2>
 
 <p>通过直接修改 <code>__proto__</code> 就可以达到修改原型链的目的</p>
 <div class="highlight"><div class="chroma">
@@ -2009,11 +2780,11 @@ for key in Map:
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
-<span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span> <span class="p">}</span>
-<span class="kd">let</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}</span>
-<span class="nx">obj2</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="nx">obj1</span>
-<span class="nx">obj3</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="nx">obj2</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span> <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}</span>
+    <span class="nx">obj2</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="nx">obj1</span>
+    <span class="nx">obj3</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">=</span> <span class="nx">obj2</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2030,17 +2801,17 @@ for key in Map:
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
-<span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj1</span><span class="p">)</span>
-<span class="nx">obj2</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="kd">let</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj2</span><span class="p">)</span>
-<span class="nx">obj3</span><span class="p">.</span><span class="nx">c</span> <span class="o">=</span> <span class="mi">3</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj1</span><span class="p">)</span>
+    <span class="nx">obj2</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="kd">let</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">obj2</span><span class="p">)</span>
+    <span class="nx">obj3</span><span class="p">.</span><span class="nx">c</span> <span class="o">=</span> <span class="mi">3</span>
 </code></pre></td></tr></table>
 </div>
 </div>
 <p>这样与上面直接修改 <code>__proto__</code> 效果是一样的。</p>
 
-<h2 id="继承">继承</h2>
+<h1 id="继承">继承</h1>
 
 <p>这里我们就发现，如果我们按照上面的方法修改原型链，得到的原型链 <code>obj3 -&gt; obj2 -&gt; obj1 -&gt; Object.prototype</code> 有点问题！</p>
 
@@ -2056,7 +2827,7 @@ for key in Map:
 
 <p>那么问题来了，这种在 <strong>构造函数之间的继承</strong> 应该怎么写呢？</p>
 
-<h3 id="第一步-使用-call-来调用父类构造函数">第一步：使用 <code>call</code> 来调用父类构造函数</h3>
+<h2 id="第一步-使用-call-来调用父类构造函数">第一步：使用 <code>call</code> 来调用父类构造函数</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2072,17 +2843,17 @@ for key in Map:
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">姓名</span> <span class="o">=</span> <span class="nx">姓名</span>
-<span class="p">}</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">自我介绍</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">你好，我是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">姓名</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">{</span>
-  <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">姓名</span><span class="p">)</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">学号</span> <span class="o">=</span> <span class="nx">学号</span>
-<span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">姓名</span> <span class="o">=</span> <span class="nx">姓名</span>
+    <span class="p">}</span>
+    <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">自我介绍</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">你好，我是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">姓名</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">{</span>
+      <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">姓名</span><span class="p">)</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">学号</span> <span class="o">=</span> <span class="nx">学号</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2111,26 +2882,26 @@ for key in Map:
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Person
-</span><span class="c1"></span><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Person&#34;</span><span class="p">,</span>
-  <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
-    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
-    <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function.prototype
-</span><span class="c1"></span><span class="p">}</span>
-
-<span class="c1">// Student
-</span><span class="c1"></span><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
-  <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">,</span>
-    <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function.prototype
-</span><span class="c1"></span><span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="c1">// Person
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Person&#34;</span><span class="p">,</span>
+      <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
+        <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function.prototype
+</span><span class="c1"></span>    <span class="p">}</span>
+    
+    <span class="c1">// Student
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
+      <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">,</span>
+        <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function.prototype
+</span><span class="c1"></span>    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2155,22 +2926,22 @@ for key in Map:
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">小明</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小明&#39;</span><span class="p">,</span> <span class="mi">123456</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  姓名: &#34;小明&#34;,
-</span><span class="cm">  学号: 123456,
-</span><span class="cm">
-</span><span class="cm">  __proto__: {
-</span><span class="cm">    constructor: ƒ Student(姓名, 学号),
-</span><span class="cm">    __proto__: Object,
-</span><span class="cm">  }
-</span><span class="cm">
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">小明</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
-<span class="c1">// Uncaught TypeError: 小明.自我介绍 is not a function
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">小明</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小明&#39;</span><span class="p">,</span> <span class="mi">123456</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      姓名: &#34;小明&#34;,
+</span><span class="cm">      学号: 123456,
+</span><span class="cm">    
+</span><span class="cm">      __proto__: {
+</span><span class="cm">        constructor: ƒ Student(姓名, 学号),
+</span><span class="cm">        __proto__: Object,
+</span><span class="cm">      }
+</span><span class="cm">    
+</span><span class="cm">    }
+</span><span class="cm">    */</span>
+    
+    <span class="nx">小明</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
+    <span class="c1">// Uncaught TypeError: 小明.自我介绍 is not a function
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -2196,7 +2967,7 @@ for key in Map:
 
 <p>因为可以看到，<code>小明</code> 这个对象中没有 <code>自我介绍</code> 属性，他的 <code>__proto__</code> 中也没有，因此他找不到 <code>自我介绍</code></p>
 
-<h3 id="第二步-建立原型链">第二步：建立原型链</h3>
+<h2 id="第二步-建立原型链">第二步：建立原型链</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -2223,18 +2994,18 @@ for key in Map:
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Student
-</span><span class="c1"></span><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
-  <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">__proto__</span><span class="o">:</span><span class="p">{</span>
-      <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
-      <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
-      <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function
-</span><span class="c1"></span><span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="c1">// Student
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
+      <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">__proto__</span><span class="o">:</span><span class="p">{</span>
+          <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
+          <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
+          <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function
+</span><span class="c1"></span>    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2264,37 +3035,37 @@ for key in Map:
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">小花</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小花&#39;</span><span class="p">,</span> <span class="mi">234567</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  姓名: &#34;小花&#34;,
-</span><span class="cm">  学号: 234567,
-</span><span class="cm">  __proto__: {
-</span><span class="cm">
-</span><span class="cm">    __proto__: {
-</span><span class="cm">      自我介绍: ƒ (),
-</span><span class="cm">      constructor: ƒ Person(姓名),
-</span><span class="cm">      __proto__: Object,
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">小花</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小花&#39;</span><span class="p">,</span> <span class="mi">234567</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      姓名: &#34;小花&#34;,
+</span><span class="cm">      学号: 234567,
+</span><span class="cm">      __proto__: {
+</span><span class="cm">    
+</span><span class="cm">        __proto__: {
+</span><span class="cm">          自我介绍: ƒ (),
+</span><span class="cm">          constructor: ƒ Person(姓名),
+</span><span class="cm">          __proto__: Object,
+</span><span class="cm">        }
+</span><span class="cm">    
+</span><span class="cm">      }
 </span><span class="cm">    }
-</span><span class="cm">
-</span><span class="cm">  }
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">小花</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
-<span class="c1">// &#39;你好，我是 小花&#39;
+</span><span class="cm">    */</span>
+    
+    <span class="nx">小花</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
+    <span class="c1">// &#39;你好，我是 小花&#39;
 </span></code></pre></td></tr></table>
 </div>
 </div>
 <p>小花现在会自我介绍了，但是还有个小问题，我们发现 <code>小花.__proto__</code> 中的 <code>constructor</code> 不见了！我们得赶紧修复一下。</p>
 
-<h3 id="第三步-解决-constructor-的问题">第三步：解决 constructor 的问题</h3>
+<h2 id="第三步-解决-constructor-的问题">第三步：解决 constructor 的问题</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Student</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Student</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2316,19 +3087,19 @@ for key in Map:
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Student
-</span><span class="c1"></span><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
-  <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">,</span>
-    <span class="nx">__proto__</span><span class="o">:</span><span class="p">{</span>
-      <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
-      <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
-      <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
-    <span class="p">}</span>
-  <span class="p">}</span><span class="p">,</span>
-  <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function
-</span><span class="c1"></span><span class="p">}</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="c1">// Student
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Student&#34;</span><span class="p">,</span>
+      <span class="nx">prototype</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">,</span>
+        <span class="nx">__proto__</span><span class="o">:</span><span class="p">{</span>
+          <span class="nx">自我介绍</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span><span class="p">,</span>
+          <span class="nx">constructor</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span><span class="p">,</span>
+          <span class="nx">__proto__</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">}</span><span class="p">,</span>
+      <span class="nx">__proto__</span><span class="o">:</span> <span class="nx">ƒ</span> <span class="p">(</span><span class="p">)</span> <span class="c1">// Function
+</span><span class="c1"></span>    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2358,33 +3129,33 @@ for key in Map:
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小花&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  姓名: &#34;小红&#34;,
-</span><span class="cm">  学号: 345678,
-</span><span class="cm">  __proto__: {
-</span><span class="cm">
-</span><span class="cm">    constructor: ƒ Student(姓名, 学号),
-</span><span class="cm">
-</span><span class="cm">    __proto__: {
-</span><span class="cm">      自我介绍: ƒ (),
-</span><span class="cm">      constructor: ƒ Person(姓名),
-</span><span class="cm">      __proto__: Object,
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小花&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      姓名: &#34;小红&#34;,
+</span><span class="cm">      学号: 345678,
+</span><span class="cm">      __proto__: {
+</span><span class="cm">    
+</span><span class="cm">        constructor: ƒ Student(姓名, 学号),
+</span><span class="cm">    
+</span><span class="cm">        __proto__: {
+</span><span class="cm">          自我介绍: ƒ (),
+</span><span class="cm">          constructor: ƒ Person(姓名),
+</span><span class="cm">          __proto__: Object,
+</span><span class="cm">        }
+</span><span class="cm">    
+</span><span class="cm">      }
 </span><span class="cm">    }
-</span><span class="cm">
-</span><span class="cm">  }
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
-<span class="c1">// ‘你好，我是 小红’
+</span><span class="cm">    */</span>
+    
+    <span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
+    <span class="c1">// ‘你好，我是 小红’
 </span></code></pre></td></tr></table>
 </div>
 </div>
 <p>OK，一切正常。</p>
 
-<h3 id="总结">总结</h3>
+<h2 id="总结">总结</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2455,72 +3226,72 @@ for key in Map:
 </span><span class="lnt">66
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">姓名</span> <span class="o">=</span> <span class="nx">姓名</span>
-<span class="p">}</span>
-
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">自我介绍</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">你好，我是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">姓名</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">{</span>
-  <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">姓名</span><span class="p">)</span> <span class="c1">// 调用父级构造函数
-</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">学号</span> <span class="o">=</span> <span class="nx">学号</span>
-<span class="p">}</span>
-
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">)</span> <span class="c1">// 建立原型链
-</span><span class="c1"></span>
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Student</span> <span class="c1">// 解决 constructor 问题
-</span><span class="c1"></span><span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  name: &#34;Student&#34;,
-</span><span class="cm">
-</span><span class="cm">  prototype: {
-</span><span class="cm">
-</span><span class="cm">    constructor: ƒ Student(姓名, 学号),
-</span><span class="cm">    // Student.prototype 里面的 constructor 就是 Student
-</span><span class="cm">
-</span><span class="cm">    __proto__:{
-</span><span class="cm">      // Student.prototype 里面的 __proto__ 是 Person.prototype
-</span><span class="cm">      自我介绍: ƒ (),
-</span><span class="cm">      constructor: ƒ Person(姓名),
-</span><span class="cm">      __proto__: Object,
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">姓名</span> <span class="o">=</span> <span class="nx">姓名</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">自我介绍</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">你好，我是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">姓名</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span><span class="p">{</span>
+      <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">姓名</span><span class="p">)</span> <span class="c1">// 调用父级构造函数
+</span><span class="c1"></span>      <span class="k">this</span><span class="p">.</span><span class="nx">学号</span> <span class="o">=</span> <span class="nx">学号</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">)</span> <span class="c1">// 建立原型链
+</span><span class="c1"></span>    
+    <span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Student</span> <span class="c1">// 解决 constructor 问题
+</span><span class="c1"></span>    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      name: &#34;Student&#34;,
+</span><span class="cm">    
+</span><span class="cm">      prototype: {
+</span><span class="cm">    
+</span><span class="cm">        constructor: ƒ Student(姓名, 学号),
+</span><span class="cm">        // Student.prototype 里面的 constructor 就是 Student
+</span><span class="cm">    
+</span><span class="cm">        __proto__:{
+</span><span class="cm">          // Student.prototype 里面的 __proto__ 是 Person.prototype
+</span><span class="cm">          自我介绍: ƒ (),
+</span><span class="cm">          constructor: ƒ Person(姓名),
+</span><span class="cm">          __proto__: Object,
+</span><span class="cm">        }
+</span><span class="cm">    
+</span><span class="cm">      },
+</span><span class="cm">    
+</span><span class="cm">      __proto__: ƒ () // Function
 </span><span class="cm">    }
-</span><span class="cm">
-</span><span class="cm">  },
-</span><span class="cm">
-</span><span class="cm">  __proto__: ƒ () // Function
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">报数</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">我的学号是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">学号</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小红&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
-<span class="cm">/*
-</span><span class="cm">{
-</span><span class="cm">  姓名: &#34;小红&#34;
-</span><span class="cm">  学号: 345678
-</span><span class="cm">  __proto__: {
-</span><span class="cm">
-</span><span class="cm">    constructor: ƒ Student(姓名, 学号)
-</span><span class="cm">    // 小红 是由 Student 构造的
-</span><span class="cm">    // 小红.__proto__ 跟 Student.prototype 是一样的
-</span><span class="cm">
-</span><span class="cm">    __proto__: {
-</span><span class="cm">      自我介绍: ƒ ()
-</span><span class="cm">      constructor: ƒ Person(姓名)
-</span><span class="cm">      __proto__: Object
+</span><span class="cm">    */</span>
+    
+    <span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">报数</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">我的学号是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">学号</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小红&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
+    <span class="cm">/*
+</span><span class="cm">    {
+</span><span class="cm">      姓名: &#34;小红&#34;
+</span><span class="cm">      学号: 345678
+</span><span class="cm">      __proto__: {
+</span><span class="cm">    
+</span><span class="cm">        constructor: ƒ Student(姓名, 学号)
+</span><span class="cm">        // 小红 是由 Student 构造的
+</span><span class="cm">        // 小红.__proto__ 跟 Student.prototype 是一样的
+</span><span class="cm">    
+</span><span class="cm">        __proto__: {
+</span><span class="cm">          自我介绍: ƒ ()
+</span><span class="cm">          constructor: ƒ Person(姓名)
+</span><span class="cm">          __proto__: Object
+</span><span class="cm">        }
+</span><span class="cm">    
+</span><span class="cm">      }
 </span><span class="cm">    }
-</span><span class="cm">
-</span><span class="cm">  }
-</span><span class="cm">}
-</span><span class="cm">*/</span>
-
-<span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
-<span class="nx">小红</span><span class="p">.</span><span class="nx">报数</span><span class="p">(</span><span class="p">)</span>
-<span class="c1">// ‘你好，我是 小红’
+</span><span class="cm">    */</span>
+    
+    <span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
+    <span class="nx">小红</span><span class="p">.</span><span class="nx">报数</span><span class="p">(</span><span class="p">)</span>
+    <span class="c1">// ‘你好，我是 小红’
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -2552,29 +3323,29 @@ for key in Map:
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Person</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">class</span> <span class="nx">Person</span> <span class="p">{</span>
+      <span class="nx">constructor</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">姓名</span> <span class="o">=</span> <span class="nx">姓名</span>
-    <span class="p">}</span>
-    <span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">}</span>
+      <span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">你好，我是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">姓名</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+      <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kr">class</span> <span class="nx">Student</span> <span class="kr">extends</span> <span class="nx">Person</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="kr">class</span> <span class="nx">Student</span> <span class="kr">extends</span> <span class="nx">Person</span> <span class="p">{</span>
+      <span class="nx">constructor</span><span class="p">(</span><span class="nx">姓名</span><span class="p">,</span> <span class="nx">学号</span><span class="p">)</span> <span class="p">{</span>
         <span class="kr">super</span><span class="p">(</span><span class="nx">姓名</span><span class="p">)</span> <span class="c1">// 这里的 姓名 两个字要与父类中的一样
 </span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">学号</span> <span class="o">=</span> <span class="nx">学号</span>
-    <span class="p">}</span>
-    <span class="nx">报数</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">}</span>
+      <span class="nx">报数</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="sb">我的学号是 </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">学号</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+      <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小红&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
-
-<span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
-<span class="nx">小红</span><span class="p">.</span><span class="nx">报数</span><span class="p">(</span><span class="p">)</span>
+    
+    <span class="kd">let</span> <span class="nx">小红</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;小红&#39;</span><span class="p">,</span> <span class="mi">345678</span><span class="p">)</span>
+    
+    <span class="nx">小红</span><span class="p">.</span><span class="nx">自我介绍</span><span class="p">(</span><span class="p">)</span>
+    <span class="nx">小红</span><span class="p">.</span><span class="nx">报数</span><span class="p">(</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>
@@ -2907,8 +3678,8 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
         
             <item>
                 <title>函数的执行时机</title>
-                <link>http://hais-teatime.com/post/2019-12-06-js-1/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-06-js-1/</guid>
+                <link>http://hais-teatime.com/post/2019-12-06-js-let/</link>
+                <guid isPermaLink="true">http://hais-teatime.com/post/2019-12-06-js-let/</guid>
                 <pubDate>Tue, 03 Dec 2019 09:00:59 +0800</pubDate>
                 
                     <author>Hyuain97@163.com (Harvey Zhang)</author>
@@ -3124,868 +3895,6 @@ git push -f git@github.com:Hyuain/usagi-piske-animated.git master:gh-pages
                                 
                                 
                                     <category domain="http://hais-teatime.com/tags/javascript/">JavaScript</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>浅析 URL</title>
-                <link>http://hais-teatime.com/post/2019-11-30-url/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-11-30-url/</guid>
-                <pubDate>Sat, 30 Nov 2019 17:16:17 +0800</pubDate>
-                
-                    <author>Hyuain97@163.com (Harvey Zhang)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description><![CDATA[<p>本文将介绍万维网三大技术之一的 URL，其实是自己的一个小 FAQ（笑）。</p>
-
-<h2 id="url-和-uri">URL 和 URI？</h2>
-
-<p>URL 实际上是 URI 的一个子集，除识别资源外还提供定位资源的方法。</p>
-
-<p>下面是一个 URI 的组成：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">                    hierarchical part
-        ┌───────────────────┴─────────────────────┐
-                    authority               path
-        ┌───────────────┴───────────────┐┌───┴────┐
-  abc://username:password@example.com:123/path/data?key=value&amp;key2=value2#fragid1
-  └┬┘   └───────┬───────┘ └────┬────┘ └┬┘           └─────────┬─────────┘ └──┬──┘
-scheme  user information     host     port                  query         fragment
-
-  urn:example:mammal:monotreme:echidna
-  └┬┘ └──────────────┬───────────────┘
-scheme              path</code></pre></td></tr></table>
-</div>
-</div>
-<p>举一个我们常见的 URL（URI） 的例子：</p>
-
-<p><a href="https://zh.wikipedia.org/w/index.php?title=Special:随机页面#5" target="_blank">https://zh.wikipedia.org/w/index.php?title=Special:随机页面#5</a></p>
-
-<ol>
-<li><code>https</code>：协议</li>
-<li><code>zh.wikipedia.org</code>：域名</li>
-<li><code>/w/index.php</code>：路径（不同的页面）</li>
-<li><code>?title=Special:随机页面</code>：查询参数（相同页面，不同内容）</li>
-<li><code>#5</code>：锚点（相同页面，相同内容，不同位置）</li>
-<li>其中若不写端口号，则表示使用 https 对应的默认端口号 443</li>
-</ol>
-
-<h2 id="nslookup">nslookup？</h2>
-
-<p>直接使用可以查询到域名的 A 记录。比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">nslookup hais-teatime.com</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="顶级域名-二级域名">顶级域名？二级域名？</h2>
-
-<p>比如对于 www.baidu.com</p>
-
-<ul>
-<li>顶级域名：com</li>
-<li>二级域名：baidu.com</li>
-<li>三级域名：www.baidu.com</li>
-</ul>
-
-<p>三级域名跟二级域名可以没关系，有可能都不是属于一家公司，注意辨别。</p>]]></description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/url/">URL</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>CSS 入门</title>
-                <link>http://hais-teatime.com/post/2019-11-30-css/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-11-30-css/</guid>
-                <pubDate>Sat, 30 Nov 2019 14:47:37 +0800</pubDate>
-                
-                    <author>Hyuain97@163.com (Harvey Zhang)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description><![CDATA[<p>随着网络的发展，人们开始对网页有了更多美学上的追求，希望网页能在提供基本的文字和图像信息的同时能够拥有美观、良好的排版，这也就促使 CSS（Cascading Style Sheets）不断发展，本文则将对现阶段所学 CSS 知识做一个简单的总结。</p>
-
-<blockquote>
-<p>大部分的内容是 <a href="http://jirengu.com" target="_blank">饥人谷</a> 方老师课上的讲的内容的总结，转载请注明。</p>
-</blockquote>
-
-<h2 id="基本概念">基本概念</h2>
-
-<h3 id="文档流-normal-flow">文档流（Normal Flow）</h3>
-
-<p>文档流的英文叫 <strong>Normal Flow</strong>，其实把它翻译成 <strong>正常布局流</strong> 更为合适。
-当我们没有使用过任何 CSS 规则来改变元素的展现方式的时候，他们会按照正常的布局流来组织——也就是默认情况下的元素布局——这也就是我们所说的 <strong>Noraml Flow</strong>，即 <strong>文档流</strong> 。</p>
-
-<p>我们可以修改元素的 <code>display</code> 属性，来为元素指定他的显示方式，通常我们可以将其值指定为 <code>inline</code> <code>block</code> 或 <code>inline-block</code>，下面将从 <strong>流动方向、宽度、高度</strong> 这三个方面来介绍 <code>display</code> 的三个值的不同特性。</p>
-
-<h4 id="流动方向">流动方向</h4>
-
-<ul>
-<li><code>inline</code> 从左到右排列，行尾会截断成两行</li>
-<li><code>block</code> 从上到下排列（每个占一行）</li>
-<li><code>inline-block</code> 从左到右排列，行尾不会截断成两行</li>
-</ul>
-
-<h4 id="宽度">宽度</h4>
-
-<ul>
-<li><code>inline</code> 的宽度为里面所有 <code>inline</code> 元素之和，不接受指定 <code>width</code></li>
-<li><code>block</code> 的宽度默认为 <code>auto</code>（这个值不是 100%），可以指定 <code>width</code>，<strong>但建议不要写 <code>width = 100%</code>，容易出 BUG</strong></li>
-<li><code>inline-block</code> 的默认为里面所有 <code>inline</code> 元素之和，但接受指定 <code>width</code></li>
-</ul>
-
-<h4 id="高度">高度</h4>
-
-<ul>
-<li><code>inline</code> 的实际高度由行高（<code>line-height</code>）间接确定（与字体有关）；<code>padding</code> 只能改变看得见的高度（而不是实际高度）；如果没有内容，也有高度，其值为 <code>line-height</code>（具体内容可以参照方老师写的<a href="https://zhuanlan.zhihu.com/p/25808995?group_id=825729887779307520" target="_blank">这篇文章</a>）</li>
-<li><code>block</code> 的高度由里面所有的 <strong>文档流元素</strong>（即还在 Normal Flow 的元素，下文会阐述什么情况下会 <a href="#脱离文档流">脱离文档流</a>）决定，也可以设置 <code>height</code>；如果没有内容，高度为 0</li>
-<li><code>inline-block</code> 的高度由里面所有的 <strong>文档流元素</strong> 决定，也可以设置 <code>height</code></li>
-</ul>
-
-<h4 id="脱离文档流">脱离文档流</h4>
-
-<p>目前有两种方式会使得元素脱离文档流，分别是：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css">    <span class="nt">position</span><span class="o">:</span> <span class="nt">absolute</span> <span class="o">|</span> <span class="nt">fixed</span><span class="o">;</span>
-    <span class="c">/* OR */</span>
-    <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span> <span class="o">|</span> <span class="nt">right</span><span class="o">;</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="盒模型-box-model">盒模型（Box Model)</h3>
-
-<p>事实上，我们可以把网页中显示的 HTML 元素看成是一个个盒子，盒子具有四层：</p>
-
-<ul>
-<li>内容（content）</li>
-<li>内边距（padding）</li>
-<li>边框（border）</li>
-<li>外边距（margin）</li>
-</ul>
-
-<p>现在主要有两种盒模型，一种是 <code>content-box</code>，一种是 <code>border-box</code>。他们的主要区别在于：</p>
-
-<ol>
-<li>我们对 <strong>content-box</strong> 指定 <code>width</code> 或 <code>height</code> 时，说的是他的最里面的 <code>content</code> 的 宽或高；</li>
-<li>而对 <strong>border-box</strong> 指定 <code>width</code> 或 <code>heihgt</code> 时，除了 <code>content</code> 的宽或高之外，还包括了 <code>padding</code> 和 <code>border</code> 的厚度。</li>
-</ol>
-
-<p>我们可以通过设定属性 <code>box-sizing: content-box | border-box</code>，来选择我们想使用的宽度计算方式。</p>
-
-<h3 id="margin-合并"><code>margin</code> 合并</h3>
-
-<p>是说我们上下两个元素若都有 margin，那么他们的 margin 将不会同时生效。有以下几个注意点：</p>
-
-<ol>
-<li>只有上下才会发生 <code>margin</code> 合并，左右不会发生</li>
-<li>只有 <code>block</code> 会发生 <code>margin</code> 合并，<code>inline-block</code> 不会发生</li>
-<li><code>first-child</code> 和 <code>last-child</code> 也会和 <code>parent</code> 发生 margin 合并</li>
-</ol>
-
-<p>取消 margin 合并的方法：</p>
-
-<ol>
-<li>使用 <code>overflow:hidden</code> 之后就不会再合并</li>
-<li>使用 <code>display:flex</code> 之后就不会再合并</li>
-<li>通过给 <code>parent</code> 上面加东西（<code>padding</code> <code>border</code> <code>overflow</code> 等）之后就不会再合并</li>
-</ol>
-
-<h3 id="浏览器的渲染过程">浏览器的渲染过程</h3>
-
-<p>根据 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction" target="_blank">Google 团队的文章</a>分析，我们可以将网页的渲染过程大致分为以下几步：</p>
-
-<ol>
-<li>根据 HTML 构建 HTML 树（DOM）</li>
-<li>根据 CSS 构建 CSS 树（CSSOM）</li>
-<li>将两棵树合并为渲染树（Render Tree）</li>
-<li>布局 <strong>Layout</strong>（文档流、盒模型、计算大小和位置）</li>
-<li>绘制 <strong>Paint</strong>（边框颜色、文字颜色、阴影）</li>
-<li>合成 <strong>Compose</strong>（根据层叠关系展示画面）</li>
-</ol>
-
-<p><img src="/images/render-tree-construction.png" alt="Render Tree Construction" /></p>
-
-<p>同时我们知道，如果用 JS 对网页中的元素进行修改的话，将会引起网页的重新渲染，这里有三种网页内容的更新方式：</p>
-
-<ul>
-<li>JS &gt; Style &gt; <strong>Layout &gt; Paint &gt; Composite</strong>：remove</li>
-<li>JS &gt; Style &gt; <strong>Paint &gt; Composite</strong>：改变背景颜色</li>
-<li>JS &gt; Style &gt; <strong>Composite</strong>：transform</li>
-</ul>
-
-<h2 id="css-布局">CSS 布局</h2>
-
-<p>布局是 CSS 的最重要的用途之一，也是众多新人苦手的地方，现在就来总结一下三种常用布局以及在什么地方使用他们。</p>
-
-<h3 id="应该如何选用哪种布局方式">应该如何选用哪种布局方式？</h3>
-
-<p>根据方老师的工作经验总结，我们可以通过以下问题来进行分析：</p>
-
-<ol>
-<li>需要兼容 IE 9 吗？
-
-<ul>
-<li>需要，使用 <strong>float 布局</strong>；左浮两个，固定宽度，不要响应式；记得 <strong>clearfix</strong>，必要时采用负 margin</li>
-<li>不需要，往下看</li>
-</ul></li>
-<li>只兼容最新的浏览器吗？
-
-<ul>
-<li>是，使用 <strong>grid 布局</strong></li>
-<li>不是，使用 <strong>flex布局</strong>，必要时采用负 margin</li>
-</ul></li>
-</ol>
-
-<h3 id="float-布局">float 布局</h3>
-
-<p>float 布局其实很简单，我们只需要做两步就可以了：</p>
-
-<ol>
-<li>在子元素上加 <code>float: left</code> 和 <code>width</code></li>
-
-<li><p>在父元素上加 <code>class=&quot;clearfix&quot;</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">.clearfix:after{
-content: &#39;&#39;;
-display: block;
-clear: both;
-}</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-
-<p>关于 float 布局也有一些经验：</p>
-
-<ul>
-<li>留一些空间或最后一个不设置 <code>width</code>（可以设置一个 <code>max-width</code>）</li>
-<li>不需要考虑响应式，因为手机上没有 IE，这个布局是专门为 IE 准备的</li>
-<li>在 IE 上有 BUG ：最左边浮动元素的 <code>margin-left</code> 会变成双倍
-
-<ul>
-<li>可以加一句兼容性写法：<code>_margin-left: ?px</code>;</li>
-<li>也可以加上 <code>display: inline-block</code></li>
-</ul></li>
-<li>如果图片下面有空隙，加上 <code>vertical-align: middle | top</code> 就可以消除</li>
-<li>float 元素外边距不合并</li>
-</ul>
-
-<h3 id="flex-布局">flex 布局</h3>
-
-<p>我们可以通过 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Tricks</a> 的一个详细的教程来学习 flex 布局，下面还是做一下介绍以便后日复习。</p>
-
-<h4 id="container">container</h4>
-
-<ul>
-<li>让一个元素变成 flex 容器：<code>display: flex | inline-flex</code></li>
-<li>改变 itmes 的流动方向（主轴）：<code>flex-direction: row | row-reverse | colum | colum-reverse</code></li>
-<li>改变折行：<code>flex-wrap: nowrap | wrap | wrap-revers</code></li>
-<li>主轴的对齐方式：<code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly</code></li>
-<li>次轴对齐：<code>align-items: flex-start | flex-end | center | stretch（默认）</code></li>
-<li>多行对齐（基本不用）：<code>align-content: flex-start | flex-end | center | strech | space-between | space-around</code></li>
-</ul>
-
-<h4 id="items">items</h4>
-
-<ul>
-<li><code>order</code>：改变显示顺序</li>
-<li><code>flex-grow</code>：控制自己如何长胖（占多余所有空间的权重），默认是 0（尽可能窄）
-
-<ul>
-<li>导航栏常用左边 logo 和右边用户头像都是 0，中间是 1</li>
-</ul></li>
-<li><code>flex-shrink</code>：控制如何变瘦，（在空间不够用的时候，压缩的比例）默认是 1（大家一起变小），可以写 0（防止变小）</li>
-<li><code>flex-basis</code>：控制基准宽度，一般用得比较少，默认是 <code>auto</code>（跟宽度一样）</li>
-<li>以上可以缩写为：<code>flex: grow shrink basis</code></li>
-<li><code>align-self: flex-start | flex-end</code></li>
-</ul>
-
-<h4 id="经验">经验</h4>
-
-<ul>
-<li>永远不要把 <code>width</code> 和 <code>height</code> 写死</li>
-<li>尽量使用 <code>min-width | max-width</code> 等来写</li>
-<li><code>margin-xxx: auto</code>，有奇效，类似于 <code>between</code></li>
-</ul>
-
-<h3 id="grid-布局">grid 布局</h3>
-
-<p>同样对于 grid 布局，我们也可以通过 <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Tricks</a> 来学习。</p>
-
-<h4 id="container-1">container</h4>
-
-<ul>
-<li>让一个元素变成 grid 容器：<code>display: grid | inline-grid</code></li>
-<li><code>grid-template-columns</code>: 每一列的宽度，可以写 <code>auto</code></li>
-<li><code>grid-template-rows</code>: 每一行的高度，可以写 <code>auto</code></li>
-
-<li><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">grid-template-areas:
-&#34;header header header&#34;
-&#34;aside main ad&#34;
-&#34;footer footer&#34;</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<h4 id="items-1">items</h4>
-
-<p><img src="/images/grid.png" alt="grid" /></p>
-
-<h2 id="定位">定位</h2>
-
-<p>定位也是 CSS 比较难以理解的部分，主要是需要记忆的内容比较多，有时候容易搞晕，在这里我们主要需要关注的有两个知识点：一是 <code>positon</code> 属性，二是 <strong>层叠上下文（The Stacking Context）</strong>。</p>
-
-<h3 id="position-属性"><code>position</code> 属性</h3>
-
-<p><code>position</code> 主要可以取以下几个值：</p>
-
-<ul>
-<li><code>static</code>：默认值，当前元素在文档流中</li>
-<li><code>relative</code>：距离自己原来的位置的偏离（<code>top | left</code>），<strong>还是占据原来的空间</strong>，可以用来：
-
-<ul>
-<li>做位移</li>
-<li>做 <code>absolute</code> 元素的 <code>parent</code></li>
-<li>配合 <code>z-index</code>，默认是 <code>auto</code>，<code>auto</code> 计算出来的值为 <code>0</code></li>
-</ul></li>
-<li><code>absolute</code>：脱离原来的位置，另起一层；会相对于祖先元素中最近的一个 <strong>定位元素</strong>（即非 <code>static</code> 元素） 来进行定位
-
-<ul>
-<li>某些浏览器如果不写 <code>top | left</code> 会引起混乱</li>
-<li>善用 <code>left: 100%</code>，善用 <code>left: 50%</code> 加 <code>负 margin</code></li>
-</ul></li>
-<li><code>fixed</code>：相对于 <strong>视口</strong> 定位，但是如果放到具有 <code>transform</code> 属性的元素里面，会有问题
-
-<ul>
-<li>某些浏览器如果不写 <code>top | left</code> 会引起混乱</li>
-<li>手机上尽量不要使用 fixed</li>
-</ul></li>
-<li><code>sticky</code>：兼容性很差</li>
-</ul>
-
-<h3 id="层叠上下文-the-stacking-context">层叠上下文（The Stacking Context）</h3>
-
-<p><img src="/images/the-stacking-context.png" alt="The Stacking Context" /></p>
-
-<blockquote>
-<p>我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，<strong>层叠上下文</strong> 就是对这些 HTML 元素的一个 <strong>三维构想</strong>。众 HTML 元素基于其元素属性 <strong>按照优先级顺序</strong> 占据这个空间。</p>
-</blockquote>
-
-<p>默认的元素的三维层叠顺序如上图所示，可以看到定位元素会超出原来的高度范畴，换句话说，<strong>原来的 background、border、块级子元素、浮动元素、内联子元素均处在 z-index = -1 ~ 0 这个区间之内</strong>。</p>
-
-<p>每一个层叠上下文就好像一个小世界，只有这里面的 <code>z-index</code> 才能进行比较，具有不同 <code>z-index</code> 的父元素之中的子元素根本无法同台竞技。</p>
-
-<p>这些常见的属性（或元素）可以创建一个层叠上下文：</p>
-
-<ul>
-<li><code>HTML</code>（根元素）</li>
-<li><code>z-index</code> 值不为 <code>auto</code> 的 <code>relative | absolute</code> 元素</li>
-<li><code>z-index</code> 值不为 <code>auto</code> 的 <code>flex</code> <code>grid</code> 子项</li>
-<li><code>transform</code> 值不为 <code>none</code> 的元素</li>
-<li><code>opacity</code> 值小于 <code>1</code> 的元素</li>
-</ul>
-
-<p>更多资料可以查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context" target="_blank">MDN 文档</a> 。</p>
-
-<h2 id="动画">动画</h2>
-
-<p>得益于 CSS 动画的帮助，我们的网页可以显得更加生动有趣，下面就我们常用的 CSS 动画的实现方式来进行简单的说明。</p>
-
-<h3 id="变型-transform">变型 <code>transform</code></h3>
-
-<p>值得注意的是，我们可以通过使用 JS 直接通过改变 CSS 样式（比如 <code>left: 50px</code>）来修改元素的大小、位置、方向等，但是这种效率非常低，网页需要不停地 <strong>repaint</strong>，而如果通过 <code>transform</code> 属性来进行修改，则不会 <strong>repaint</strong> 那么多次，将会大幅提高网页的流畅度。——整个浏览器的渲染过程我们已经在 <a href="#浏览器的渲染过程">前面</a> 讲过了。</p>
-
-<p><code>transform</code> 属性可以取以下值:</p>
-
-<ul>
-<li>位移 translate：<code>translateX(50px) | translateY(50%) | translateZ(50px) | translate(50px, 50px)</code></li>
-<li>视点的确定（在父元素上）：<code>perspective: 1000px</code>，表示父元素的中心为坐标原点，距离屏幕为 <code>1000px</code></li>
-<li>缩放 scale：<code>scaleX(&lt;number&gt;) | scaleY(&lt;number&gt;) | scale(&lt;number&gt;, &lt;number&gt;?)</code>，<code>border</code> 也会一起变</li>
-<li>旋转 rotate：<code>rotate([&lt;angle&gt;|&lt;zero&gt;]) | rotateZ([&lt;angle&gt;|&lt;zero&gt;]) | rotateX([&lt;angle&gt;|&lt;zero&gt;])</code>，一般用来做360度旋转的 loading 或者按钮的交互</li>
-<li>扭曲 skew：<code>skewX(&lt;angle&gt;|&lt;zero&gt;) | skewY(&lt;angle&gt;|&lt;zero&gt;) | skew(&lt;angle&gt;|&lt;zero&gt;, &lt;angle&gt;|&lt;zero&gt;?)</code></li>
-</ul>
-
-<p>使用 <code>transform: none</code> 可以取消所有变化</p>
-
-<p>此外，我们可以用 <code>top: 50%; left: 50%; transform(-50%, -50%)</code> 做绝对定位的居中</p>
-
-<p><strong>然而， transform 只是静态的变型，而要实现动画，我们还需要使用下面介绍的 transition 或者 animation</strong></p>
-
-<h3 id="过渡-transition">过渡 <code>transition</code></h3>
-
-<p><code>transition</code> 可以合在一起这样写：</p>
-
-<p><code>属性名(可以写all)</code> <code>时长</code> <code>过渡方式( linear | ease | ease-in | ease-in-out | cubic-bezier | step-start | step-end | steps )</code> <code>延迟</code></p>
-
-<p>比如：</p>
-
-<p><code>transition: width 2s linear 3s</code></p>
-
-<p><strong>但请注意，不是所有属性都有过渡，比如：</strong></p>
-
-<p><code>display: none =&gt; block</code></p>
-
-<p>一般改成</p>
-
-<p><code>visibility: hidden =&gt; visible</code></p>
-
-<h3 id="动画-animation">动画 animation</h3>
-
-<p><code>animation</code> 可以合在一起这样写：</p>
-
-<p><code>时长</code> <code>过渡方式</code> <code>延迟</code> <code>次数( infinite )</code> <code>方向( reverse | alternate | alternate-reverse )</code> <code>填充模式( none | forwards | backwards | both)</code> <code>是否暂停(paused)</code> <code>自定义的动画名</code></p>
-
-<p>在使用 animation 之前，我们需要先制作一个动画（添加关键帧），比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">自定义的动画名</span> <span class="p">{</span>
-    <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-        <span class="k">transform</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">66</span><span class="p">.</span><span class="nc">66</span><span class="o">%</span> <span class="p">{</span>
-        <span class="k">transform</span><span class="p">:</span> <span class="nb">translateX</span><span class="p">(</span><span class="mi">200</span><span class="kt">px</span><span class="p">)</span>
-    <span class="p">}</span><span class="p">}</span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/css/">CSS</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>HTML 入门与重难点标签</title>
-                <link>http://hais-teatime.com/post/2019-11-28-html/</link>
-                <guid isPermaLink="true">http://hais-teatime.com/post/2019-11-28-html/</guid>
-                <pubDate>Thu, 28 Nov 2019 17:22:28 +0800</pubDate>
-                
-                    <author>Hyuain97@163.com (Harvey Zhang)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description><![CDATA[<p>近四十年前，万维网（WWW）最初的构想于世界上诞生，现在已经融入了人们的日常生活之中，甚至可以说已然成为现代文明的重要组成部分。</p>
-
-<p>将网址输入浏览器，回车得到想要的页面；亦或是点击一个链接，就可以看到想要的内容——理所当然，易如反掌，这就是我们所说的万维网。</p>
-
-<p>这万维网之中，有三个核心技术：URI、HTTP 与 HTML，本文则将简单对其中的 HTML 及其部分重点标签进行介绍，作为笔记。</p>
-
-<h2 id="html-的历史">HTML 的历史</h2>
-
-<p>1989年，李爵士（Berners-Lee）在一份备忘录中提出一个基于互联网的超文本系统；
-1991年，李爵士公开了名为 HTML Tags 的文章中，在这篇文章中，他设计了18个元素（如今最新的 HTML 大概有110个标签），至此，HTML (HyperText Markup Language) 宣告诞生。
-目前我们所使用的 HTML 5 于2014年10月28日作为 W3C 推荐标准发布。</p>
-
-<h2 id="html-起手式">HTML 起手式</h2>
-
-<p>用 <code>Emmet</code> 所提供的速写法可以很快地写出你在写 <code>HTML</code> 所需要写的一个骨架。
-你只需要在安装了插件的编辑器（某些编辑器默认具有此功能）中输入 <code>!</code> 再敲击 <code>Tab</code>，便可以很方便地输入以下内容。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="c">&lt;!--</span><span class="c"> 表示文档类型是 HTML 5 </span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="c">&lt;!--</span><span class="c"> html 标签，可以在这里设置语言，比如 lang=&#34;zh</span><span class="c">-</span><span class="c">CN&#34; </span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p"></span><span class="p">&gt;</span>  <span class="c">&lt;!--</span><span class="c"> 这里的东西不会显示到页面上 </span><span class="c">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p"></span><span class="p">&gt;</span>  <span class="c">&lt;!--</span><span class="c"> 文件的字符编码 </span><span class="c">--&gt;</span>
-    <span class="c">&lt;!--</span><span class="c"> 设置视口大小为设备宽度（以兼容手机），并设置初始缩放为 1.0 并禁用缩放 </span><span class="c">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;</span><span class="p"></span><span class="p">&gt;</span> 
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span><span class="p"></span><span class="p">&gt;</span> <span class="c">&lt;!--</span><span class="c"> 让 IE 浏览器使用最新的内核 </span><span class="c">--&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p"></span><span class="p">&gt;</span>Document<span class="p">&lt;</span><span class="p">/</span><span class="nt">title</span><span class="p">&gt;</span> <span class="c">&lt;!--</span><span class="c"> 标题 </span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">head</span><span class="p">&gt;</span> 
-<span class="p">&lt;</span><span class="nt">body</span><span class="p"></span><span class="p">&gt;</span> <span class="c">&lt;!--</span><span class="c"> 内容 </span><span class="c">--&gt;</span>
-    
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="常用标签">常用标签</h2>
-
-<h3 id="常用的表示章节的标签">常用的表示章节的标签</h3>
-
-<p>在 HTML 5 强化语义之后，增加了一些表示章节的标签，通过对这些标签的合理使用，我们可以更好地优化页面的结构，与此同时也为盲人同胞提供了方便。
-目前我们常用的标签有：</p>
-
-<ul>
-<li>标题 <code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code></li>
-<li>章节 <code>&lt;section&gt;</code></li>
-<li>文章 <code>&lt;article&gt;</code></li>
-<li>段落 <code>&lt;p&gt;</code></li>
-<li>头部 <code>&lt;header&gt;</code></li>
-<li>脚部 <code>&lt;footer&gt;</code></li>
-<li>主要内容 <code>&lt;main&gt;</code></li>
-<li>旁支内容 <code>&lt;aside&gt;</code></li>
-<li>划分 <code>&lt;div&gt;</code></li>
-</ul>
-
-<h3 id="常用的内容标签">常用的内容标签</h3>
-
-<ul>
-<li>有序列表 <code>&lt;ol&gt;</code> + <code>&lt;li&gt;</code></li>
-<li>无序列表 <code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code></li>
-<li>描述 <code>&lt;dl&gt;</code> + <code>&lt;dt&gt;</code> + <code>&lt;dd&gt;</code>，其中 <code>&lt;dt&gt;</code> 表示描述词，<code>&lt;dd&gt;</code> 表示描述的内容（ <code>Emmet</code> 速写: <code>dl+</code>）</li>
-<li>保留空格的段落 <code>&lt;pre&gt;</code></li>
-<li>分割线 <code>&lt;hr&gt;</code></li>
-<li>换行 <code>&lt;br&gt;</code></li>
-<li>定位符、超链接 <code>&lt;a&gt;</code></li>
-<li>语气的强调 <code>&lt;em&gt;</code></li>
-<li>本质的强调 <code>&lt;strong&gt;</code></li>
-<li>代码 <code>&lt;code&gt;</code>，默认是内联元素，可以用 <code>&lt;pre&gt;</code> 包住 <code>&lt;code&gt;</code></li>
-<li>引用 <code>&lt;quote&gt;</code></li>
-<li>块级引用 <code>&lt;blockquote&gt;</code></li>
-</ul>
-
-<h2 id="全局属性">全局属性</h2>
-
-<ul>
-<li><code>class</code> 类</li>
-<li><code>contenteditable</code> 用户可以直接编辑页面上的东西</li>
-<li><code>hidden</code> 隐藏</li>
-<li><code>id</code> 标记</li>
-<li><code>style</code> 样式</li>
-<li><code>tabindex</code> 控制 <code>Tab键</code> 激活元素的顺序，<code>tabindex=0</code> 是最后一个，<code>tabindex=-1</code> 代表永远不会访问</li>
-<li><code>title</code> 鼠标悬浮显示的内容</li>
-</ul>
-
-<h2 id="重点标签">重点标签</h2>
-
-<h3 id="a-标签"><code>&lt;a&gt;</code> 标签</h3>
-
-<h4 id="href-属性"><code>href</code> 属性</h4>
-
-<ul>
-<li>网址
-
-<ul>
-<li><code>http://google.com</code></li>
-<li><code>https://google.com</code></li>
-<li><code>//google.com</code> 无协议网址</li>
-</ul></li>
-<li>路径
-
-<ul>
-<li><code>/a/b/c</code> 绝对路径，但是是基于 <strong>HTTP 服务</strong> 开启的根目录，不是整个计算机的根目录</li>
-<li><code>a/b/c</code> 相对路径，基于当前路径的目录</li>
-<li><code>index.html</code> 当前目录的文件</li>
-<li><code>./index.html</code> 当前目录的文件</li>
-</ul></li>
-<li><code>#id</code></li>
-<li>伪协议
-
-<ul>
-<li><code>javascript:alert(1);</code></li>
-<li><code>javasrcript:;</code> 可以写一个什么都不做的a标签</li>
-<li><code>mailto:xxx@xxx.com</code> 会呼出邮件客户端</li>
-<li><code>tel:1300000000</code> 会呼出拨号界面</li>
-</ul></li>
-</ul>
-
-<h4 id="target-属性"><code>target</code> 属性</h4>
-
-<ul>
-<li>内置名字
-
-<ul>
-<li><code>_blank</code> 新标签</li>
-<li><code>_top</code> 在最顶层打开（比如 <code>iframe</code> 的最外层页面）</li>
-<li><code>_parent</code> 在父级窗口打开，没有 <code>_top</code> 那么高层</li>
-<li><code>_self</code> 在当前页面打开（比如 <code>iframe</code> 的当前层）</li>
-</ul></li>
-<li>其他自定义的新窗口的名字或者 <code>iframe</code> 的名字</li>
-</ul>
-
-<h4 id="download-属性"><code>download</code> 属性</h4>
-
-<p>下载，而不是查看网页，但是大部分都不支持</p>
-
-<h3 id="iframe-标签"><code>iframe</code> 标签</h3>
-
-<p>内嵌窗口，但是现在大都不用了</p>
-
-<h3 id="table-标签"><code>&lt;table&gt;</code> 标签</h3>
-
-<p>里面必须写<code>&lt;thead&gt;</code> <code>&lt;tbody&gt;</code> <code>&lt;tfoot&gt;</code>，否则浏览器也会自己加上，并且显示的顺序与实际写的这三个顺序无关，浏览器一定是按照<code>&lt;thead&gt;</code> <code>&lt;tbody&gt;</code> <code>&lt;tfoot&gt;</code>的顺序显示</p>
-
-<p>相关的样式有：</p>
-
-<ul>
-<li><code>table-layout</code>
-
-<ul>
-<li><code>auto</code> 按照内容的多少来分配宽度权重</li>
-<li><code>fixed</code> 等宽</li>
-</ul></li>
-<li><code>border-collapse: collapse</code> 表示两个单元格的边线合并</li>
-<li><code>border-spacing</code> 两个单元格中间的空隙</li>
-</ul>
-
-<h3 id="img-标签"><code>&lt;img&gt;</code> 标签</h3>
-
-<p>发出一个GET请求，展示一张图片</p>
-
-<h4 id="src-属性"><code>src</code> 属性</h4>
-
-<p>可以是相对路径，也可以是绝对路径</p>
-
-<h4 id="alt-属性"><code>alt</code> 属性</h4>
-
-<p>图片加载失败的时候显示的内容</p>
-
-<h4 id="height-和-width-属性"><code>height</code> 和 <code>width</code> 属性</h4>
-
-<p>若只写高度或宽度，图像比例保持不变</p>
-
-<h4 id="事件">事件</h4>
-
-<ul>
-<li><code>onload</code>图片加载成功</li>
-<li><code>onerror</code> 图片加载失败</li>
-</ul>
-
-<h4 id="响应式">响应式</h4>
-
-<p><code>max-width: 100%</code></p>
-
-<h3 id="form-标签"><code>&lt;form&gt;</code> 标签</h3>
-
-<p>发出一个GET或POST请求，然后刷新页面</p>
-
-<h4 id="action-属性"><code>action</code> 属性</h4>
-
-<p>请求到哪个页面</p>
-
-<h4 id="method-属性"><code>method</code> 属性</h4>
-
-<h4 id="autocomplete-属性"><code>autocomplete</code> 属性</h4>
-
-<p>为 <code>on</code> 则打开自动填充，下面的 <code>text</code> 要写 <code>name</code></p>
-
-<h4 id="target-属性-1"><code>target</code> 属性</h4>
-
-<p>把哪个页面（ 值可以为 <code>_blank</code> 等等）变成要请求到的那个页面（也就是说哪个页面需要刷新）</p>
-
-<blockquote>
-<p><code>&lt;input type=&quot;submit&quot;&gt;</code> 和 <code>&lt;button type=&quot;submit&quot;&gt;</code> 的区别？</p>
-
-<ul>
-<li>input里面不能再有标签（但是文字可以用 <code>value=&quot;&quot;</code> 进行更改）</li>
-<li>button里面可以有任何东西（包括图片等其他标签）</li>
-</ul>
-</blockquote>
-
-<h4 id="注意事项">注意事项</h4>
-
-<ul>
-<li>一般不监听 <code>input</code> 的 <code>click</code> 事件</li>
-<li><code>form</code> 里面的 <code>input</code> 要有 <code>name</code></li>
-<li>一个 <code>form</code> 必须要有一个 <code>type=&quot;submit&quot;</code>，如果 <code>button</code> 不写 <code>type</code>，默认为 <code>submit</code></li>
-</ul>
-
-<h3 id="input-标签"><code>&lt;input&gt;</code> 标签</h3>
-
-<h4 id="type-属性"><code>type</code> 属性</h4>
-
-<ul>
-<li><code>text</code></li>
-<li><code>color</code></li>
-<li><code>password</code></li>
-<li><code>radio</code> 所有的 <code>input</code> 要有同一个 <code>name</code></li>
-<li><code>checkbox</code> 所有的 <code>input</code> 要有同一个 <code>name</code></li>
-<li><code>file</code> 加上 <code>multiple</code> 属性可以同时选多个文件</li>
-<li><code>hidden</code></li>
-<li><code>tel</code></li>
-<li><code>email</code></li>
-<li><code>search</code></li>
-</ul>
-
-<h4 id="事件-1">事件</h4>
-
-<ul>
-<li><code>onchange</code></li>
-<li><code>onfocus</code></li>
-<li><code>onblur</code></li>
-</ul>
-
-<h3 id="textarea-标签"><code>&lt;textarea&gt;</code> 标签</h3>
-
-<ul>
-<li><code>style=&quot;resize: none&quot;</code> 让右下角不能拖动</li>
-</ul>
-
-<h3 id="select-标签"><code>&lt;select&gt;</code> 标签</h3>
-
-<ul>
-<li><code>&lt;option value=&quot;1&quot;&gt;星期一&lt;/option&gt;</code></li>
-</ul>]]></description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://hais-teatime.com/tags/html/">HTML</category>
                                 
                             
                                 
