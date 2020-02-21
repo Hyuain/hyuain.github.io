@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Hai&#39;s Teatime</title>
     <subtitle type="html">我的第一个博客，记录了一些学习随笔。</subtitle>
-    <updated>2020-02-21T10:11:29+08:00</updated>
+    <updated>2020-02-21T10:13:25+08:00</updated>
     <id>http://hais-teatime.com/</id>
     <link rel="alternate" type="text/html" href="http://hais-teatime.com/" />
     <link rel="self" type="application/atom+xml" href="http://hais-teatime.com/atom.xml" />
@@ -627,81 +627,6 @@ switch (this.state.currentIndex) {
 </div>
 </div>
 <p><code>pointArray</code> 实际上就是我们需要的横纵坐标了。</p>]]></content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" term="从小白开始的前端学习之旅" label="从小白开始的前端学习之旅" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/vue/" term="Vue" label="Vue" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/" term="前端" label="前端" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/" term="入门" label="入门" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://hais-teatime.com/tags/%E9%A1%B9%E7%9B%AE/" term="项目" label="项目" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">新的笔记本</title>
-            <link rel="alternate" type="text/html" href="http://hais-teatime.com/post/2020-01-29-new-blog/" />
-            <id>http://hais-teatime.com/post/2020-01-29-new-blog/</id>
-            <updated>2020-02-05T10:46:38+08:00</updated>
-            <published>2020-01-29T16:03:43+08:00</published>
-            <author>
-                    <name>Harvey Zhang</name>
-                    <uri>http://hais-teatime.com/</uri>
-                    <email>Hyuain97@163.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    
-    <summary type="html"><![CDATA[以前一直用的 Notion 做笔记，感觉体验很不错，但还是不太如意，这几天复习一下基础知识，顺便把笔记都搬家啦。]]></summary>
-            
-                <content type="html"><![CDATA[<p>以前一直用的 Notion 做笔记，感觉体验很不错，但还是不太如意，这几天复习一下基础知识，顺便把笔记都搬家啦。</p>
-
-<p>因为 Notion 每个月要收 5 美刀（有点小贵），现在试用的两个月快完了，而且怕他的服务器不稳定，得赶紧把笔记给换个地方存起来，于是新建了一个博客专门用来放笔记。</p>
-
-<p>链接在这里：<a href="https://hais-teatime.com/hais-notebook/" target="_blank">小海的笔记本</a></p>
-
-<p><strong>同时这个博客里面的笔记性质的文章也将会全部移动到新的笔记本中，这个博客今后将会更多专注于原创的内容。</strong></p>
-
-<p>新的笔记本使用了自带的搜索插件，也有很棒的分类系统，可以很方便地找到以前的东西哦。</p>
-
-<p>但是所谓笔记本，就是到处抄抄抄得来的东西，因此，不允许用作商业用途，目前笔记的来源包括但不限于：</p>
-
-<p>饥人谷、腾讯课堂、慕课网、BiliBili 上找的课程、各类文档、各种博客（掘金、知乎等等）、各种百科资料、互联网上的公开内容等等，为避免法律纠纷，在这里特别说明一下。当然一般是不会一字未动复制粘贴过来的，也不会出现大段的课件、PPT 等原版资料。</p>]]></content>
             
             
             
