@@ -23,10 +23,663 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 06 Feb 2020 16:27:46 +0800</lastBuildDate>
+        <lastBuildDate>Fri, 21 Feb 2020 10:11:29 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="http://hais-teatime.com/rss.xml" />
         
+        
+            <item>
+                <title>小项目：番茄闹钟 - Potado</title>
+                <link>http://hais-teatime.com/post/2020-01-30-potado/</link>
+                <guid isPermaLink="true">http://hais-teatime.com/post/2020-01-30-potado/</guid>
+                <pubDate>Fri, 07 Feb 2020 10:53:19 +0800</pubDate>
+                
+                    <author>Hyuain97@163.com (Harvey Zhang)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description><![CDATA[<p>初学 React 和 TypeScript，尝试做了一个简单的番茄闹钟，可以在点这里 <a href="https://hais-teatime.com/potado/" target="_blank">在线预览</a>，也可以进 <a href="https://github.com/Hyuain/hais-ui" target="_blank">代码仓库</a> 去看看。</p>
+
+<h1 id="项目介绍">项目介绍</h1>
+
+<p>本项目是一个简单的番茄你闹钟，分为番茄和任务两部分：在番茄部分可以定义一个番茄闹钟，并查阅番茄历史；在任务部分可以自己新建任务并查看任务历史，此外具有登录和注册功能，可以同步番茄信息，在 PC 端和移动端均具有良好的适配性。</p>
+
+<p>本项目是一个基于 React 的简单单页应用，并且使用 TypeScript 进行书写，使用 axios 发送请求、React-Router 来进行页面跳转、Redux 管理任务信息。</p>
+
+<h1 id="登录与注册页面及页面跳转">登录与注册页面及页面跳转</h1>
+
+<p>和 Vue 比较类似，我们要在 <code>App.tsx</code> 中使用 React Router：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import {
+  HashRouter,
+  Switch,
+  Route
+} from &#39;react-router-dom&#39;;
+
+export default function App() {
+  return (
+    &lt;HashRouter&gt;
+      &lt;Switch&gt;
+        &lt;Route path=&#39;/login&#39;&gt;
+          &lt;Login/&gt;
+        &lt;/Route&gt;
+        &lt;Route path=&#39;/register&#39;&gt;
+          &lt;Register/&gt;
+        &lt;/Route&gt;
+        &lt;Route path=&#39;/&#39;&gt;
+          &lt;Home/&gt;
+        &lt;/Route&gt;
+      &lt;/Switch&gt;
+    &lt;/HashRouter&gt;
+  );
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>本来我最开始是按照官方文档写的 <code>Router</code>，折腾了半天搞好了发布到 GH-Pages 之后发现页面并不能像我想象的那样跳转，都跳到 <code>/hais-teatime.com/login/</code> 去了，跟我预期的 <code>/hais-teatime.com/potado/login/</code> 不同。
+因为我也是刚开始用 Router，并没有对 <code>HashRouter</code> 和 <code>BrowserRouter</code> 理解得很好（之后有空我会专门写一篇文章来看看这个 React Router），然后我突然想起来我以前用 <code>vue-cli</code> 创建项目的时候，选择 <code>Vue-Router</code> 之后他会问我用哪种模式，其中他说有一种模式需要服务器端设置好，我一般当然就选择的是不需要服务器端设置的，后来 Google 发现这种就叫哈希路由。于是我想是不是这个 React 也需要使用哈希路由，于是就在文档中按照对应的设置好。</p>
+
+<p>另外还有几个问题，一是在组件中如何来进行跳转，以达到 Vue 的 <code>Link</code> 或者 <code>push</code> 的效果？这里我采用了 <code>useHistory</code> 这个 Hook：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import {Link, useHistory} from &#39;react-router-dom&#39;;
+export default function() {
+  let history = useHistory();
+  // 登录成功之后跳转到主页
+  const onLogin = async () =&gt; {
+    try {
+      // await ... 发送请求
+      history.push(&#39;/&#39;) 
+    } catch (e) {
+      //...
+    }
+  };
+  return (
+    &lt;div&gt;
+      &lt;button onClick={onLogin}&gt;登录&lt;/button&gt;
+      &lt;p&gt;如果还没有账号，请&lt;Link to=&#39;/register&#39;&gt;点击这里注册&lt;/Link&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  )
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>二是如何在组件外进行跳转，我发现需要借助 <code>history</code> 这个库，而且还有点麻烦：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// history.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">createHashHistory</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;history&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">history</span> <span class="o">=</span> <span class="nx">createHashHistory</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">history</span><span class="p">;</span>
+
+<span class="c1">// axios.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">history</span> <span class="nx">from</span> <span class="s1">&#39;./history&#39;</span><span class="p">;</span>
+
+<span class="c1">// 发现未登录时跳转到登录页
+</span><span class="c1"></span><span class="k">if</span><span class="p">(</span><span class="p">.</span><span class="p">.</span><span class="p">.</span><span class="p">)</span><span class="p">{</span>
+  <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="主页">主页</h1>
+
+<p>主页最主要的任务有以下两个：</p>
+
+<ol>
+<li>从服务器获取并初始化数据</li>
+<li>整体布局</li>
+</ol>
+
+<p>其中需要获取的数据包括用户数据、todos 和 tomatoes 这三部分，todos 和 tomatoes 获取之后需要使用 Redux 存到 Store 中，方便其他组件使用。</p>
+
+<h2 id="redux">Redux</h2>
+
+<p>由于有实际上我们有 todos 和 tomatoes 两个模块，所以我们可能需要按照下面的方式来使用 Redux：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"> redux
+ ├── actions
+ │   ├── index.ts
+ │   ├── todos.ts
+ │   └── tomatoes.ts
+ ├── reducers
+ │   ├── index.ts
+ │   ├── todos.ts
+ │   └── tomatoes.ts
+ ├── actionTypes.ts
+ ├── selectors.ts
+ └── store.ts</code></pre></td></tr></table>
+</div>
+</div>
+<p>action 主要是用来抽象行为，并且触发一个 reducer；reducer 则是处理不同 action 的 state；store 则可以理解为 state 的容器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// actions/index.ts 用来汇总 actions
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">todos</span> <span class="nx">from</span> <span class="s1">&#39;./todos&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">tomatoes</span> <span class="nx">from</span> <span class="s1">&#39;./tomatoes&#39;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="p">.</span><span class="p">.</span><span class="p">.</span><span class="nx">todos</span><span class="p">,</span>
+  <span class="p">.</span><span class="p">.</span><span class="p">.</span><span class="nx">tomatoes</span>
+<span class="p">}</span><span class="p">;</span>
+
+<span class="c1">// actions/todos.ts 里面是 todos 的 actions
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">INIT_TODOS</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../actionTypes&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">initTodos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">payload</span>: <span class="kt">any</span><span class="p">[</span><span class="p">]</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span>: <span class="kt">INIT_TODOS</span><span class="p">,</span>
+    <span class="nx">payload</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// reducers/index.ts 用来汇总 reducers
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">combineReducers</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;redux&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">todos</span> <span class="nx">from</span> <span class="s1">&#39;./todos&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">tomatoes</span> <span class="nx">from</span> <span class="s1">&#39;./tomatoes&#39;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">combineReducers</span><span class="p">(</span><span class="p">{</span><span class="nx">todos</span><span class="p">,</span> <span class="nx">tomatoes</span><span class="p">}</span><span class="p">)</span>
+
+<span class="c1">// reducers/todos.ts 里面是 todos 的 reducers
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">INIT_TODOS</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../actionTypes&#39;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">state</span>: <span class="kt">any</span><span class="p">[</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="p">]</span><span class="p">,</span> <span class="nx">action</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">INIT_TODOS</span>:
+      <span class="kt">return</span> <span class="p">[</span><span class="p">.</span><span class="p">.</span><span class="p">.</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">]</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// store.ts 创建 store
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">createStore</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;redux&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">rootReducer</span> <span class="nx">from</span> <span class="s1">&#39;./reducers&#39;</span>
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">rootReducer</span><span class="p">)</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>在 Home 中，我们需要获取三块数据：用户信息、todos、tomatoes，我们可以借助 React Hooks 中的 <code>useEffect</code> 来进行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">const Home = (props: IHomeProps) =&gt; {
+  React.useEffect(() =&gt; {
+    // const getMe = ...
+    // const getTomatoes = ...
+    const getTodos = async () =&gt; {
+      try {
+        // 获取数据
+        const response = await axios.get(&#39;todos&#39;);
+        // 在 Redux 中初始化数据
+        props.initTodos(todos);
+      } catch (e) {
+        // ...
+      }
+   } 
+  })
+  // return ... 
+};
+// 经过下面的代码，props 中就可访问到 state 和 actions 了
+const mapStateToProps = (state: any, ownProps: any) =&gt; ({
+  ...ownProps
+});
+const mapDispatchToProps = {
+  initTodos: actions.initTodos,
+  initTomatoes: actions.initTomatoes
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Home);</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样我们就完成了从服务器获取所有 todos 的数据，然后装到 store 中的操作。</p>
+
+<h1 id="任务列表-todos">任务列表 Todos</h1>
+
+<p>Todos 的主要功能有两个：</p>
+
+<ol>
+<li>添加新任务</li>
+<li>展示未完成的任务，并可以进行编辑</li>
+</ol>
+
+<p>因此 Todos 主要由 TodosInput 和 TodoItem 这两个构成，整体结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"> Todos
+ ├── TodoInput
+ └── TodoList
+     ├── TodoItem
+     ├── TodoItem
+     └── ...</code></pre></td></tr></table>
+</div>
+</div>
+<p>我们之前就已经在主页中获取到了 todos 的全部数据，但是 TodoItem 需要展示的是未完成的 todos，为了方便今后使用，同时也要保证 reducer 的纯净性，我创建了一个 <code>selector.ts</code> 文件来专门处理这类对 state 进行过滤或分组的工作：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// redux/selector.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">TODO_FILTERS</span><span class="p">,</span> <span class="nx">TOMATO_FILTERS</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../constants&#39;</span>
+
+<span class="kr">const</span> <span class="nx">getTodos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">store</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">todos</span><span class="p">)</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">getNotDeletedTodos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">store</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">getTodos</span><span class="p">(</span><span class="nx">store</span><span class="p">)</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="p">(</span><span class="nx">todo</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">!</span><span class="nx">todo</span><span class="p">.</span><span class="nx">deleted</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">getTodosByFilter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">store</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">todoFilter</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">notDeletedTodos</span> <span class="o">=</span> <span class="nx">getNotDeletedTodos</span><span class="p">(</span><span class="nx">store</span><span class="p">)</span><span class="p">;</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">todoFilter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">TODO_FILTERS.IMCOMPLETED</span>:
+      <span class="kt">return</span> <span class="nx">notDeletedTodos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="p">(</span><span class="nx">todo</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">(</span><span class="o">!</span><span class="nx">todo</span><span class="p">.</span><span class="nx">completed</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">return</span> <span class="nx">notDeletedTodos</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样就可以在 Todos 组件中轻松拿到 <code>incompleteTodos</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">ownProps</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">incompleteTodos</span> <span class="o">=</span> <span class="nx">getTodosByFilter</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">TODO_FILTERS</span><span class="p">.</span><span class="nx">INCOMPLETE</span><span class="p">)</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">incompleteTodos</span><span class="p">,</span>
+    <span class="p">.</span><span class="p">.</span><span class="p">.</span><span class="nx">ownProps</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="如何切换-todoitem-的-editing-状态">如何切换 TodoItem 的 <code>editing</code> 状态？</h2>
+
+<p>在 <code>initTodos</code> 的时候，我们可以再加上一个 <code>editing</code> 属性，这样以后就可以通过 <code>editing</code> 来判断这个 <code>TodoItem</code> 是不是处于编辑状态了。同时，可以使用 <code>classNames</code> 这个库来帮我们动态添加 <code>className</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import classNames from &#39;classnames&#39;
+const TodoItem = (props: ITodoItemProps) =&gt; {
+  const todoItemClass = classNames({
+    &#39;todo-item&#39;: true,
+    &#39;editing&#39;: props.editing
+  });
+  return (
+    &lt;div classNames={todoItemClass}&gt;
+    {/* ... */}
+    &lt;/div&gt;
+  )
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="番茄闹钟-tomato">番茄闹钟 Tomato</h1>
+
+<p>番茄闹钟分为两个模块：计时器 和 最近的历史记录。</p>
+
+<p>同样也是在 Tomatoes 组件中获取到所有需要的信息，然后再以 Props 的形式传给子组件。计时器会根据是否有未完成的番茄闹钟来判断是显示按钮还是倒计时。</p>
+
+<h2 id="怎样实现倒计时">怎样实现倒计时</h2>
+
+<p>使用内置的 <code>setInterval</code> 即可，开始倒计时的时候运行 <code>setInterval</code>，每 1000 ms 将剩余时间减少 1000 ms，结束之后再 <code>clearInterval</code>。</p>
+
+<h2 id="怎样将已完成的番茄按天分组">怎样将已完成的番茄按天分组</h2>
+
+<p>我将分组的函数 <code>groupByDay</code> 也放在了 <code>redux/selectors.ts</code> 中，方便日后调用，使用了 <code>lodash</code> 和 <code>date-fns</code> 这两个库，分别提供了分组函数和时间格式化方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="nx">_</span> <span class="nx">from</span> <span class="s1">&#39;lodash&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">format</span><span class="p">,</span> <span class="nx">parseISO</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;date-fns&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">groupByDay</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dataBeforeGroup</span>: <span class="kt">any</span><span class="p">[</span><span class="p">]</span><span class="p">,</span> <span class="nx">keyOfTime</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">_</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="nx">dataBeforeGroup</span><span class="p">,</span> <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">format</span><span class="p">(</span><span class="nx">parseISO</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">keyOfTime</span><span class="p">]</span><span class="p">)</span><span class="p">,</span> <span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="p">)</span><span class="p">)</span>
+  <span class="p">}</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="统计模块">统计模块</h1>
+
+<p>统计模块主要由统计图和历史记录构成，可以在番茄和土豆的统计数据中进行切换</p>
+
+<h3 id="如何制作标签页的切换">如何制作标签页的切换</h3>
+
+<p>React 没有 <code>v-if</code> 这样的指令，需要自己写条件判断，先给 <code>Tabs</code> 加上一个 <code>data-index</code> 属性，方便后续取用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li data-index=&#34;1&#34; onClick={this.onClick}&gt;&lt;/li&gt;
+    &lt;li data-index=&#34;2&#34; onClick={this.onClick}&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div&gt;
+    {Content}
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后给 <code>Body</code> 做一个选择判断：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">let Content: any;
+switch (this.state.currentIndex) {
+  case &#39;1&#39;:
+    Content = ...;
+    break;
+  case &#39;2&#39;:
+    Content = ...;
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>最后加上一个点击事件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">onClick</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="p">{</span><span class="nx">currentIndex</span>: <span class="kt">e.currentTarget.getAttribute</span><span class="p">(</span><span class="s1">&#39;data-index&#39;</span><span class="p">)</span><span class="p">}</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="怎样画折线统计图">怎样画折线统计图</h2>
+
+<p>我是借助 <code>polygon</code> 标签来画的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;svg&gt;
+&lt;polygon fill=&#34;rgba(215,78,78,.1)&#34; stroke=&#34;rgba(215,78,78,.5)&#34; strokeWidth=&#34;1&#34;
+         points={genPoints()}/&gt;
+&lt;/svg&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<p>只需要知道类似于这样的一个字符串即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[`0,${height}`, ...pointArray, `${width},0`,`${width},${height}`].join(&#39; &#39;)</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>pointArray</code> 实际上就是我们需要的横纵坐标了。</p>]]></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/categories/%E4%BB%8E%E5%B0%8F%E7%99%BD%E5%BC%80%E5%A7%8B%E7%9A%84%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">从小白开始的前端学习之旅</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/vue/">Vue</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E5%89%8D%E7%AB%AF/">前端</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E5%85%A5%E9%97%A8/">入门</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="http://hais-teatime.com/tags/%E9%A1%B9%E7%9B%AE/">项目</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>新的笔记本</title>
@@ -838,7 +1491,162 @@
 
 <p>对应的，当 <code>collapse-item</code> 被点击后，如果是已经展开的状态，就触发事件 <code>remove:selected</code>，并传出自己的 <code>name</code>，这个事件将在父组件 <code>collapse</code> 中得到处理。</p>
 
-<p>然后 <code>collapse</code> 中移除对应的 <code>name</code>，然后触发 <code>update:selected</code> 事件来更新。</p>]]></description>
+<p>然后 <code>collapse</code> 中移除对应的 <code>name</code>，然后触发 <code>update:selected</code> 事件来更新。</p>
+
+<h1 id="一键注册">一键注册</h1>
+
+<p>我选择 <code>index.js</code> 作为项目的入口文件，为了给用户更好的使用体验，提供了两种使用的方式，首先是按需引入，只是提供一个汇总的入口，用户需要 <code>import</code> 之后自己手动注册组件或是使用插件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">import</span> <span class="nx">HaiButton</span> <span class="nx">from</span> <span class="s1">&#39;./src/button&#39;</span>
+    <span class="kr">import</span> <span class="nx">HaiButtonGroup</span> <span class="nx">from</span> <span class="s1">&#39;./src/button-group&#39;</span>
+    <span class="kr">import</span> <span class="nx">HaiToast</span> <span class="nx">from</span> <span class="s2">&#34;./src/plugin&#34;</span>
+
+    <span class="kr">export</span> <span class="p">{</span>
+      <span class="nx">HaiButton</span><span class="p">,</span>
+      <span class="nx">HaiButtonGroup</span><span class="p">,</span>
+      <span class="nx">HaiToast</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>同时也提供了全局自动安装的方式，将所有的组件封装成一个插件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">import</span> <span class="nx">HaiButton</span> <span class="nx">from</span> <span class="s1">&#39;./src/button&#39;</span>
+    <span class="kr">import</span> <span class="nx">HaiButtonGroup</span> <span class="nx">from</span> <span class="s1">&#39;./src/button-group&#39;</span>
+    <span class="kr">import</span> <span class="nx">HaiToast</span> <span class="nx">from</span> <span class="s2">&#34;./src/plugin&#34;</span>
+
+    <span class="kr">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">HaiButton</span><span class="p">,</span>
+      <span class="nx">HaiButtonGroup</span>
+    <span class="p">}</span>
+
+    <span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">components</span><span class="p">)</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">key</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">components</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="p">)</span>
+      <span class="p">}</span><span class="p">)</span>
+      <span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">HaiToast</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>这样用户就可以使用 <code>Vue.use(HaisUI)</code> 一键注册了。</p>
+
+<h1 id="单元测试">单元测试</h1>
+
+<p>我使用了 Karma + Mocha 来进行单元测试，还 Sinon 来帮助完成测试。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yarn add -D karma karma-chrome-launcher karma-mocha karma-sinon-chai mocha sinon sinon-chai karma-chai karma-chai-spies</code></pre></td></tr></table>
+</div>
+</div>
+<p>比如在 <code>test/button.test.js</code> 文件中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">chai</span><span class="p">.</span><span class="nx">expect</span>
+<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+<span class="kr">import</span> <span class="nx">Button</span> <span class="nx">from</span> <span class="s1">&#39;../src/button.vue&#39;</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Button&#39;</span><span class="p">,</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;存在&#39;</span><span class="p">,</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">Button</span><span class="p">)</span><span class="p">.</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">ok</span>
+  <span class="p">}</span><span class="p">)</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;可以设置 icon&#39;</span><span class="p">,</span> <span class="p">(</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">Constructor</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Button</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Constructor</span><span class="p">(</span><span class="p">{</span>
+      <span class="nx">propsData</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;settings&#39;</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="p">)</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">useElement</span> <span class="o">=</span> <span class="nx">vm</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;use&#39;</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">useElement</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;xlink:href&#39;</span><span class="p">)</span><span class="p">)</span><span class="p">.</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">&#39;#icon-settings&#39;</span><span class="p">)</span>
+    <span class="nx">vm</span><span class="p">.</span><span class="nx">$destroy</span><span class="p">(</span><span class="p">)</span>
+  <span class="p">}</span><span class="p">)</span>
+<span class="p">}</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="持续集成">持续集成</h1>
+
+<p>项目使用 Travis-CI 进行持续集成，编写 <code>.travis.yml</code> 文件如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>node_js<span class="w">
+</span><span class="w"></span><span class="k">node_js</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="w">  </span>- <span class="s2">&#34;12&#34;</span><span class="w">
+</span><span class="w"></span><span class="k">addons</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="w">  </span><span class="k">chrome</span><span class="p">:</span><span class="w"> </span>stable<span class="w">
+</span><span class="w"></span><span class="k">sudo</span><span class="p">:</span><span class="w"> </span>required<span class="w">
+</span><span class="w"></span><span class="k">before_script</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="w">  </span>- <span class="s2">&#34;sudo chown root /opt/google/chrome/chrome-sandbox&#34;</span><span class="w">
+</span><span class="w">  </span>- <span class="s2">&#34;sudo chmod 4755 /opt/google/chrome/chrome-sandbox&#34;</span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
                 
                 
                 
@@ -2700,7 +3508,7 @@
 <p><code>对象.__proto__ === 其构造函数.prototype</code></p>
 </blockquote>
 
-<h3 id="普通对象的原型链">普通对象的原型链</h3>
+<h2 id="普通对象的原型链">普通对象的原型链</h2>
 
 <blockquote>
 <p><strong>普通对象的原型是 Object</strong></p>
@@ -3295,7 +4103,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="用-class-继承">用 class 继承</h3>
+<h1 id="用-class-继承">用 class 继承</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
